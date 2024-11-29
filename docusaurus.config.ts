@@ -80,10 +80,14 @@ const config: Config = {
               label: 'Introduction',
               to: '/docs/intro',
             },
-            // {
-            //   label: 'Troubleshooting',
-            //   to: '/docs/troubleshooting',
-            // },
+            {
+              label: 'Get Started',
+              to: '/docs/category/getting-started',
+            },
+            {
+              label: 'Microsoft Teams',
+              to: '/docs/getting-started/microsoft-teams',
+            },
           ],
         },
         {
