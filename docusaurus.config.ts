@@ -54,7 +54,7 @@ const config: Config = {
     navbar: {
       logo: {
         alt: 'SYNQ Logo',
-        src: 'img/logo.png',
+        src: 'img/logo.svg',
       },
       items: [
         {
