@@ -20,7 +20,6 @@ const config: Config = {
   organizationName: 'SYNQ-Technologies', // Usually your GitHub org/user name.
   projectName: 'public-docs', // Usually your repo name.
   deploymentBranch: "gh-pages",
-  //trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -52,12 +51,10 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
     navbar: {
       logo: {
         alt: 'SYNQ Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {
