@@ -2,46 +2,54 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## Platform Overview
 
-## Getting Started
+SYNQ Technology makes a platform that’s centered on connecting customers in a physical
+retail setting that need help, with the associate that can help them in the most efficient
+way. In-store technology for customers to request help today is largely analog, with tools
+that provide no assurance to the customer and no data to the retailers.
 
-Get started by **creating a new site**.
+Made up of 19 modules, SYNQ Frontline Hero enables texting for help, QR-based help
+requests via a customer’s smartphone, a digital last mile for curbside pick-up of online
+orders, and BISPUN (buy in-store pick up now) - a methodology SYNQ invented that allows
+customers to shop friction items (locked, oversize, out of stock) at a SKU level directly from
+their smartphone for fulfilment in the store.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+In the following sections, you’ll find details on SYNQ’s system architecture, system
+requirements, deployment steps, and guidance for architecting the Microsoft Teams
+channels.
 
-### What you'll need
+## Solution Architecture
+SYNQ’s system architecture is designed to deliver a seamless and efficient experience
+directly through Microsoft Teams. As shown in the architecture diagram below, SYNQ's
+products are integrated within a robust cloud environment, hosted on Microsoft Azure,
+ensuring reliability, scalability, and security.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+The architecture is centered around the interaction between the customer's device and our
+cloud services via Microsoft Teams. Customers initiate their journey by scanning a QR code
+with their device, which in turn notifies associates via Microsoft Teams. This leads the
+associate into Teams and/or the SYNQ Portal to take action on the customer request.
+Within Teams, they engage through chats, access various app tabs, and utilize task views
+that enhance their user experience and streamline their interactions.
 
-## Generate a new site
+### Cloud Services
+Our services are encapsulated within the SYNQ Cloud, which operates on the Microsoft
+Azure platform. This setup ensures that the system maintains high performance and
+availability. The SYNQ Microsoft Teams Bot acts as the primary interface, managing
+communication between the Teams environment and our backend services
 
-Generate a new Docusaurus site using the **classic template**.
+### SYNQ Modules
+Inside the SYNQ Cloud, the SYNQ Frontline Hero application acts as the hub, housing key
+modules, including but not limited to: SYNQ Order Up, SYNQ Call for Help, SYNQ Curbside,
+SYNQ Text for Help, SYNQ Touchless Lockers API, and SYNQ Pulse (IoT). These modules are
+designed to address a wide range of use cases in the frontline worker space.
 
-The classic template will automatically be added to your project after you run the command:
+### Database Integration
+At the foundation of our architecture are several databases that support all interactions
+and transactions. It ensures data consistency and real-time updates across the platform,
+driving a cohesive, responsive user experience.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+### Architecture Diagram
+![Architecture Diagram](/img/synq-high-level.png)
