@@ -83,10 +83,10 @@ const config: Config = {
               label: 'Introduction',
               to: '/docs/intro',
             },
-            {
-              label: 'Troubleshooting',
-              to: '/docs/troubleshooting',
-            },
+            // {
+            //   label: 'Troubleshooting',
+            //   to: '/docs/troubleshooting',
+            // },
           ],
         },
         {
