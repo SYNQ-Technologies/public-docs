@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -20,7 +20,7 @@ const config: Config = {
   organizationName: 'SYNQ-Technologies', // Usually your GitHub org/user name.
   projectName: 'public-docs', // Usually your repo name.
   deploymentBranch: "gh-pages",
-  trailingSlash: false,
+  //trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -44,21 +44,6 @@ const config: Config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -70,21 +55,19 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'SYNQ Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'docSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Documentation',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/SYNQ-Technologies/public-docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -94,28 +77,49 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Topics',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Introduction',
               to: '/docs/intro',
+            },
+            {
+              label: 'Troubleshooting',
+              to: '/docs/troubleshooting',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Legal',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Terms of Service',
+              to: 'https://www.synqtech.com/terms-of-service',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Privacy Policy',
+              href: 'https://www.synqtech.com/privacy-policy',
+            },
+          ],
+        },
+        {
+          title: 'Social',
+          items: [
+            {
+              label: 'YouTube',
+              href: 'https://www.youtube.com/channel/UCMOueM3G_-hjm-oWZ4FyNDw',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/company/synq-access/',
+            },
+            {
+              label: 'Instagram',
+              href: 'https://www.instagram.com/synqtech/',
+            },
+            {
+              label: 'Facebook',
+              href: 'https://www.facebook.com/synqaccess',
             },
           ],
         },
@@ -123,17 +127,17 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Company',
+              to: 'https://www.synqtech.com/about',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Blog',
+              to: 'https://www.synqtech.com/blog',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} SYNQ Technologies.`,
     },
     prism: {
       theme: prismThemes.github,
