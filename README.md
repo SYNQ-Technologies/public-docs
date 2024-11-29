@@ -1,0 +1,2 @@
+# public-docs
+SYNQ Documentation
