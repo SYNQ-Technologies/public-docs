@@ -13,7 +13,7 @@ const config: Config = {
   url: 'https://synq-technologies.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/public-docs/',
+  baseUrl: process.env.NODE_ENV === 'production' ? '/' : '/public-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.

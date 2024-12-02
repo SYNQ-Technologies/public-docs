@@ -15,7 +15,7 @@ not onerous.
 All SYNQ products require a subscription.
 
 ## Communication Platform
-SYNQ leverages the existing communcation platform that your frontline workers already use every day to deliver alerts and notifications.
+SYNQ leverages the existing communication platform that your frontline workers already use every day to deliver alerts and notifications.
 
 SYNQ supports the following platforms:
 - Microsoft Teams

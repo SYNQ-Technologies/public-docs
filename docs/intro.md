@@ -15,7 +15,7 @@ Made up of 19 modules, SYNQ Frontline Hero enables texting for help, QR-based he
 requests via a customer’s smartphone, a digital last mile for curbside pick-up of online
 orders, and BISPUN (buy in-store pick up now) - a methodology SYNQ invented that allows
 customers to shop friction items (locked, oversize, out of stock) at a SKU level directly from
-their smartphone for fulfilment in the store.
+their smartphone for fulfillment in the store.
 
 In the following sections, you’ll find details on SYNQ’s system architecture, system
 requirements, deployment steps, and guidance for architecting the Microsoft Teams

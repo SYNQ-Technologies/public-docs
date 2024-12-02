@@ -45,8 +45,8 @@ To configure BlueFletch Messaging:
 1. Select __BlueFletch__
 1. Click __Update Location Settings__
 
-## Microsoft Entra
-For the best user experience we recommend signing into both your BlueFletch-enabled devices and SYNQ using Microsoft Entra accounts.
+## Microsoft Entra ID
+For the best user experience we recommend signing into both your BlueFletch-enabled devices and SYNQ using Microsoft Entra ID accounts.
 
 Refer to __Setup Guide for Azure AD using MSAL__ of the BlueFletch Entra Single Sign-On guide.
 
