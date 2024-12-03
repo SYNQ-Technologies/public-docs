@@ -5,7 +5,7 @@ sidebar_position: 1
 # Introduction
 Call for Help redefines the way customers seek assistance within retail stores. This advanced system enables customers to connect with store staff seamlessly, enhancing the shopping experience. This documentation serves as your guide to effectively harnessing the potential of "Call for Help."
 
-### How It Empowers Retail
+## How It Empowers Retail
 
 Call for Help empowers retail establishments by:
 - Streamlining Assistance: Customers can effortlessly communicate their needs, leading to quicker response times and improved satisfaction.

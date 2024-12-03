@@ -5,6 +5,25 @@ sidebar_position: 3
 # Call Buttons
 SYNQ call buttons provide a friendly easy to use button that relays a customer's request for assistance to the notification channel of your choosing.
 
+## Hardware Components
+A typical store deployment includes the following hardware components:
+- One Call Button Hub
+- Multiple Call Buttons
+
+The Hub communicates with SYNQ's cloud services over the wired Ethernet connection.
+
+The Call Buttons communicate with the Hub over Wi-Fi.
+
+![Architecture Diagram](/img/call-for-help/call-button-architecture.png)
+
+## Requirements
+The Call Button Hub requires the following:
+- An Ethernet connection that provides both network connectivity and Power over Ethernet (PoE)
+- Network must have DHCP enabled
+- Network must allow access to Google Public DNS IP addresses: `8.8.8.8` and `8.8.4.4` on port `53`
+- Network must allow access to Google Public Network Time Protocol (NTP) server `time.google.com` on port `123`
+- Network must allow access to SYNQ's cloud services `callforhelp.synqtech.com` on port `443`
+
 ## Getting Started
 1. Ensure you have Microsoft Teams (or an alternative messaging platform) configured. See [Microsoft Teams](../getting-started/microsoft-teams.md) for complete details.
 2. Verify that your buttons are registered in Call For Help 
@@ -14,22 +33,22 @@ SYNQ call buttons provide a friendly easy to use button that relays a customer's
    4. Scroll down to "Call for Help Buttons"
    5. You should see all your buttons listed
       :::note
-      When you purchase call buttons from SYNQ we typically import them into your store location before they are shipped to you. However, they will have default values for most settings.
+      When you purchase call buttons from SYNQ we typically import them into your store location before they are shipped to you. However, they will have default values for most configuration options.
       :::
    6. Edit each button to set appropriate names, prompts, and notification channels
       :::tip
       During initial setup we recommend setting the notification channel of each button to a "Test" channel. This makes testing easier and avoids sending unwanted test notifications to other staff.
       :::
    7. See [Add a new Call Button](#add-a-new-call-button) if you need to add buttons.
-3. Install the Button Base
-   1. The Button Base requires an Ethernet connection to provide both power and network connectivity
-   2. Deploy the button base high up in a central location that is free from obstructions (for example, escalators) to maximize coverage.
+3. Install the Hub
+   1. Connect the hub to an Ethernet connection that provides both network connectivity and power.
+   2. Deploy the hub high up in a central location that is free from obstructions (for example, escalators) to maximize coverage.
       :::note
-      Multiple base units may be required in very large locations, or in locations with Wi-Fi interference.
+      Multiple hub units may be required in very large locations, or in locations with Wi-Fi interference.
       :::
 4. Test Buttons
    1. Ensure each button contains batteries
-   2. Bring the button close to the button base
+   2. Bring the button close to the hub
    3. Press the button
    4. Verify in Microsoft Teams that the expected notification appears
    5. Once the button has been verified move the button to the desired location within your store
@@ -37,7 +56,7 @@ SYNQ call buttons provide a friendly easy to use button that relays a customer's
       :::note
       To avoid abuse, call buttons will only process one request every 120 seconds. Keep this in mind as you test. You may have to wait a moment before pressing the button again.
       :::
-   7. If a button does not raise a notification, try moving the button to a location nearer to the base and testing again. 
+   7. If a button does not raise a notification, try moving the button to a location nearer to the hub and testing again. 
 5. Update each button in MyStore to set the desired notification channels.
 6. Test buttons again to ensure messages are delivered to the desired channels.
 
@@ -174,9 +193,9 @@ For all deployments we recommend you create a "Manager" or "Escalations" channel
 |Meats|Meats|
 
 ## Troubleshooting
-### Button can't communicate with the base
-If a button press does not result in a Teams notification the button may be having trouble connecting to the base due to Wi-Fi interference.
-1. Try moving the button closer to the base and testing again. If the button works closer to the base you can wander around with the button (keep in mind the 120 second throttle) to try to identify areas of interference. You may need to relocate the base, or add another base.
+### Button can't communicate with the hub
+If a button press does not result in a Teams notification the button may be having trouble connecting to the hub due to Wi-Fi interference.
+1. Try moving the button closer to the hub and testing again. If the button works closer to the hub you can wander around with the button (keep in mind the 120 second throttle) to try to identify areas of interference. You may need to relocate the hub, or add another hub.
 
 ### Message doesn't arrive in Teams
 The configured notification channel of the button my be incorrect. 

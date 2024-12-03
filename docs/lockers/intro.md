@@ -43,8 +43,8 @@ Though we are prototyping four-season outdoor locker designs, there are substant
 - Power (1000W)
 - Ethernet connectivity
 - Network must have DHCP enabled
-- Network must allow access to Google Public DNS IP addresses: `8.8.8.8` and `8.8.4.4`
-- Network must allow access Google Public Network Time Protocol (NTP) server `time.google.com`
+- Network must allow access to Google Public DNS IP addresses: `8.8.8.8` and `8.8.4.4` on port `53`
+- Network must allow access to Google Public Network Time Protocol (NTP) server `time.google.com` on port `123`
 
 ## Add a Locker
 1. Sign into https://dcio.synqtech.com

@@ -20,7 +20,7 @@ To enable webhooks:
 ## Event Payloads
 SYNQ provides the following webhook event payloads as `application/json` data.
 ### Call for Help
-```
+```json
 {
     "type": "callforhelp",
     "created_at": "2024-11-13T17:42:44Z",
@@ -39,7 +39,7 @@ SYNQ provides the following webhook event payloads as `application/json` data.
 ```
 
 ### Curbside
-```
+```json
 {
     "type": "curbside",
     "created_at": "2024-11-13T17:42:44Z",

@@ -22,3 +22,10 @@ Your organization's Microsoft Entra ID policies prevent you from granting SYNQ t
 
 ## Can sign in to MyStore, but waiting for approval
 A location administrator for your requested store location has not yet approved your request.
+
+## I forgot my password
+See [Password Reset](./mystore/user-management.md#password-reset) for instructions.
+
+:::note
+If you sign in using a Microsoft account, you will need to follow your organization's password recovery process instead.
+:::
