@@ -26,11 +26,11 @@ To test a QR Code display:
 2. Select "Call for Help"
 3. Select "Settings"
 4. Scroll down to "Call for Help Buttons"
-2. Click "Download Display QRCode"
-3. To test the display from your PC, click the "Try it Out" button.
-4. A popup window open (emulating the customer's experience on their smart phone)
-5. Select an option
-6. Validate that the call for help request appears as a notification in the expected Teams channel
+5. Click "Download Display QRCode"
+6. To test the display from your PC, click the "Try it Out" button.
+7. A popup window open (emulating the customer's experience on their smart phone)
+8. Select an option
+9. Validate that the call for help request appears as a notification in the expected Teams channel
 
 ## Branding
 Digital call buttons provide a web interface for customers so it is important to provide your store's branding to them so that they feel like a natural part of your store.

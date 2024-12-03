@@ -16,18 +16,18 @@ Call for Help empowers retail establishments by:
 ### Call Button
 1. A customer is standing in an aisle and needs assistance.
 2. The customer sees the Call Button.
-2. The customer presses the button.
-5. The customer is able to track the progress of their call for help via the LED status indicators on the button.
-6. The associate arrives to assist the customer.
+3. The customer presses the button.
+4. The customer is able to track the progress of their call for help via the LED status indicators on the button.
+5. The associate arrives to assist the customer.
 
 ### Digital Call Button (QR Code)
 1. A customer is standing in an aisle and needs assistance.
 2. The customer sees the QR Code signage.
-2. The customer scans the QR Code with their smart phone.
-3. The customer sees a branded Call for Help web page.
-4. The customer selects one of the pre-configured prompts.
-5. The customer is able to track the progress of their call for help.
-6. The associate arrives to assist the customer.
+3. The customer scans the QR Code with their smart phone.
+4. The customer sees a branded Call for Help web page.
+5. The customer selects one of the pre-configured prompts.
+6. The customer is able to track the progress of their call for help.
+7. The associate arrives to assist the customer.
 
 ## Associate Experience
 The associate experience is the same for both physical and digital call buttons.
