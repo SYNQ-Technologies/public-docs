@@ -28,7 +28,7 @@ You can create your own custom keywords and assign them to an appropriate channe
 4. Click __Add Custom Keyword__
 5. Provide the desired keyword
    :::tip
-   Good keywords are short and easy for your customer to type. For example, Prefer `PAINT` over `PAINT DEPARTMENT`.
+   Good keywords are short and easy for your customer to type. For example, prefer `PAINT` over `PAINT DEPARTMENT`.
    :::
    :::note
    Keywords are case-insensitive.

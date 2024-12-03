@@ -1,0 +1,949 @@
+openapi: 3.0.3
+info:
+  title: SYNQ Call for Help API
+  description: APIs for handling SYNQ Call for Help requests.
+  version: 1.0.0
+
+servers:
+  - url: "{scheme}://{host}:{port}"
+    description: Configurable server URL
+    variables:
+      scheme:
+        default: "http"
+        description: The protocol scheme.
+        enum:
+          - "http"
+          - "https"
+      host:
+        default: "localhost"
+        description: The hostname or IP address.
+      port:
+        default: "8002"
+        description: The port number.
+        
+components:
+  securitySchemes:
+    SYNQAuth:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: >
+        Use the SYNQ authentication header. The format is:
+        `Authorization: SYNQ {your-secret-key}`.
+
+tags:
+  - name: CallForHelp
+    description: APIs related to Call for help.
+  - name: CallButton
+    description: API related to Call Button.
+    
+paths:
+  /api/callforhelp/claim:
+    post:
+      tags:
+        - CallForHelp
+      summary: Claim the CFH request
+      description: Request indicating that an employee has claimed this Call for Help request.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message_id:
+                  type: string
+                  description: Unique identifier for the request.
+                  example: "1732749765797"
+                channel_id:
+                  type: string
+                  description: Identifier for the channel, which is the channel ID of the corresponding service.
+                  example: "1e3er4rc6"
+                claimed_by:
+                  type: string
+                  description: Name of the person claiming the request.
+                  example: "John Smith"
+                claimed_by_user_id:
+                  type: string
+                  description: Unique identifier for the user claiming the request, which is the ID of the user from the corresponding service.
+                  example: "6df5c514-34r5-4f97-derf-932d8a517e50"
+                request_from:
+                  type: string
+                  description: Indicates the source of the request. Default value is "microsoft". Possible values include "microsoft", "ringcentral", "bluefletch", and "web_interface".
+                  example: "web_interface"
+                  enum:
+                    - "microsoft"
+                    - "ringcentral"
+                    - "bluefletch"
+                    - "web_interface"
+              required:
+                - message_id
+                - channel_id
+                - claimed_by
+                - claimed_by_user_id
+      responses:
+        '200':
+          description: Success Response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: Success response.
+                    example: true
+        '404':
+          description: Not Found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message.
+                    example: "Not Found!"
+        '500':
+          description: Internal server error.
+  
+
+  /api/callforhelp/on_the_way:
+    post:
+      tags:
+        - CallForHelp
+      summary: On the way to address this CFH request.
+      description: Request indicating an employee is on their way to address this Call for Help request.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message_id:
+                  type: string
+                  description: Unique identifier for the request.
+                  example: "1732749765797"
+                channel_id:
+                  type: string
+                  description: Identifier for the channel, which is the channel ID of the corresponding service.
+                  example: "1e3er4rc6"
+                claimed_by:
+                  type: string
+                  description: Name of the person claiming the request.
+                  example: "John Smith"
+                claimed_by_user_id:
+                  type: string
+                  description: Unique identifier for the user claiming the request, which is the ID of the user from the corresponding service.
+                  example: "6df5c514-34r5-4f97-derf-932d8a517e50"
+                request_from:
+                  type: string
+                  description: Indicates the source of the request. Default value is "microsoft". Possible values include "microsoft", "ringcentral", "bluefletch", and "web_interface".
+                  example: "web_interface"
+                  enum:
+                    - "microsoft"
+                    - "ringcentral"
+                    - "bluefletch"
+                    - "web_interface"
+              required:
+                - message_id
+                - channel_id
+                - claimed_by
+                - claimed_by_user_id
+      responses:
+        '200':
+          description: Success Response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: Success response.
+                    example: true
+        '404':
+          description: Not Found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message.
+                    example: "Not Found!"
+        '500':
+          description: Internal server error.
+  
+    
+  /api/callforhelp/complete:
+    post:
+      tags:
+        - CallForHelp
+      summary: Complete CFH request.
+      description: Request indicating that an employee has completed this CALL FOR HELP request.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message_id:
+                  type: string
+                  description: Unique identifier for the request.
+                  example: "1732749765797"
+                channel_id:
+                  type: string
+                  description: Identifier for the channel, which is the channel ID of the corresponding service.
+                  example: "1e3er4rc6"
+                claimed_by:
+                  type: string
+                  description: Name of the person claiming the request.
+                  example: "John Smith"
+                claimed_by_user_id:
+                  type: string
+                  description: Unique identifier for the user claiming the request, which is the ID of the user from the corresponding service.
+                  example: "6df5c514-34r5-4f97-derf-932d8a517e50"
+                customer_status:
+                  type: string
+                  description: Indicates how the employee completed the request.
+                  example: "not_interested"
+                request_from:
+                  type: string
+                  description: Indicates the source of the request. Default value is "microsoft". Possible values include "microsoft", "ringcentral", "bluefletch", and "web_interface".
+                  example: "web_interface"
+                  enum:
+                    - "microsoft"
+                    - "ringcentral"
+                    - "bluefletch"
+                    - "web_interface"
+              required:
+                - message_id
+                - channel_id
+                - claimed_by
+                - claimed_by_user_id
+                - customer_status
+      responses:
+        '200':
+          description: Success Response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: Success response.
+                    example: true
+        '404':
+          description: Not Found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message.
+                    example: "Not Found!"
+        '500':
+          description: Internal server error.
+
+      
+  /api/callforhelp/cancel:
+    post:
+      tags:
+        - CallForHelp
+      summary: Cancel CFH request.
+      description: Request indicating that customer cancelled this CALL FOR HELP request.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message_id:
+                  type: string
+                  description: Unique identifier for the request.
+                  example: "1732749765797"
+              required:
+                - message_id
+      responses:
+        '200':
+          description: Success Response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: Unique identifier for the request.
+                    example: 19163
+                  device_id:
+                    type: string
+                    nullable: true
+                    description: Device ID.
+                    example: null
+                  is_claimed:
+                    type: boolean
+                    description: Indicates whether the request is claimed.
+                    example: false
+                  claimed_at:
+                    type: string
+                    nullable: true
+                    format: date-time
+                    description: Timestamp when the request was claimed.
+                    example: null
+                  claimed_by:
+                    type: string
+                    nullable: true
+                    description: Employee who claimed the request.
+                    example: null
+                  organization_id:
+                    type: integer
+                    description: ID of the organization.
+                    example: 1
+                  location_id:
+                    type: integer
+                    description: ID of the location.
+                    example: 8
+                  created_at:
+                    type: string
+                    format: date-time
+                    description: Timestamp when the request was created.
+                    example: "2024-11-28T00:31:03.000000Z"
+                  updated_at:
+                    type: string
+                    format: date-time
+                    description: Timestamp when the request was last updated.
+                    example: "2024-11-28T00:32:06.000000Z"
+                  option_id:
+                    type: integer
+                    description: Option ID for the request.
+                    example: 1
+                  teams_channel_id:
+                    type: string
+                    description: Identifier for the corresponding service.
+                    example: "19:4ec0b94131264332a03e29d577c41716@thread.tacv2"
+                  message_id:
+                    type: string
+                    description: Message ID of the request.
+                    example: "1732753863471"
+                  is_timeout:
+                    type: boolean
+                    description: Indicates if the request has timed out.
+                    example: false
+                  timeout_at:
+                    type: string
+                    nullable: true
+                    format: date-time
+                    description: Timestamp for the timeout (if applicable).
+                    example: null
+                  is_closed:
+                    type: boolean
+                    description: Indicates if the request is closed.
+                    example: true
+                  closed_at:
+                    type: string
+                    nullable: true
+                    format: date-time
+                    description: Timestamp when the request was closed.
+                    example: "2024-11-28 00:32:06"
+                  is_on_the_way:
+                    type: boolean
+                    description: Indicates if a staff member is on the way.
+                    example: false
+                  staff_on_the_way_at:
+                    type: string
+                    nullable: true
+                    format: date-time
+                    description: Timestamp when staff was on the way.
+                    example: null
+                  completed_at:
+                    type: string
+                    nullable: true
+                    format: date-time
+                    description: Timestamp when the request was completed.
+                    example: null
+                  is_completed:
+                    type: integer
+                    description: Indicates if the request is completed (0 or 1).
+                    example: 0
+                  completion_reason:
+                    type: string
+                    nullable: true
+                    description: Reason for request completion.
+                    example: null
+                  is_canceled:
+                    type: boolean
+                    description: Indicates if the request is canceled.
+                    example: true
+                  customer_canceled_at:
+                    type: string
+                    nullable: true
+                    format: date-time
+                    description: Timestamp when the customer canceled the request.
+                    example: "2024-11-28 00:32:06"
+                  display_id:
+                    type: integer
+                    description: Display ID of the request.
+                    example: 7
+                  callbutton_id:
+                    type: string
+                    nullable: true
+                    description: Call button ID associated with the request.
+                    example: null
+        '404':
+          description: Not Found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message.
+                    example: "Not Found!"
+        '500':
+          description: Internal server error.
+          
+  /api/callforhelp/v1/tracking:
+    get:
+      tags:
+        - CallForHelp
+        - CallButton
+      summary: Get Call For Help request details
+      description: API for retrieving real-time status of a Call For Help request.
+      parameters:
+        - name: message_id
+          in: query
+          required: true
+          schema:
+            type: string
+          description: CFH unique identifier.
+          example: "1732753863471"
+      responses:
+        '200':
+          description: Successfully retrieved tracking details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  device_id:
+                    type: string
+                    nullable: true
+                    description: Identifier for the device related to the request.
+                    example: null
+                  option:
+                    type: object
+                    description: Details of the Call For Help option.
+                    properties:
+                      id:
+                        type: integer
+                        description: Unique identifier for the option.
+                        example: 1
+                      text_en:
+                        type: string
+                        description: Option text in English.
+                        example: "Request Parts Service"
+                      text_fr:
+                        type: string
+                        description: Option text in French.
+                        example: "Demander un service de pièces"
+                      prompt_en:
+                        type: string
+                        description: Prompt text in English.
+                        example: "A customer needs service at the Automotive Parts Counter"
+                      prompt_fr:
+                        type: string
+                        description: Prompt text in French.
+                        example: "Un client a besoin d'un service au comptoir de pièces automobiles"
+                      organization_id:
+                        type: integer
+                        description: ID of the organization associated with the option.
+                        example: 1
+                      location_id:
+                        type: integer
+                        nullable: true
+                        description: ID of the location associated with the option.
+                        example: null
+                      created_at:
+                        type: string
+                        format: date-time
+                        description: Timestamp when the option was created.
+                        example: "2020-09-03T17:44:25.000000Z"
+                      updated_at:
+                        type: string
+                        format: date-time
+                        description: Timestamp when the option was last updated.
+                        example: "2020-09-03T18:31:52.000000Z"
+                  location_id:
+                    type: integer
+                    description: ID of the location related to the request.
+                    example: 8
+                  message_id:
+                    type: string
+                    nullable: true
+                    description: Message ID of the request.
+                    example: null
+                  cfh_request:
+                    type: object
+                    description: Details of the Call For Help request.
+                    properties:
+                      option_id:
+                        type: integer
+                        description: Option ID of the request.
+                        example: 1
+                      is_claimed:
+                        type: boolean
+                        description: Indicates if the request is claimed.
+                        example: false
+                      claimed_at:
+                        type: string
+                        nullable: true
+                        format: date-time
+                        description: Timestamp when the request was claimed.
+                        example: null
+                      claimed_by:
+                        type: string
+                        nullable: true
+                        description: Employee who claimed the request.
+                        example: null
+                      location_id:
+                        type: integer
+                        description: Location ID of the request.
+                        example: 8
+                      organization_id:
+                        type: integer
+                        description: Organization ID of the request.
+                        example: 1
+                      created_at:
+                        type: string
+                        format: date-time
+                        description: Timestamp when the request was created.
+                        example: "2024-11-28T00:31:03.000000Z"
+                      updated_at:
+                        type: string
+                        format: date-time
+                        description: Timestamp when the request was last updated.
+                        example: "2024-11-28T00:32:06.000000Z"
+                      is_timeout:
+                        type: boolean
+                        description: Indicates if the request has timed out.
+                        example: false
+                      timeout_at:
+                        type: string
+                        nullable: true
+                        format: date-time
+                        description: Timestamp for timeout, if applicable.
+                        example: null
+                      is_closed:
+                        type: boolean
+                        description: Indicates if the request is closed.
+                        example: true
+                      closed_at:
+                        type: string
+                        nullable: true
+                        format: date-time
+                        description: Timestamp when the request was closed.
+                        example: "2024-11-28 00:32:06"
+                      is_on_the_way:
+                        type: boolean
+                        description: Indicates if an employee is on the way.
+                        example: false
+                      staff_on_the_way_at:
+                        type: string
+                        nullable: true
+                        format: date-time
+                        description: Timestamp when the staff was on the way.
+                        example: null
+                      is_canceled:
+                        type: boolean
+                        description: Indicates if the request is canceled.
+                        example: true
+                      customer_canceled_at:
+                        type: string
+                        nullable: true
+                        format: date-time
+                        description: Timestamp when the customer canceled the request.
+                        example: "2024-11-28 00:32:06"
+                      employee_has_arrived:
+                        type: boolean
+                        description: Indicates if the employee has arrived. Same as is_on_the_way
+                        example: false
+                      employee_arrived_at:
+                        type: string
+                        nullable: true
+                        format: date-time
+                        description: Timestamp when the employee arrived. Same as staff_on_the_way_at
+                        example: null
+                  show_survey:
+                    type: boolean
+                    description: Indicates if a survey should be shown to the customer.
+                    example: false
+        '404':
+          description: Not Found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message.
+                    example: "Not Found!"
+        '500':
+          description: Internal server error.
+          
+  /api/callbutton/press:
+    post:
+      summary: Handle call button press
+      description: API to handle the press of a call button and trigger relevant actions.
+      tags:
+        - CallButton
+      security:
+        - SYNQAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                device_key:
+                  type: string
+                  description: Unique identifier for the device.
+                  example: "AA:22:33:44:55:66"
+              required:
+                - device_key
+      responses:
+        '200':
+          description: Success Response.
+          content:
+            text/plain:
+              schema:
+                type: string
+                description: >
+                  The success message is determined based on the priority of the request parameters:
+          
+                  1. If `voltage` exists in the request: "Voltage updated successfully."
+                  
+                  2. If `button` exists in the request and its value is 0: "Button value is 0, no action taken."
+                  
+                  3. Otherwise, the response will be the CFH unique identifier.
+                  
+                enum:
+                  - "Voltage updated successfully"
+                  - "Button value is 0, no action taken"
+                  - "1732764565773"
+                example: "1732764565773"
+        '401':
+          description: Unauthorized.
+          
+        '400':
+          description: Bad Request.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message.
+                    example: "Device key not found!"
+        '403':
+          description: Forbidden.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message.
+                    example: "MAC Address is incorrect or unregistered"
+        '429':
+          description: Too Many Requests.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message.
+                    example: "Please wait 57 seconds before sending another request!"
+        '500':
+          description: Internal server error.
+  
+  /api/callbutton/{message_id}:
+    put:
+      summary: Update CallButton Request
+      description: Updates the status of a CallButton request with the provided details.
+      tags:
+        - CallButton
+      security:
+        - SYNQAuth: []
+      parameters:
+        - name: message_id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique identifier for the CallButton request.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                device_key:
+                  type: string
+                  description: Device key associated with the CallButton.
+                  example: "AA:22:33:44:55:66"
+                update_type:
+                  type: string
+                  description: >
+                    The type of update to be performed. Must be one of the following: `completed`, `close`, or `customer_canceled`.
+                  enum:
+                    - completed
+                    - close
+                    - customer_canceled
+                  example: "customer_canceled"
+                reason:
+                  type: string
+                  description: The reason for marking the request as completed. This field is required if the `update_type` is `completed`.
+                  example: "not_interested"
+              required:
+                - device_key
+                - update_type
+      responses:
+        '200':
+          description: CallButton request updated successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Success message.
+                    example: "Success"
+                  data:
+                    type: object
+                    description: Details of the updated CallButton request.
+                    properties:
+                      id:
+                        type: integer
+                        description: Unique identifier for the request.
+                        example: 19167
+                      device_id:
+                        type: string
+                        nullable: true
+                        description: Identifier for the device if exists.
+                        example: null
+                      is_claimed:
+                        type: boolean
+                        description: Indicates if the request has been claimed by an employee.
+                        example: false
+                      claimed_at:
+                        type: string
+                        format: date-time
+                        description: Timestamp when the request was claimed. Null if not claimed.
+                        nullable: true
+                        example: null
+                      claimed_by:
+                        type: string
+                        nullable: true
+                        description: Name of the employee who claimed the request. Null if not claimed.
+                        example: null
+                      organization_id:
+                        type: integer
+                        description: Identifier for the organization associated with the request.
+                        example: 1
+                      location_id:
+                        type: integer
+                        description: Identifier for the location associated with the request.
+                        example: 8
+                      created_at:
+                        type: string
+                        format: date-time
+                        description: Timestamp when the request was created.
+                        example: "2024-11-28T05:13:02.000000Z"
+                      updated_at:
+                        type: string
+                        format: date-time
+                        description: Timestamp when the request was last updated.
+                        example: "2024-11-28T05:14:56.000000Z"
+                      option_id:
+                        type: integer
+                        description: Identifier for the selected request option.
+                        example: 17
+                      teams_channel_id:
+                        type: string
+                        description: Identifier for the service channel associated with the request.
+                        example: "19:4ec0b94131264332a03e29d577c41716@thread.tacv2"
+                      message_id:
+                        type: string
+                        description: Unique identifier for the message sent by the service.
+                        example: "1732770783261"
+                      is_timeout:
+                        type: boolean
+                        description: Indicates if the request timed out.
+                        example: false
+                      timeout_at:
+                        type: string
+                        format: date-time
+                        nullable: true
+                        description: Timestamp when the request timed out. Null if not applicable.
+                        example: null
+                      is_closed:
+                        type: boolean
+                        description: Indicates if the request has been closed.
+                        example: true
+                      closed_at:
+                        type: string
+                        format: date-time
+                        description: Timestamp when the request was closed.
+                        example: "2024-11-28 05:14:56"
+                      is_on_the_way:
+                        type: boolean
+                        description: Indicates if an employee is on their way to address the request.
+                        example: false
+                      staff_on_the_way_at:
+                        type: string
+                        format: date-time
+                        nullable: true
+                        description: Timestamp when an employee was marked as on the way. Null if not applicable.
+                        example: null
+                      completed_at:
+                        type: string
+                        format: date-time
+                        nullable: true
+                        description: Timestamp when the request was marked as completed. Null if not completed.
+                        example: null
+                      is_completed:
+                        type: integer
+                        description: Status indicating if the request was completed (1) or not (0).
+                        example: 0
+                      completion_reason:
+                        type: string
+                        nullable: true
+                        description: Reason for completing the request. Null if not completed.
+                        example: null
+                      is_canceled:
+                        type: boolean
+                        description: Indicates if the request was canceled by the customer.
+                        example: true
+                      customer_canceled_at:
+                        type: string
+                        format: date-time
+                        description: Timestamp when the request was canceled by the customer.
+                        example: "2024-11-28 05:14:56"
+                      display_id:
+                        type: string
+                        nullable: true
+                        description: Display identifier for the request. Null if not applicable.
+                        example: null
+                      callbutton_id:
+                        type: integer
+                        description: Identifier for the CallButton associated with the request.
+                        example: 1
+                      employee_has_arrived:
+                        type: boolean
+                        description: Same as is_on_the_way.
+                        example: false
+                      employee_arrived_at:
+                        type: string
+                        format: date-time
+                        nullable: true
+                        description: Same as staff_on_the_way_at.
+                        example: null
+        
+        '401':
+          description: Unauthorized.
+                    
+        '400':
+          description: Bad Request.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message.
+                    example: "Device key not found!"
+        '403':
+          description: Forbidden.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message.
+                    example: "MAC Address is incorrect or unregistered"
+        '429':
+          description: Too Many Requests.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message.
+                    example: "Please wait 57 seconds before sending another request!"   
+        '422':
+          description: Validation error. One or more fields failed validation.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: A human-readable message summarizing the error.
+                    example: "The update_type field is required."
+                  errors:
+                    type: object
+                    description: Detailed validation errors for specific fields.
+                    additionalProperties:
+                      type: array
+                      items:
+                        type: string
+                    example:
+                      update_type:
+                        - "The update_type field is required."
+        '404':
+          description: Not Found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message.
+                    example: "No processing CFH request found" 
+        '500':
+          description: Internal Server Error.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Error message.
+                    example: "An unexpected error occurred. Please try again later." 
+  

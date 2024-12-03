@@ -1,0 +1,988 @@
+openapi: 3.0.3
+info:
+  title: SYNQ Lockers API
+  description: APIs for handling SYNQ Touchless Lockers.
+  version: 1.0.0
+
+servers:
+  - url: "{scheme}://{host}:{port}"
+    description: Configurable server URL
+    variables:
+      scheme:
+        default: "http"
+        description: The protocol scheme.
+        enum:
+          - "http"
+          - "https"
+      host:
+        default: "localhost"
+        description: The hostname or IP address.
+      port:
+        default: "8004"
+        description: The port number.
+        
+
+
+tags:
+  - name: Locker - Employee/Admin
+    description: APIs related to Lockers (Employee/Admin side).
+  - name: Locker - Customers
+    description: APIs related to Locker Customers.
+  - name: Locker - Feedback
+    description: APIs for handling feedback from the locker.
+
+    
+paths:
+
+  /api/lockers/cabinet/status:
+    post:
+      summary: Update locker cabinet status (only for version 2 locker)
+      description: Updates the front and/or rear status of one or more cabinets in a locker.
+      tags:
+        - Locker - Feedback
+      parameters:
+        - in: header
+          name: api-key
+          required: true
+          schema:
+            type: string
+            example: YWQ3NDc1M2EtYmMyZC00OWVjLWE5MDAtYjBhODNiM2YyY2Iz
+          description: Locker-specific API key for authentication.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - cabinets
+              properties:
+                cabinets:
+                  type: array
+                  description: Array of cabinet objects to update.
+                  items:
+                    type: object
+                    required:
+                      - key
+                    properties:
+                      key:
+                        type: integer
+                        description: Key for the cabinet.
+                        example: 0
+                      front_status:
+                        type: string
+                        nullable: true
+                        description: Status of the front door. Either this or `rear_status` is required.
+                        enum:
+                          - open
+                          - closed
+                        example: closed
+                      rear_status:
+                        type: string
+                        nullable: true
+                        description: Status of the rear door. Either this or `front_status` is required.
+                        enum:
+                          - open
+                          - closed
+                        example: open
+                locker_info:
+                  type: object
+                  description: Information about the locker. (optional)
+                  properties:
+                    ip:
+                      type: string
+                      description: IP address of the locker.
+                      example: "123.123.123.132"
+                    firmware:
+                      type: string
+                      description: Firmware version of the locker.
+                      example: "1.1.2.2.1.1.1"
+                event:
+                  type: object
+                  description: Details about the event. (optional)
+                  properties:
+                    type:
+                      type: string
+                      description: Type of the event.
+                      example: active
+      responses:
+        '200':
+          description: Success response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Updated successfully"
+        '422':
+          description: Validation error. One or more fields failed validation.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: A human-readable message summarizing the error.
+                    example: "The cabinets field is required."
+                  errors:
+                    type: object
+                    description: Detailed validation errors for specific fields.
+                    additionalProperties:
+                      type: array
+                      items:
+                        type: string
+                    example:
+                      cabinets:
+                        - "The cabinets field is required."
+        '401':
+          description: Unauthorized error.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Unauthorized"
+                  message:
+                    type: string
+                    example: "Invalid API key"
+        '500':
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Internal server error"
+  
+  /api/lockers/locations/{location_id}:
+    get:
+      summary: Get Lockers for a Specific Location
+      description: Retrieve details of lockers and their cabinets for a specific location.
+      tags:
+        - Locker - Employee/Admin
+      parameters:
+        - name: location_id
+          in: path
+          required: true
+          description: ID of the location to retrieve lockers for.
+          schema:
+            type: integer
+            example: 8
+        - name: secret_token
+          in: query
+          required: true
+          description: Secret token for authentication.
+          schema:
+            type: string
+            example: "devsecret"
+      responses:
+        '200':
+          description: Lockers and their cabinet details retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      description: Locker ID.
+                      example: 109
+                    api_key:
+                      type: string
+                      description: Locker-specific API key.
+                      example: "YWQ3NDc1M2EtYmMyZC00OWVjLWE5MDAtYjBhODNiM2YyY2Iz"
+                    created_at:
+                      type: string
+                      format: date-time
+                      description: Creation timestamp of the locker.
+                      example: "2021-08-11T00:08:02.000000Z"
+                    updated_at:
+                      type: string
+                      format: date-time
+                      description: Last update timestamp of the locker.
+                      example: "2023-11-22T00:03:53.000000Z"
+                    name:
+                      type: string
+                      description: Name of the locker.
+                      example: "ddnewname"
+                    organization_id:
+                      type: integer
+                      description: Organization ID associated with the locker.
+                      example: 1
+                    location_id:
+                      type: integer
+                      description: Location ID associated with the locker.
+                      example: 8
+                    rear_loading_available:
+                      type: boolean
+                      description: Indicates if rear loading is available for the locker.
+                      example: true
+                    version:
+                      type: integer
+                      description: Version of the locker.
+                      example: 2
+                    timer:
+                      type: integer
+                      description: Timer setting for the locker (in seconds).
+                      example: 15
+                    cabinets:
+                      type: array
+                      description: List of cabinets in the locker.
+                      items:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            description: Cabinet ID.
+                            example: 285
+                          key:
+                            type: integer
+                            description: Unique key for identifying the cabinet within the locker.
+                            example: 0
+                          created_at:
+                            type: string
+                            format: date-time
+                            description: Timestamp when the cabinet was created.
+                            example: "2021-08-11T00:08:02.000000Z"
+                          updated_at:
+                            type: string
+                            format: date-time
+                            description: Timestamp when the cabinet details were last updated.
+                            example: "2024-11-29T22:33:51.000000Z"
+                          name:
+                            type: string
+                            nullable: true
+                            description: Name of the cabinet (if applicable).
+                            example: null
+                          locker_id:
+                            type: integer
+                            description: ID of the locker the cabinet belongs to.
+                            example: 109
+                          state:
+                            type: string
+                            description: Current state of the cabinet door.
+                            enum:
+                              - closed
+                              - open
+                              - opening
+                              - closing
+                            example: "closed"
+                          enabled:
+                            type: boolean
+                            description: Indicates whether the cabinet is enabled.
+                            example: true
+                          size:
+                            type: string
+                            description: Size of the cabinet.
+                            example: "mini"
+                          occupied:
+                            type: integer
+                            description: Indicates whether the cabinet is occupied (1 for true, 0 for false).
+                            example: 1
+                          released_at:
+                            type: string
+                            format: date-time
+                            nullable: true
+                            description: Timestamp when the cabinet was released (if applicable).
+                            example: null
+                          thermal_mode:
+                            type: string
+                            description: Current thermal mode of the cabinet.
+                            enum:
+                              - ambient
+                              - heat
+                              - freeze
+                              - chill
+                            example: "ambient"
+                          rear_load_status:
+                            type: string
+                            description: Current status of the rear load door.
+                            enum:
+                              - open
+                              - closed
+                              - opening
+                              - closing
+                            example: "open"
+                          tag:
+                            type: string
+                            nullable: true
+                            description: Tag associated with the cabinet (if applicable).
+                            example: null
+                          cool_off_period:
+                            type: boolean
+                            description: Indicates whether the cabinet is in a cool-off period.
+                            example: false
+        
+        '403':
+          description: Forbidden.
+        '500':
+          description: Internal server error.
+          
+  /api/lockers/orders:
+    post:
+      summary: Create a new order for a locker cabinet
+      description: API to create a new order associated with a locker cabinet.
+      tags:
+        - Locker - Employee/Admin
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+          required: true
+          description: Secret token for authentication.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rearload:
+                  type: boolean
+                  description: Indicates whether rear loading is required.
+                  example: true
+                locker_id:
+                  type: integer
+                  description: Unique identifier for the locker.
+                  example: 109
+                cabinet_id:
+                  type: integer
+                  description: Unique identifier for the cabinet within the locker.
+                  example: 286
+                order_id:
+                  type: integer
+                  description: Unique identifier for the order.
+                  example: 46188
+                organization_id:
+                  type: integer
+                  description: Unique identifier for the organization.
+                  example: 1
+                location_id:
+                  type: integer
+                  description: Unique identifier for the location.
+                  example: 8
+              required:
+                - rearload
+                - locker_id
+                - cabinet_id
+                - order_id
+                - organization_id
+                - location_id
+      responses:
+        '201':
+          description: Successful response with order details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  order_id:
+                    type: integer
+                    description: Unique identifier for the order.
+                    example: 46188
+                  cabinet_id:
+                    type: integer
+                    description: Unique identifier for the cabinet within the locker.
+                    example: 286
+                  open_code:
+                    type: string
+                    description: Code used to open the locker cabinet.
+                    example: YzQwNWNhZGYtZWJlZS00ZjgzLWE0YjAtMGE4OTBjMzU4MDNl
+                  locker_id:
+                    type: integer
+                    description: Unique identifier for the locker.
+                    example: 109
+                  organization_id:
+                    type: integer
+                    description: Unique identifier for the organization.
+                    example: 1
+                  location_id:
+                    type: integer
+                    description: Unique identifier for the location.
+                    example: 8
+                  app_owner_id:
+                    type: string
+                    nullable: true
+                    description: ID of the application owner, if applicable.
+                    example: null
+                  updated_at:
+                    type: string
+                    format: date-time
+                    description: Timestamp when the order was last updated.
+                    example: "2024-11-29T23:35:05.000000Z"
+                  created_at:
+                    type: string
+                    format: date-time
+                    description: Timestamp when the order was created.
+                    example: "2024-11-29T23:35:05.000000Z"
+                  id:
+                    type: integer
+                    description: Unique identifier for the order record.
+                    example: 127
+        '403':
+          description: Forbidden.
+        '400':
+          description: Bad Request
+        '500':
+          description: Internal server error.
+          
+  /api/lockers/cabinets/{cabinet_id}:
+    put:
+      tags:
+        - Locker - Employee/Admin
+      summary: Update the state of a locker cabinet.
+      description: Sends a command to update the state of a locker cabinet (Internal request).
+      parameters:
+        - name: cabinet_id
+          in: path
+          required: true
+          description: The unique identifier for the locker cabinet.
+          schema:
+            type: integer
+        - name: secret_token
+          in: query
+          required: true
+          description: Secret token for authentication.
+          schema:
+            type: string
+            example: devsecret
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - command
+              properties:
+                acted_by:
+                  type: integer
+                  description: ID of the user performing the action.
+                  example: 1201
+                command:
+                  type: string
+                  description: >
+                    Command to execute. Accepted values are:
+                    
+                    - `resize`: Changes the size of the locker. Requires `size`.
+                    
+                    - `set_thermal_mode`: Changes the thermal mode. Requires `thermal_mode`.
+                    
+                    - `disable`: Disables the locker.
+                    
+                    - `enable`: Enables the locker.
+                    
+                    - `open`: Opens the locker.
+                    
+                    - `close`: Closes the locker.
+                  enum:
+                    - resize
+                    - set_thermal_mode
+                    - disable
+                    - enable
+                    - open
+                    - close
+                  example: "close"
+                size:
+                  type: string
+                  nullable: true
+                  description: Size of the locker. Required when `command` is `resize`.
+                  example: "mini"
+                thermal_mode:
+                  type: string
+                  nullable: true
+                  description: Thermal mode of the locker. Required when `command` is `set_thermal_mode`. Possible values are `ambient`, `heat`, `freeze`, `chill`.
+                  enum:
+                    - ambient
+                    - heat
+                    - freeze
+                    - chill
+                  example: "ambient"
+                order_id:
+                  type: string
+                  nullable: true
+                  description: The associated order ID if the cabinet is occupied, if applicable.
+                  example: null
+                reason:
+                  type: string
+                  nullable: true
+                  description: Reason for the action if the cabinet is occupied, if applicable.
+                  example: null
+                rearload:
+                  type: boolean
+                  description: Indicates the action to be performed for the rear door.
+                  example: true
+                delay:
+                  type: integer
+                  description: The delay (in seconds) for the close. Only applicable for the close command.
+                  example: 2
+             
+      responses:
+        '200':
+          description: Success response with the updated locker cabinet details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: The unique identifier for the locker cabinet.
+                    example: 285
+                  key:
+                    type: integer
+                    description: Key associated with the locker cabinet.
+                    example: 0
+                  created_at:
+                    type: string
+                    format: date-time
+                    description: When the locker cabinet was created.
+                    example: "2021-08-11T00:08:02.000000Z"
+                  updated_at:
+                    type: string
+                    format: date-time
+                    description: When the locker cabinet was last updated.
+                    example: "2024-11-29T19:27:44.000000Z"
+                  name:
+                    type: string
+                    nullable: true
+                    description: Name of the locker cabinet, if provided.
+                    example: null
+                  locker_id:
+                    type: integer
+                    description: Identifier of the associated locker.
+                    example: 109
+                  state:
+                    type: string
+                    description: >
+                      Current status of the locker cabinet front door.
+                      
+                      - For version 1 lockers, the expected values are:
+                      
+                        - `closed`
+                        
+                        - `open`
+                        
+                      - For version 2 lockers, the expected values are:
+                        - `closed`
+                        
+                        - `open`
+                        
+                        - `opening`
+                        
+                        - `closing`
+                        
+                    enum:
+                      - closed
+                      - open
+                      - opening
+                      - closing
+                    example: "closed"
+                  enabled:
+                    type: integer
+                    description: Whether the locker cabinet is enabled (1 for true, 0 for false).
+                    example: 1
+                  size:
+                    type: string
+                    description: Size of the locker cabinet.
+                    example: "mini"
+                  occupied:
+                    type: integer
+                    description: Whether the locker cabinet is occupied (1 for true, 0 for false).
+                    example: 0
+                  released_at:
+                    type: string
+                    format: date-time
+                    nullable: true
+                    description: When the locker cabinet was released, if applicable.
+                    example: null
+                  thermal_mode:
+                    type: string
+                    description: Thermal mode of the locker cabinet (e.g., `ambient`, `cold`).
+                    example: "ambient"
+                  rear_load_status:
+                    type: string
+                    description: >
+                      Current status of the locker cabinet rear door.
+                      
+                      - For version 1 lockers, the expected values are:
+                      
+                        - `closed`
+                        
+                        - `open`
+                        
+                      - For version 2 lockers, the expected values are:
+                        - `closed`
+                        
+                        - `open`
+                        
+                        - `opening`
+                        
+                        - `closing`
+                        
+                    enum:
+                      - closed
+                      - open
+                      - opening
+                      - closing
+                    example: "closed"
+                  tag:
+                    type: string
+                    nullable: true
+                    description: Optional tag for the locker cabinet.
+                    example: null
+        '403':
+          description: Forbidden.
+        '400':
+          description: "Invalid command: Acd."
+        '500':
+          description: Internal server error.
+          
+  /api/lockers/orders/cabinets/{cabinet_id}:
+    put:
+      tags:
+        - Locker - Employee/Admin
+      summary: Mark a cabinet order as completed.
+      description: Updates the cabinet order status to completed.
+      parameters:
+        - name: cabinet_id
+          in: path
+          required: true
+          description: Unique identifier for the cabinet.
+          schema:
+            type: integer
+            example: 286
+        - name: secret_token
+          in: query
+          required: true
+          description: Secret token for authentication.
+          schema:
+            type: string
+            example: "devsecret"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                completed_by:
+                  type: integer
+                  example: 123
+                completed_device_id:
+                  type: integer
+                  example: 1201
+                delay:
+                  type: integer
+                  example: 8
+      responses:
+        '200':
+          description: Success response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: Unique identifier for the cabinet order.
+                    example: 127
+                  created_at:
+                    type: string
+                    format: date-time
+                    description: Timestamp when the order was created.
+                    example: "2024-11-29T23:35:05.000000Z"
+                  updated_at:
+                    type: string
+                    format: date-time
+                    description: Timestamp when the order was last updated.
+                    example: "2024-11-30T03:54:17.000000Z"
+                  order_id:
+                    type: integer
+                    description: Associated order ID.
+                    example: 46188
+                  cabinet_id:
+                    type: integer
+                    description: ID of the cabinet linked to the order.
+                    example: 286
+                  open_code:
+                    type: string
+                    description: Unique code for cabinet access.
+                    example: "YzQwNWNhZGYtZWJlZS00ZjgzLWE0YjAtMGE4OTBjMzU4MDNl"
+                  completed_at:
+                    type: string
+                    format: date-time
+                    description: Timestamp when the order was marked as completed.
+                    example: "2024-11-30T03:54:17.131043Z"
+                  locker_id:
+                    type: integer
+                    description: Unique identifier for the locker.
+                    example: 109
+                  organization_id:
+                    type: integer
+                    description: Organization ID associated with the order.
+                    example: 1
+                  location_id:
+                    type: integer
+                    description: Location ID associated with the order.
+                    example: 8
+                  completed_by:
+                    type: integer
+                    nullable: true
+                    description: ID of the employee who completed the order.
+                    example: null
+                  canceled_at:
+                    type: string
+                    format: date-time
+                    nullable: true
+                    description: Timestamp when the order was canceled, if applicable.
+                    example: null
+                  app_owner_id:
+                    type: integer
+                    nullable: true
+                    description: App owner ID, if applicable.
+                    example: null
+                  completed_device_id:
+                    nullable: true
+                    type: integer
+                    example: 1201
+                  application:
+                    type: string
+                    nullable: true
+                    example: null
+        '403':
+          description: Forbidden.
+        '400':
+          description: Bad Request
+          
+  /api/lockers/cabinets/customers/{open_code}:
+    post:
+      tags:
+        - Locker - Customers
+      summary: Perform an action on a cabinet for a specific order
+      description: Executes a specified command on a cabinet identified by the `open_code`.
+      parameters:
+        - name: open_code
+          in: path
+          required: true
+          description: The unique open code for the locker order.
+          schema:
+            type: string
+            example: "NTAxYzBlMGMtOTk0MC00Y2EwLWIxMzYtZGE2ZTU2YTQwNDAy"
+        - name: secret_token
+          in: query
+          required: true
+          description: Secret token for authentication.
+          schema:
+            type: string
+            example: "devsecret"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                command:
+                  type: string
+                  description: The command to perform on the cabinet.
+                  enum:
+                    - here
+                    - agree
+                    - disagree
+                  example: "agree"
+              required:
+                - command
+      responses:
+        '200':
+          description: Success response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: The ID of the cabinet.
+                    example: 289
+                  key:
+                    type: integer
+                    description: The cabinet key.
+                    example: 0
+                  created_at:
+                    type: string
+                    format: date-time
+                    description: The creation timestamp of the cabinet.
+                    example: "2021-08-11T00:11:41.000000Z"
+                  updated_at:
+                    type: string
+                    format: date-time
+                    description: The last update timestamp of the cabinet.
+                    example: "2024-12-02T00:14:07.000000Z"
+                  name:
+                    type: string
+                    nullable: true
+                    description: The name of the cabinet.
+                    example: null
+                  locker_id:
+                    type: integer
+                    description: The ID of the locker.
+                    example: 111
+                  state:
+                    type: string
+                    description: Current state of the cabinet.
+                    enum:
+                      - closed
+                      - open
+                    example: "open"
+                  enabled:
+                    type: boolean
+                    description: Whether the cabinet is enabled.
+                    example: true
+                  size:
+                    type: string
+                    description: The size of the cabinet.
+                    example: "test1"
+                  occupied:
+                    type: boolean
+                    description: Whether the cabinet is occupied.
+                    example: true
+                  released_at:
+                    type: string
+                    format: date-time
+                    nullable: true
+                    description: Timestamp of when the cabinet was released.
+                    example: null
+                  thermal_mode:
+                    type: string
+                    description: The thermal mode of the cabinet.
+                    enum:
+                      - ambient
+                      - heat
+                      - freeze
+                      - chill
+                    example: "ambient"
+                  rear_load_status:
+                    type: string
+                    description: The rear load status of the cabinet.
+                    enum:
+                      - open
+                      - closed
+                    example: "closed"
+                  tag:
+                    type: string
+                    nullable: true
+                    description: The tag associated with the cabinet.
+                    example: null
+        '403':
+          description: Forbidden.
+        '400':
+          description: Bad Request
+          
+  /api/lockers/orders/customer/{open_code}:
+    put:
+      tags:
+        - Locker - Customers
+      summary: Mark a cabinet order as completed.
+      description: Complete the locker order associated with a specific customer using the `open_code`.
+      parameters:
+        - name: open_code
+          in: path
+          required: true
+          description: The unique open code for the locker order.
+          schema:
+            type: string
+            example: "MzQzMDliYWYtOTU3Mi00YWFiLWEwM2MtZTU0NjgzZDYwMDlm"
+        - name: secret_token
+          in: query
+          required: true
+          description: Secret token for authentication.
+          schema:
+            type: string
+            example: "devsecret"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                delay:
+                  type: integer
+                  description: The delay in seconds if required.
+                  example: 8
+      responses:
+        '200':
+          description: Success response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 145
+                  created_at:
+                    type: string
+                    format: date-time
+                    example: "2024-12-03T19:29:45.000000Z"
+                  updated_at:
+                    type: string
+                    format: date-time
+                    example: "2024-12-03T20:06:51.000000Z"
+                  order_id:
+                    type: integer
+                    example: 50
+                  cabinet_id:
+                    type: integer
+                    example: 290
+                  open_code:
+                    type: string
+                    example: "MzQzMDliYWYtOTU3Mi00YWFiLWEwM2MtZTU0NjgzZDYwMDlm"
+                  completed_at:
+                    type: string
+                    format: date-time
+                    example: "2024-12-03T20:06:51.230211Z"
+                  locker_id:
+                    type: integer
+                    example: 111
+                  organization_id:
+                    type: integer
+                    example: 1
+                  location_id:
+                    type: integer
+                    example: 8
+                  completed_by:
+                    type: string
+                    nullable: true
+                    example: null
+                  canceled_at:
+                    type: string
+                    nullable: true
+                    example: null
+                  app_owner_id:
+                    type: string
+                    nullable: true
+                    example: null
+                  completed_device_id:
+                    type: string
+                    nullable: true
+                    example: null
+                  application:
+                    type: string
+                    nullable: true
+                    example: null
+        '403':
+          description: Forbidden.
+        '400':
+          description: Bad Request
+                          
