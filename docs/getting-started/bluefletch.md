@@ -13,6 +13,12 @@ To configure SYNQ to use BlueFletch for your store location you need to:
 3. Configure SYNQ to be aware of your BlueFletch channels.
 4. Configure SYNQ apps and devices to send their notifications to your BlueFletch channels.
 
+## Supported Modules
+BlueFletch messaging is supported for the following SYNQ modules:
+- Call for Help
+- Curbside
+- OrderUp
+
 ## Requirements
 
 ### BlueFletch Apps 
