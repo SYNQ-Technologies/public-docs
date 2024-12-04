@@ -27,10 +27,10 @@ The Call Button Hub requires the following:
 ## Getting Started
 1. Ensure you have Microsoft Teams (or an alternative messaging platform) configured. See [Microsoft Teams](../getting-started/microsoft-teams.md) for complete details.
 2. Verify that your buttons are registered in Call For Help 
-   1. Sign into MyStore https://dcio.synqtech.com
-   2. Select "Call for Help"
-   3. Select "Settings"
-   4. Scroll down to "Call for Help Buttons"
+   1. Sign into __MyStore__
+   2. Select __Call for Help__
+   3. Select __Settings__
+   4. Scroll down to __Call for Help Buttons__
    5. You should see all your buttons listed
       :::note
       When you purchase call buttons from SYNQ we typically import them into your store location before they are shipped to you. However, they will have default values for most configuration options.
@@ -62,11 +62,11 @@ The Call Button Hub requires the following:
 
 ## Add a new Call Button
 To add a new call button to your Call for Help system:
-1. Sign into MyStore https://dcio.synqtech.com
-2. Select "Call for Help"
-3. Select "Settings"
-4. Scroll down to "Call for Help Buttons"
-5. Click "Create a new Call for Help Button"
+1. Sign into __MyStore__
+2. Select __Call for Help__
+3. Select __Settings__
+4. Scroll down to __Call for Help Buttons__
+5. Click __Create a new Call for Help Button__
 6. Enter the following information:
    - Name
    - In Store Location Label
@@ -76,21 +76,21 @@ To add a new call button to your Call for Help system:
      :::
    - Prompt Notification Channel
    - Escalations Channel
-7. Click "Submit Options"
+7. Click __Submit Options__
 
 
 ## Modify Call Button Properties
 To change properties of a call button, such as the Name, Location, or Notification Channel:
-1. Sign into MyStore https://dcio.synqtech.com
-2. Select "Call for Help"
-3. Select "Settings"
-4. Scroll down to "Call for Help Buttons"
-5. Click "Edit" on the desired call button
+1. Sign into __MyStore__
+2. Select __Call for Help__
+3. Select __Settings__
+4. Scroll down to __Call for Help Buttons__
+5. Click __Edit__ on the desired call button
 6. Update the button settings as desired
-7. Click "Submit Options"
+7. Click __Submit Options__
 
 ## Battery Level
-Every time a call button communicates with the SYNQ cloud it reports its battery level. The last reported battery level of each button is shown in the "Call for Help Buttons" section.
+Every time a call button communicates with the SYNQ cloud it reports its battery level. The last reported battery level of each button is shown in the __Call for Help Buttons__ section.
 
 ## Mounting Buttons
 SYNQ Call For Help Buttons are versatile and intended to support a number of mounting situations.
@@ -205,9 +205,9 @@ The configured notification channel of the button my be incorrect.
 ### Message arrives in Teams, but does not notify
 Notifications may be disabled in the channel in Teams.
 1. Click the `...` menu on the channel in Teams
-2. Select "Channel notifications"
+2. Select __Channel notifications__
 3. Modify the notification setting
-4. Click "Save"
+4. Click __Save__
 
 ## Advanced Button Press Actions
 - Long press releasing after the first flash of the LEDs. Cancels/completes the current request.

@@ -40,11 +40,11 @@ To approve user access to a store location requested by a Microsoft account:
 
 ## Password Reset
 So long as a user has registered with a valid email address they are able to reset their own password. 
-1. Navigate to https://dcio.synqtech.com
-2. Click "Login"
-3. Click "Forgot password"
+1. Sign into __MyStore__
+2. Click __Login__
+3. Click __Forgot password__
 4. Enter your email address (which is your username)
-5. Click "Send Password Reset Link"
+5. Click __Send Password Reset Link__
 6. Check your inbox for an email from `noreply@synqtech.com` that includes a password reset link.
    :::tip
    Check your junk email folder if the email does not arrive in your inbox.

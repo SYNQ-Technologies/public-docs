@@ -28,14 +28,14 @@ Order Up enables customers to digitally request high-cube and high-value items f
 The associate experience of an OrderUp order can vary significantly depending on how your store is configured and the various responsibilities of your different associates. The following is a simplified example.
 1. The associate receives an OrderUp notification/alert on their device in Microsoft Teams.
 2. The associate can see information about the OrderUp order.
-3. The associate clicks the "Manage This Order" button and is taken to the OrderUp/Picking web interface for that order.
-4. The associate clicks the "Picking" button to indicate that they will handle this request.
+3. The associate clicks the __Manage This Order__ button and is taken to the OrderUp/Picking web interface for that order.
+4. The associate clicks the __Picking__ button to indicate that they will handle this request.
    - All other store associates on the same team are able to see that picking has started for this order.
 5. The associate picks the required items for the order
-6. The associate clicks the "1x for Customer" button and selects an appropriate drop zone for the order. For example: "Dropped @ Customer Service".
-7. The associate clicks the "Mark Paid" button.
+6. The associate clicks the __1x for Customer__ button and selects an appropriate drop zone for the order. For example: __Dropped @ Customer Service__.
+7. The associate clicks the __Mark Paid__ button.
    - This could also be done by a separate associate at the checkout or pickup location.
-8. The associate clicks the "Mark Picked Up" button.
+8. The associate clicks the __Mark Picked Up__ button.
    - This could also be done by a separate associate at the pickup location.
 
 ## Manager/Supervisor Experience

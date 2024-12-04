@@ -25,7 +25,7 @@ You need a Twilio account and phone number to use Text for Help. See [Phone Numb
 2. The associate can see information about the Text for Help request
    - What keyword the customer used.
    - The customer's question.
-3. The associate clicks the "Claim" button to indicate that they will handle this request.
+3. The associate clicks the __Claim__ button to indicate that they will handle this request.
    - All other store associates on the same team are able to see that this request has been claimed.
 4. The associate may need a moment to wrap up their current task.
 5. When ready, the associate replies to the customer in Microsoft Teams.

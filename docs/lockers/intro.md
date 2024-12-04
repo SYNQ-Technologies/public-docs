@@ -47,22 +47,22 @@ Though we are prototyping four-season outdoor locker designs, there are substant
 - Network must allow access to Google Public Network Time Protocol (NTP) server `time.google.com` on port `123`
 
 ## Add a Locker
-1. Sign into https://dcio.synqtech.com
-2. Select "Locker"
-3. Click "Launch"
-4. Click "Add a new locker"
+1. Sign into __MyStore__
+2. Select __Locker__
+3. Click __Launch__
+4. Click __Add a new locker__
 5. Enter the following information:
    - Name
    - Cabinet amount
    - Location/Organization
    - Timer
-6. Click "Submit"
+6. Click __Submit__
 
 ## Enable a Locker as an OrderUp Dropzone
-1. Sign into https://dcio.synqtech.com
-2. Select "Picking Utility"
-3. Click "Settings"
-4. Enable the "Enable Locker Dropoff" setting
+1. Sign into __MyStore__
+2. Select __Picking Utility__
+3. Click __Settings__
+4. Enable the __Enable Locker Dropoff__ setting
 
 ## Light Sequences
 - Multi-color: Ready.

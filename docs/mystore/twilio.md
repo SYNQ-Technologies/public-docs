@@ -18,9 +18,9 @@ The Curbside and Text for Help applications require a Twilio phone number that i
 3. Select the __Configure__ tab
 4. Scroll down to __Messaging Configuration__
 5. Configure:
-   - **A call comes in**: `Webhook`
-   - **URL**: `https://text-for-help.synqtech.com:5000/api/sms`
-   - **HTTP**: `HTTP Post`
+   - __A call comes in__: `Webhook`
+   - __URL__: `https://text-for-help.synqtech.com:5000/api/sms`
+   - __HTTP__: `HTTP Post`
 
 :::tip
 Alternatively you can define these settings in a reusable __Messaging Service__ and assign it to the number.

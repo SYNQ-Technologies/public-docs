@@ -1,9 +1,11 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
 type FeatureItem = {
   title: string;
+  href?: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: JSX.Element;
 };
@@ -11,6 +13,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'OrderUp',
+    href: 'docs/category/orderup',
     Svg: require('@site/static/img/order-up.svg').default,
     description: (
       <>
@@ -21,6 +24,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Digital Call Buttons',
+    href: 'docs/call-for-help/digital-call-buttons',
     Svg: require('@site/static/img/call-buttons.svg').default,
     description: (
       <>
@@ -31,16 +35,18 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'SYNQ IOT Pulse',
+    href: 'docs/call-for-help/pulse-iot-devices',
     Svg: require('@site/static/img/iot.svg').default,
     description: (
       <>
         {/* Turn physical inputs into digital notifications */}
-        Discover the first-ever commerically available IoT device for Microsoft Teams. SYNQ Pulse IoT leverages real-time notifications and automatic escalations to streamline the frontline worker experience.
+        Discover the first-ever commercially available IoT device for Microsoft Teams. SYNQ Pulse IoT leverages real-time notifications and automatic escalations to streamline the frontline worker experience.
       </>
     ),
   },
   {
     title: 'Curbside Pickup',
+    href: 'docs/category/curbside',
     Svg: require('@site/static/img/curbside.svg').default,
     description: (
       <>
@@ -51,6 +57,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Text For Help',
+    href: 'docs/category/text-for-help',
     Svg: require('@site/static/img/text-for-help.svg').default,
     description: (
       <>
@@ -61,6 +68,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Touchless Lockers',
+    href: 'docs/category/lockers',
     Svg: require('@site/static/img/lockers.svg').default,
     description: (
       <>
@@ -71,14 +79,14 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ title, href, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" color='rgb(89, 89, 89)' />
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+        <Heading as="h3">{href ? <Link  href={href}>{title}</Link> : title}</Heading>
         <p>{description}</p>
       </div>
     </div>

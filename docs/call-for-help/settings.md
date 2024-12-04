@@ -8,24 +8,24 @@ sidebar_position: 10
 If a call for help request goes unanswered for an extended period of time it is unlikely that the customer is still waiting. These requests represent a failure to help a customer. They should be archived, because they contribute to important metrics, but we want to remove them from the list of active notifications so they don't create a bunch of noise for associates. How long a call for help request can remain active is up to you.
 
 To set the request expiry timeout:
-1. Sign into MyStore https://dcio.synqtech.com
-2. Select "Call for Help"
-3. Select "Settings"
-4. Scroll down to "Request Expiry"
+1. Sign into __MyStore__
+2. Select __Call for Help__
+3. Select __Settings__
+4. Scroll down to __Request Expiry__
 5. Select the number of minutes to allow a call for help request to remain active.
-6. Click "Save".
+6. Click __Save__.
 
 ## Escalations
 Escalations allow managers and supervisors to receive notifications when call for help requests are not claimed in a timely manner by associates.
 
 To enable escalations:
-1. Sign into MyStore https://dcio.synqtech.com
-2. Select "Call for Help"
-3. Select "Settings"
-4. Scroll down to "Escalation Notifications"
-5. Check the "Send escalation notifications" checkbox.
+1. Sign into __MyStore__
+2. Select __Call for Help__
+3. Select __Settings__
+4. Scroll down to __Escalation Notifications__
+5. Check the __Send escalation notifications__ checkbox.
 6. Select the number of minutes to allow a call for help request to go unclaimed before triggering an escalation.
-7. Click "Save".
+7. Click __Save__.
 
 ## Channels
 Channels determine where call for help requests are routed. 
@@ -54,11 +54,11 @@ The following prompts may be quite specific and only apply to one store location
 
 ## Create Prompts
 To create a new prompt:
-1. Sign into MyStore https://dcio.synqtech.com
-2. Select "Call for Help"
-3. Select "Settings"
-4. Scroll down to "Call for Help Prompts"
-5. Click "Create a new prompt"
-6. Check the "Save Option to Organization" checkbox if you want to make this prompt available to all stores in your organization, otherwise it will only be available to the current store location.
+1. Sign into __MyStore__
+2. Select __Call for Help__
+3. Select __Settings__
+4. Scroll down to __Call for Help Prompts__
+5. Click __Create a new prompt__
+6. Check the __Save Option to Organization__ checkbox if you want to make this prompt available to all stores in your organization, otherwise it will only be available to the current store location.
 7. Provide the text that will appear for both the customer and staff message.
-8. Click "Create Call For Help Display Option"
+8. Click __Create Call For Help Display Option__

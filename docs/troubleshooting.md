@@ -8,11 +8,11 @@ This section documents some common issues and solutions.
 
 ## Can't see Teams channels in MyStore configuration
 The SYNQ Frontline Hero app registration is not complete. 
-1. Go to the default "General" channel of your team
-2. Click "Start a post"
+1. Go to the default __General__ channel of your team
+2. Click __Start a post__
 3. In the message input start typing `@⁠SYNQ Frontline Hero` and select the bot from the list of suggestions
 4. Select `update` from the list of suggested actions
-5. Click "Post"
+5. Click __Post__
 
 ## Sign in with a Microsoft account says "you don't have permission to complete this action"
 Your organization's Microsoft Entra ID policies prevent you from granting SYNQ the necessary permissions to sign you in. 

@@ -7,27 +7,27 @@ SYNQ digital call buttons are easy to deploy QR codes that link customers with s
 
 ## Create a Digital Call Button display
 To create a new digital call button QR Code:
-1. Sign into MyStore https://dcio.synqtech.com
-2. Select "Call for Help"
-3. Select "Settings"
-4. Scroll down to "Call for Help Displays"
-5. Click "Create a new Call for Help display"
+1. Sign into __MyStore__
+2. Select __Call for Help__
+3. Select __Settings__
+4. Scroll down to __Call for Help Displays__
+5. Click __Create a new Call for Help display__
 6. Enter the following information:
    - Display Name
    - Notification Channel
    - Escalations Channel
-7. Select the desired "Display Options" to present to the customer. You can include between one and four options.
-8. Check the "Enable QR Code" checkbox
-9. Click "Submit Options"
+7. Select the desired __Display Options__ to present to the customer. You can include between one and four options.
+8. Check the __Enable QR Code__ checkbox
+9. Click __Submit Options__
 
 ## Test a QR Code Display
 To test a QR Code display:
-1. Sign into MyStore https://dcio.synqtech.com
-2. Select "Call for Help"
-3. Select "Settings"
-4. Scroll down to "Call for Help Buttons"
-5. Click "Download Display QRCode"
-6. To test the display from your PC, click the "Try it Out" button.
+1. Sign into __MyStore__
+2. Select __Call for Help__
+3. Select __Settings__
+4. Scroll down to __Call for Help Buttons__
+5. Click __Download Display QRCode__
+6. To test the display from your PC, click the __Try it Out__ button.
 7. A popup window open (emulating the customer's experience on their smart phone)
 8. Select an option
 9. Validate that the call for help request appears as a notification in the expected Teams channel
@@ -36,10 +36,10 @@ To test a QR Code display:
 Digital call buttons provide a web interface for customers so it is important to provide your store's branding to them so that they feel like a natural part of your store.
 
 To update the branding of your digital call buttons:
-1. Sign into MyStore https://dcio.synqtech.com
-2. Select "Call for Help"
-3. Select "Settings"
-4. Scroll down to "Custom Style"
+1. Sign into __MyStore__
+2. Select __Call for Help__
+3. Select __Settings__
+4. Scroll down to __Custom Style__
 
 To set the logo:
 1. Provide the URL to a SVG or PNG image of your brand logo
@@ -47,11 +47,11 @@ To set the logo:
      - Maximum height: 100 pixels
      - Maximum width: 150 pixels
    - We recommend using an image with a transparent background
-2. Click "Apply"
+2. Click __Apply__
 
 To set brand fonts and colors:
 1. Provide valid CSS definitions in the "Custom CSS" editor.
-2. Click "Update Custom CSS"
+2. Click __Update Custom CSS__
 
 For example:
 ```css

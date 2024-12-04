@@ -31,23 +31,23 @@ Microsoft provides detailed instructions on how to create teams and channels [he
 
 ### Create a Team
 1. Open Microsoft Teams
-2. Select the "Teams" tab
-3. Click the "+" icon and select "Create team".
+2. Select the __Teams__ tab
+3. Click the `+` icon and select __Create team__.
 4. Provide the following:
    - Team name
    - Description
    - Team type: Private, Public, or Org-wide
    - Name the first channel: General
-5. Click "Create"
+5. Click __Create__
 
 ### Add Channels to the team
-1. On the "Teams" tab
-2. Click the `...` menu of the desired team and select "Add channel"
+1. On the __Teams__ tab
+2. Click the `...` menu of the desired team and select __Add channel__
 3. Provide the following:
    - Team name
    - Description
    - Channel type: Standard, Shared, or Private
-4. Click "Create"
+4. Click __Create__
 5. Repeat for all the channels you want to add
 :::note
 If you are just getting started you may not know all the channels you plan to create. Channels can always be added and reconfigured later.
@@ -57,11 +57,11 @@ We recommend that you create a "Testing" channel. This can serve as a staging ar
 :::
 
 ### Add Users to the team
-1. On the "Teams" tab
-2. Click the `...` menu of the desired team and select "Add member"
+1. On the __Teams__ tab
+2. Click the `...` menu of the desired team and select __Add member__
 3. Enter the name or email of the desired user or security group to add
    - You can add multiple users at once
-4. Click "Add"
+4. Click __Add__
 :::note
 If you are just getting started you may not yet have a complete list of all users that should be added. This fine because team members can easily be added/removed later.
 We recommend you get started by only adding a few users that will be involved with the initial testing of the system.
@@ -69,16 +69,16 @@ We recommend you get started by only adding a few users that will be involved wi
 
 ## Add the Frontline Hero App to Microsoft Teams
 Once your Team is created, channels are added, and relevant users are added, you’ll need to add the SYNQ Frontline Hero to the Team.
-1. On the "Teams" tab
-2. Click the `...` menu of the desired team and select "Manage team"
-3. Select the "Apps" tab at the top of the screen
-4. Click "+ Get more apps"
+1. On the __Teams__ tab
+2. Click the `...` menu of the desired team and select __Manage team__
+3. Select the __Apps__ tab at the top of the screen
+4. Click __+ Get more apps__
 5. Search for "SYNQ Frontline Hero"
     :::note
     Canadian Tire stores should contact "Canadian Tire Corporate" to add the "MyStore by SYNQ" app instead for their location.
     ::: 
-6. Click "Add" on the SYNQ Frontline Hero app
+6. Click __Add__ on the SYNQ Frontline Hero app
 7. Follow the instructions to add Frontline Hero to your team.
 8. Once you’ve added the SYNQ Frontline Hero to your team, it will generate a post in the default/General channel of the team prompting you to complete the registration. 
-9.  Click the “Complete Registration” button. This will take you to the SYNQ Frontline Hero admin portal.
+9.  Click the __Complete Registration__ button. This will take you to the SYNQ Frontline Hero admin portal.
 10. Sign in here with your Microsoft Account and it will link your Microsoft Teams instance to SYNQ Frontline Hero’s administrative portal.

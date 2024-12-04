@@ -27,14 +27,15 @@ You can create your own custom keywords and assign them to an appropriate channe
 3. Select __Settings__
 4. Click __Add Custom Keyword__
 5. Provide the desired keyword
-   :::tip
-   Good keywords are short and easy for your customer to type. For example, prefer `PAINT` over `PAINT DEPARTMENT`.
-   :::
    :::note
    Keywords are case-insensitive.
    :::
 6. Select the desired Teams channel that will receive the notifications
 7. Click __Save__
+
+:::tip
+Good keywords are short and easy for your customer to type on their mobile device. For example, prefer `PAINT` over `PAINT DEPARTMENT`.
+:::
 
 ## Download Signage
 You'll want to deploy some signage throughout your store to inform customers of the Text for Help system.
@@ -47,8 +48,11 @@ To download pregenerated signage for your Text for Help keywords:
 5. Click the __↓ Download Signage__ button
 6. Select the desired color
 7. Check the __Use SMS QR Code__ checkbox if you want the signage to include a QR code that will populate a text message on the customer's smart phone
-8. Click __Download__
-9. Deploy the signage to appropriate locations within your store
+    :::tip
+    SMS QR codes will pre-populate the customer's text messaging app with the correct phone number and keyword message. This helps avoid typing mistakes.
+    :::
+1. Click __Download__
+2. Deploy the signage to appropriate locations within your store
 
 ## Create your own Signage
 You can also create your own signage manually. Typically the the signage should say something like:

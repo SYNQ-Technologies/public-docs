@@ -36,12 +36,12 @@ The associate experience is the same for both physical and digital call buttons.
    - What button or QR code triggered the request.
    - Where the customer is located.
    - What type of assistance the customer needs.
-3. The associate clicks the "Claim" button to indicate that they will handle this request.
+3. The associate clicks the __Claim__ button to indicate that they will handle this request.
    - All other store associates on the same team are able to see that this request has been claimed.
 4. The associate may need a moment to wrap up their current task.
-5. When ready, the associate clicks the "On the way" button to indicate that they are now en-route to the customer.
+5. When ready, the associate clicks the __On the way__ button to indicate that they are now en-route to the customer.
 6. The associate arrives to assist the customer.
-7. After assisting the customer the associate selects from a list of options indicating how the call for help request was resolved and clicks the "Complete" button.
+7. After assisting the customer the associate selects from a list of options indicating how the call for help request was resolved and clicks the __Complete__ button.
 
 ## Manager/Supervisor Experience
 Ideally, managers and supervisors don't need to get involved in simple customer requests for assistance. But sometimes it can be busy or staff just aren't responding to requests in a timely manner. It is time to escalate.

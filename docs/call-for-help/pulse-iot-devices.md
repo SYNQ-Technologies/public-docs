@@ -16,11 +16,11 @@ You can use SYNQ Pulse IoT to extend the Call for Help system to alert staff whe
 
 ## Add a Pulse IoT Device
 Pulse IoT Devices are added to the Call for Help system exactly the same way as call buttons.
-1. Sign into MyStore https://dcio.synqtech.com
-2. Select "Call for Help"
-3. Select "Settings"
-4. Scroll down to "Call for Help Buttons"
-5. Click "Create a new Call for Help Button"
+1. Sign into __MyStore__
+2. Select __Call for Help__
+3. Select __Settings__
+4. Scroll down to __Call for Help Buttons__
+5. Click __Create a new Call for Help Button__
 6. Enter the following information:
    - Name
    - In Store Location Label
@@ -30,4 +30,4 @@ Pulse IoT Devices are added to the Call for Help system exactly the same way as 
      :::
    - Prompt Notification Channel
    - Escalations Channel
-7. Click "Submit Options"
+7. Click __Submit Options__
