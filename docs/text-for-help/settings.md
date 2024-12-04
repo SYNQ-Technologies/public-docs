@@ -36,6 +36,27 @@ You can create your own custom keywords and assign them to an appropriate channe
 6. Select the desired Teams channel that will receive the notifications
 7. Click __Save__
 
+## Download Signage
+You'll want to deploy some signage throughout your store to inform customers of the Text for Help system.
+
+To download pregenerated signage for your Text for Help keywords:
+1. Sign into __MyStore__ as a Location Administrator
+2. Select __Text for Help__
+3. Select __Settings__
+4. Scroll down to the desired keyword
+5. Click the __↓ Download Signage__ button
+6. Select the desired color
+7. Check the __Use SMS QR Code__ checkbox if you want the signage to include a QR code that will populate a text message on the customer's smart phone
+8. Click __Download__
+9. Deploy the signage to appropriate locations within your store
+
+## Create your own Signage
+You can also create your own signage manually. Typically the the signage should say something like:
+> Need assistance? Text "HELP" to (234) 567-8900
+
+To include a SMS QR code in your signage, use a QR code generator with your phone number and keyword.
+SMS QR codes take the form `SMSTO:[PHONE_NUMBER]:[MESSAGE]` For example, `SMSTO:+12345678900:HELP`.
+
 ## Blocked Phone Numbers
 In the event that you receive repeated unwanted texts to your Text for Help number you are able to add offending numbers to a block list. Any incoming messages from blocked phone numbers will not be processed by the system.
 
