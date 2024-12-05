@@ -2,6 +2,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import type * as Redocusaurus from 'redocusaurus';
+import lunrSearch from 'docusaurus-lunr-search'
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -33,6 +34,17 @@ const config: Config = {
         locales: ['en'],
     },
 
+    plugins: [
+        [
+            // Note: search doesn't work in dev mode. 
+            // You need to run `npm run build` and `npm run serve`.
+            lunrSearch,
+            {
+                languages: ['en'],
+            }
+        ],
+    ],
+
     presets: [
         [
             'classic',
@@ -49,7 +61,7 @@ const config: Config = {
         [
             'redocusaurus',
             {
-                        // Note: the download button 404s in development, but works on a full build
+                // Note: the download button 404s in development, but works on a full build
                 specs: [
                     {
                         id: 'call-for-help-api',
@@ -72,9 +84,9 @@ const config: Config = {
     ],
     themeConfig: {
         docs: {
-          sidebar: {
-            hideable: true,
-          },
+            sidebar: {
+                hideable: true,
+            },
         },
         navbar: {
             logo: {
