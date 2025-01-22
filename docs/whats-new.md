@@ -10,6 +10,21 @@ sidebar_position: 19
 - Show the battery level for each call button in MyStore.
 - Customer facing user interface updates for digital call buttons.
 
+### 2025-01-22
+
+#### Features
+- Configuration of staff display name format.
+  - On the Call for Help settings page you can now configure how staff names will appear in adaptive cards.
+  ![Staff Display Name Format](/img/whats-new/2025-01-22-cfh-display-name-format.png)
+
+#### Fixes
+- SSD-318: Location Administrators are unable to see Call for Help dashboard for current store.
+
+### 2025-01-09
+
+#### Fixes
+- SSD-363: BlueFletch notifications should use `useHeadsUp: true`.
+
 ### 2024-12-05
 
 #### Features
