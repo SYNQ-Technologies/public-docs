@@ -7,8 +7,13 @@ sidebar_position: 19
 ### Coming Soon
 - Configuration of Call for Help outcomes. 
    - Each store location will be able to configure their own list of Call for Help outcomes to present to the associate. If you don't configure any outcomes, the associate will still have the option to mark a call for help as __Complete__, but they won't be prompted to select an outcome.
-- Show the battery level for each call button in MyStore.
 - Customer facing user interface updates for digital call buttons.
+
+### 2025-01-23
+
+#### Features
+- Show the battery level for each call button in MyStore.
+  ![Call Button Battery Level](/img/whats-new/2025-01-23-battery-level.png)
 
 ### 2025-01-22
 
