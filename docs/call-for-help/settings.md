@@ -8,10 +8,10 @@ sidebar_position: 10
 If a call for help request goes unanswered for an extended period of time it is unlikely that the customer is still waiting. These requests represent a failure to help a customer. They should be archived, because they contribute to important metrics, but we want to remove them from the list of active notifications so they don't create a bunch of noise for associates. How long a call for help request can remain active is up to you.
 
 To set the request expiry timeout:
-1. Sign into __MyStore__
-2. Select __Call for Help__
-3. Select __Settings__
-4. Scroll down to __Request Expiry__
+1. Sign into __MyStore__.
+2. Select __Call for Help__.
+3. Select __Settings__.
+4. Scroll down to __Request Expiry__.
 5. Select the number of minutes to allow a call for help request to remain active.
 6. Click __Save__.
 
@@ -19,10 +19,10 @@ To set the request expiry timeout:
 Escalations allow managers and supervisors to receive notifications when call for help requests are not claimed in a timely manner by associates.
 
 To enable escalations:
-1. Sign into __MyStore__
-2. Select __Call for Help__
-3. Select __Settings__
-4. Scroll down to __Escalation Notifications__
+1. Sign into __MyStore__.
+2. Select __Call for Help__.
+3. Select __Settings__.
+4. Scroll down to __Escalation Notifications__.
 5. Check the __Send escalation notifications__ checkbox.
 6. Select the number of minutes to allow a call for help request to go unclaimed before triggering an escalation.
 7. Click __Save__.
@@ -35,7 +35,6 @@ Defaults:
 - Default Management Channel: The default channel for all call for help escalations.
 
 Each call button or display you create can override these default channels.
-
 ## Prompts
 Prompts are simple sentences that provide context to a call for help request. These prompts assist both the customer and the associate.
 
@@ -52,13 +51,38 @@ For example, the following prompts are general and can apply to many stores.
 The following prompts may be quite specific and only apply to one store location.
 - Need assistance with live bait.
 
-## Create Prompts
+### Create Prompts
 To create a new prompt:
-1. Sign into __MyStore__
-2. Select __Call for Help__
-3. Select __Settings__
-4. Scroll down to __Call for Help Prompts__
-5. Click __Create a new prompt__
+1. Sign into __MyStore__.
+2. Select __Call for Help__.
+3. Select __Settings__.
+4. Scroll down to __Call for Help Prompts__.
+5. Click __Create a new prompt__.
 6. Check the __Save Option to Organization__ checkbox if you want to make this prompt available to all stores in your organization, otherwise it will only be available to the current store location.
 7. Provide the text that will appear for both the customer and staff message.
-8. Click __Create Call For Help Display Option__
+8. Click __Create Call For Help Display Option__.
+
+## Displays
+See [Digital Call Buttons](./digital-call-buttons.md).
+
+## Outcomes
+Outcomes are simple options presented to store associates to have them indicate how a call for help request was completed.
+
+After the associate indicates they are on the way to help a customer the interface updates to show radio buttons listing the configured outcome options.
+
+If no outcomes are configured, the associate will still have the option to mark a call for help as __Complete__, but they won't be prompted to select an outcome.
+
+### Create Outcomes
+To create a new outcome:
+1. Sign into __MyStore__.
+2. Select __Call for Help__.
+3. Select __Settings__.
+4. Scroll down to __Call for Help Outcomes__.
+5. Click __Create a new Outcome__.
+7. Provide the text that will appear for the associate.
+8. Click __Submit Options__.
+9. Repeat as needed to create the desired list of outcomes.
+
+:::tip
+You can click and drag to update the presentation order of the outcomes.
+:::

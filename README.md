@@ -1,6 +1,8 @@
-# Website
+# SYNQ Public Documentation Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This project provides SYNQ's public documentation hosted on https://docs.synqtech.com.
+
+This website is built using [Docusaurus](https://docusaurus.io/).
 
 ### Installation
 

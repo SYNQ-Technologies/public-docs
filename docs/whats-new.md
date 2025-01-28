@@ -5,9 +5,20 @@ sidebar_position: 19
 # What's New
 
 ### Coming Soon
-- Configuration of Call for Help outcomes. 
-   - Each store location will be able to configure their own list of Call for Help outcomes to present to the associate. If you don't configure any outcomes, the associate will still have the option to mark a call for help as __Complete__, but they won't be prompted to select an outcome.
 - Customer facing user interface updates for digital call buttons.
+
+### 2025-01-28
+
+#### Features
+- Configuration of Call for Help outcomes. 
+   - Each store location can now configure their own list of Call for Help outcomes to present to the associate to allow them to indicate how each help request was handled. 
+   - These outcomes are only visible to staff, so the customer experience remains unchanged.
+   - If you don't configure any outcomes, the associate will still have the option to mark a call for help as __Complete__, but they won't be prompted to select an outcome.
+   - __Configuration in Mystore__ \
+  ![Call for Help Outcomes MyStore Configuration](/img/whats-new/2025-01-28-cfh-outcomes-mystore.png)
+   - __Associate view in Microsoft Teams__ \
+  ![Call for Help Outcomes Staff View](/img/whats-new/2025-01-28-cfh-outcomes-teams.png)
+
 
 ### 2025-01-23
 
