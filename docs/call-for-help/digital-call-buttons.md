@@ -16,7 +16,9 @@ To create a new digital call button QR Code:
    - Display Name
    - Notification Channel
    - Escalations Channel
-7. Select the desired __Display Options__ to present to the customer. You can include between one and four options.
+7. Select the desired __Display Options__ to present to the customer. 
+   - You can include between one and four options.
+   - The list of available options come from your configured list of Call for Help Prompts. See [Prompts](./settings.md#prompts) for more information.
 8. Check the __Enable QR Code__ checkbox
 9. Click __Submit Options__
 
