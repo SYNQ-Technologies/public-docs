@@ -7,6 +7,10 @@ SYNQ's Call Buttons are just one specific application of generic and versatile u
 
 You can use SYNQ Pulse IoT to extend the Call for Help system to alert staff when a sensor is triggered.
 
+:::note
+Just like Call Buttons, SYNQ Pulse IoT devices must be deployed within range of a Call Button Hub.
+::: 
+
 ## Example Applications
 - Weight sensors (shopping baskets low)
 - Infrared broken-beam sensors

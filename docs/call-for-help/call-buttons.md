@@ -10,6 +10,14 @@ A typical store deployment includes the following hardware components:
 - One Call Button Hub
 - Multiple Call Buttons
 
+### Call Button
+![Call Button](/img/call-for-help/call-button-1.jpg)
+![Call Button](/img/call-for-help/call-button-2.jpg)
+
+### Call Button Hub
+![Call Button Hub](/img/call-for-help/call-button-hub-1.jpg)
+
+### Hardware Networking
 The Hub communicates with SYNQ's cloud services over the wired Ethernet connection.
 
 The Call Buttons communicate with the Hub over Wi-Fi.
