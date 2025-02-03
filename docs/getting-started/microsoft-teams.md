@@ -32,12 +32,14 @@ Microsoft provides detailed instructions on how to create teams and channels [he
 ### Create a Team
 1. Open Microsoft Teams
 2. Select the __Teams__ tab
-3. Click the `+` icon and select __Create team__.
+3. Click the `+` icon and select __Create team__. \
+  ![Create team](/img/teams/create-team-menu.png)
 4. Provide the following:
    - Team name
    - Description
    - Team type: Private, Public, or Org-wide
-   - Name the first channel: General
+   - Name the first channel: General \
+   ![Create team](/img/teams/create-team.png)
 5. Click __Create__
 
 ### Add Channels to the team
@@ -68,7 +70,7 @@ We recommend you get started by only adding a few users that will be involved wi
 :::
 
 ## Add the Frontline Hero App to Microsoft Teams
-Once your Team is created, channels are added, and relevant users are added, you’ll need to add the SYNQ Frontline Hero to the Team.
+Once your Team is created, channels are added, and relevant users are added, you'll need to add the SYNQ Frontline Hero to the Team.
 1. On the __Teams__ tab
 2. Click the `...` menu of the desired team and select __Manage team__
 3. Select the __Apps__ tab at the top of the screen
@@ -77,8 +79,32 @@ Once your Team is created, channels are added, and relevant users are added, you
     :::note
     Canadian Tire stores should contact "Canadian Tire Corporate" to add the "MyStore by SYNQ" app instead for their location.
     ::: 
-6. Click __Add__ on the SYNQ Frontline Hero app
-7. Follow the instructions to add Frontline Hero to your team.
-8. Once you’ve added the SYNQ Frontline Hero to your team, it will generate a post in the default/General channel of the team prompting you to complete the registration. 
-9.  Click the __Complete Registration__ button. This will take you to the SYNQ Frontline Hero admin portal.
-10. Sign in here with your Microsoft Account and it will link your Microsoft Teams instance to SYNQ Frontline Hero’s administrative portal.
+6. Click __Add__ on the SYNQ Frontline Hero app \
+   ![App added](/img/teams/app-added.png)
+7. Click __Save__.
+8. A welcome message will appear in a post in the default/General channel of the team prompting you to complete the registration.
+9. Click the __Complete Registration__ button. This will take you to the SYNQ Frontline Hero admin portal to complete the registration. \
+   ![MyStore registration](/img/teams/mystore-complete-registration-1.png)
+10. Sign in with your Microsoft Account, if prompted.
+11. Click __Save__.
+12. The SYNQ Frontline Hero app has now been registered with the team. A final success message should appear. \
+   ![MyStore registration](/img/teams/mystore-complete-registration-2.png)
+
+## Enabling/Disabling Notifications
+Microsoft Teams notifications are set at the user level and are custom to an associate's Teams account. 
+Notifications can be configured, in Teams, from your workstation or mobile device.
+
+### Workstation
+1. In the Teams application, locate the channel that you wish to enable/disable notifications on.
+2. Click the three dots `...` to the right of the channel name to open a popup menu.
+3. Click __Channel Notifications__.
+4. Set the notification preferences as needed. The below image shows the needed settings to receive notifications.
+![Notification Preferences](/img/teams/notifications.png)
+
+### Mobile Device
+1. In the Teams application, press the channel on your mobile device.
+2. Select the Channel Name > at the top of your screen.
+3. Select __Notify me for new posts__ and select either option to enable/disable notifications for this channel.
+:::note
+Most mobile devices will have a Silent or Do Not Disturb mode that can override whatever settings you have enabled in Teams. If no notifications are coming through and Teams has been configured properly, you will need to make sure the device isn't in Silent or Do Not Disturb mode. You can typically access notification settings on the device by pulling down from the top of the screen.
+:::
