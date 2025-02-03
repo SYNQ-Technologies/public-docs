@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Requirements
 
-SYNQ’s platform is architected in a way to make it as lightweight as possible for
+SYNQ's platform is architected in a way to make it as lightweight as possible for
 deployment and scalability. Interactions with the platform leverage a customer device and
 an associated web app. On the associate side, notification routing is configurable and new
 alerts are presented/posted as adaptive cards to the relevant groups in-store to support the
@@ -38,10 +38,10 @@ we get into details on these approaches with tactical advice for deploying SYNQ 
 your existing device and identity process.
 
 ## Operating System
-SYNQ’s platform is supported on any operating system that supports Microsoft Teams.
+SYNQ's platform is supported on any operating system that supports Microsoft Teams.
 
 ## Web Browser
-SYNQ’s web interfaces are supported on the following web browsers.
+SYNQ's web interfaces are supported on the following web browsers.
 - Google Chrome
 - Microsoft Edge
 - Mozilla Firefox
