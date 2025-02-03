@@ -44,11 +44,13 @@ Microsoft provides detailed instructions on how to create teams and channels [he
 
 ### Add Channels to the team
 1. On the __Teams__ tab
-2. Click the `...` menu of the desired team and select __Add channel__
+2. Click the `...` menu of the desired team and select __Add channel__ \
+   ![Team Menu](/img/teams/team-menu.png)
 3. Provide the following:
    - Team name
    - Description
-   - Channel type: Standard, Shared, or Private
+   - Channel type: Standard, Shared, or Private \
+   ![Add Channel](/img/teams/create-channel.png)
 4. Click __Create__
 5. Repeat for all the channels you want to add
 :::note
@@ -60,14 +62,27 @@ We recommend that you create a "Testing" channel. This can serve as a staging ar
 
 ### Add Users to the team
 1. On the __Teams__ tab
-2. Click the `...` menu of the desired team and select __Add member__
+2. Click the `...` menu of the desired team and select __Add member__ \
+   ![Team Menu](/img/teams/team-menu.png)
 3. Enter the name or email of the desired user or security group to add
    - You can add multiple users at once
-4. Click __Add__
+4. Select the desired role (__Member__ or __Owner__) for each user
+5. Click __Add__
 :::note
 If you are just getting started you may not yet have a complete list of all users that should be added. This fine because team members can easily be added/removed later.
 We recommend you get started by only adding a few users that will be involved with the initial testing of the system.
 :::
+
+### Manage Team Members and Permissions
+1. On the __Teams__ tab
+2. Click the `...` menu of the desired team and select __Manage team__ \
+   ![Team Menu](/img/teams/team-menu.png)
+3. Select the __Members__ tab
+4. All Members of your team will be listed here, separated into two categories: __Owners__ and __Members and guests__
+   - Owners are able to manage the team, its channels and its users. 
+   - Members can view but not edit.
+5. To grant administrative privileges to a user, change their __Role__ to __Owner__ \
+   ![Manage Members](/img/teams/manage-members.png)
 
 ## Add the Frontline Hero App to Microsoft Teams
 Once your Team is created, channels are added, and relevant users are added, you'll need to add the SYNQ Frontline Hero to the Team.
