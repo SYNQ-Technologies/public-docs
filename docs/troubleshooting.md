@@ -29,3 +29,6 @@ See [Password Reset](./mystore/user-management.md#password-reset) for instructio
 :::note
 If you sign in using a Microsoft account, you will need to follow your organization's password recovery process instead.
 :::
+
+## I don't see the checkbox to enable a Call for Help Display as a QR code
+Your store may not be licensed for Digital Call Buttons. Contact SYNQ Support and we can assist you.
