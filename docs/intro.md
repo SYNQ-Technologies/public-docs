@@ -6,23 +6,23 @@ sidebar_position: 1
 
 ## Platform Overview
 
-SYNQ Technology makes a platform that’s centered on connecting customers in a physical
+SYNQ Technology makes a platform that's centered on connecting customers in a physical
 retail setting that need help, with the associate that can help them in the most efficient
 way. In-store technology for customers to request help today is largely analog, with tools
 that provide no assurance to the customer and no data to the retailers.
 
 Made up of 19 modules, SYNQ Frontline Hero enables texting for help, QR-based help
-requests via a customer’s smartphone, a digital last mile for curbside pick-up of online
+requests via a customer's smartphone, a digital last mile for curbside pick-up of online
 orders, and BISPUN (buy in-store pick up now) - a methodology SYNQ invented that allows
 customers to shop friction items (locked, oversize, out of stock) at a SKU level directly from
 their smartphone for fulfillment in the store.
 
-In the following sections, you’ll find details on SYNQ’s system architecture, system
+In the following sections, you'll find details on SYNQ's system architecture, system
 requirements, deployment steps, and guidance for architecting the Microsoft Teams
 channels.
 
 ## Solution Architecture
-SYNQ’s system architecture is designed to deliver a seamless and efficient experience
+SYNQ's system architecture is designed to deliver a seamless and efficient experience
 directly through Microsoft Teams. As shown in the architecture diagram below, SYNQ's
 products are integrated within a robust cloud environment, hosted on Microsoft Azure,
 ensuring reliability, scalability, and security.

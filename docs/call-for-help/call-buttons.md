@@ -98,6 +98,8 @@ To change properties of a call button, such as the Name, Location, or Notificati
 7. Click __Submit Options__
 
 ## Battery Level
+SYNQ Call For Help Buttons are powered by 4 x AA batteries.
+
 Every time a call button communicates with the SYNQ cloud it reports its battery level. The last reported battery level of each button is shown in the __Call for Help Buttons__ section.
 
 ## Mounting Buttons

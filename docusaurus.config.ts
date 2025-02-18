@@ -137,7 +137,7 @@ const config: Config = {
                         },
                         {
                             label: 'Privacy Policy',
-                            href: 'https://www.synqtech.com/privacy-policy',
+                            to: 'https://www.synqtech.com/privacy-policy',
                         },
                     ],
                 },
