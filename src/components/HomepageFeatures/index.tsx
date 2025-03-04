@@ -77,6 +77,28 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
+  {
+    title: 'Air Traffic Control',
+    href: 'docs/radio/radio-atc',
+    Svg: require('@site/static/img/air-traffic-control.svg').default,
+    description: (
+      <>
+        {/* Modernize in-store radio comms */}
+        Enable bi-directional communication between the customer and associate - leveraging existing radio technology. Customer help requests (from a QR or IoT button) are converted in real-time to voice notifications, and associates can claim those requests via their radio, updating the customer of the status of their request.
+      </>
+    ),
+  },
+  {
+    title: 'Radio Agent',
+    href: 'docs/radio/radio-agent',
+    Svg: require('@site/static/img/radio-agent.svg').default,
+    description: (
+      <>
+        {/* Empower associates with agentic AI */}
+        Unlock the hidden power of your existing radios with SYNQ's Radio Agent. We help you empower associates with agentic AI capabilities to enable hands-free, real-time access to information. Product inventory, store information, product knowledge, and so much more can be made available with your voice.
+      </>
+    ),
+  },
 ];
 
 function Feature({ title, href, Svg, description }: FeatureItem) {
