@@ -67,7 +67,7 @@ Upon clicking a specific request, you'll have access to comprehensive order deta
 Employees are able to send messages to customers through the order to notify of any delays or updates. 
 ![Message Customer](../../static/img/curbside/message-customer.png)
 :::note
-This requires a Twilio API key and phone number applied to your store’s Location Settings. A Twilio API key can also be applied in Organization Settings to cover all stores in the Organization. See [Phone Number Requirements](/docs/mystore/twilio#phone-number-requirements) for requirements and configuration details. 
+This requires a Twilio API key and phone number applied to your store's Location Settings. A Twilio API key can also be applied in Organization Settings to cover all stores in the Organization. See [Phone Number Requirements](/docs/mystore/twilio#phone-number-requirements) for requirements and configuration details. 
 :::
 
 #### Departures
