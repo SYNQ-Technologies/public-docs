@@ -50,3 +50,11 @@ So long as a user has registered with a valid email address they are able to res
    Check your junk email folder if the email does not arrive in your inbox.
    :::
 7. Click the link in the email to complete the password reset.
+
+## Email Preferences
+To manage your email preferences:
+1. Sign into __MyStore__.
+2. Hover the mouse over the store name and logo in the top left of the page.
+5. Click your username.
+6. Click the __Manage your Email Preferences__ link.
+7. Toggle on/off the desired email notifications.
