@@ -3,10 +3,9 @@ sidebar_position: 1
 ---
 
 # Introduction
-SYNQ Radio AI...
-
-## How It Empowers Retail
 Most stores have a communication gap — mobile compute can't connect to radios and radios can't interact with customers. This fragmentation negatively impacts efficiency and customer experience. 
+
+SYNQ Radio connects your existing radios to the modern digital world. This bridges the gap between your radios and all your other digital in-store comms and systems.
 
 ## How It Works
 You connect one of your in-store radios to the SYNQ Radio Edge Compute using our adapter. Now everything that radio receives gets captured, logged, and analyzed. SYNQ Radio can also broadcast voice messages to your staff using that radio.
@@ -26,6 +25,7 @@ What you need to get up and running with SYNQ Radio AI:
 
 ## Supported Radio Models
 Our growing list of tested and supported radio models:
+- ICOM IC-F2000 
 - ICOM IC-M37
 - Motorola CLP1043
 - Motorola DLR1020
