@@ -18,7 +18,7 @@ sidebar_position: 19
 - A new __Weekly Store Report__ that includes the store's performance metrics with links to detailed dashboards for Call for Help, Curbside, and OrderUp.
 
 #### Fixes
-- SSD-371: Unable to clear Twilio phone number in location setting.
+- SSD-371: Unable to clear Twilio phone number in location settings.
 - SSD-407: Fix chart when Call for Help call buttons and displays share the same name.
 
 ### 2025-01-28
