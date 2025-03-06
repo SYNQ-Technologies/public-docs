@@ -6,6 +6,20 @@ sidebar_position: 19
 
 ### Coming Soon
 - Customer facing user interface updates for digital call buttons.
+- Support Webex as a communication platform provider.
+
+### 2025-03-05
+
+#### Features
+- The Call for Help dashboard now allows you to export the raw data to CSV.
+- The Call for Help dashboard now includes the following additional charts:
+  - Outcomes
+  - User Performance
+- A new __Weekly Store Report__ that includes the store's performance metrics with links to detailed dashboards for Call for Help, Curbside, and OrderUp.
+
+#### Fixes
+- SSD-371: Unable to clear Twilio phone number in location settings.
+- SSD-407: Fix chart when Call for Help call buttons and displays share the same name.
 
 ### 2025-01-28
 
