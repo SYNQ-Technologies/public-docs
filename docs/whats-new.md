@@ -7,6 +7,14 @@ sidebar_position: 19
 ### Coming Soon
 - Customer facing user interface updates for digital call buttons.
 - Support Webex as a communication platform provider.
+- Customer supplied voice and text prompts for digital call buttons.
+- Spanish translations for digital call buttons.
+- Improve sign in flow for new users when using Microsoft accounts.
+
+### 2025-03-11
+
+#### Fixes
+- 28: Clicking "Delivered" on a Curbside order before clicking "Claim" does not set the `reviewed_at` time and alerts can continue.
 
 ### 2025-03-05
 
