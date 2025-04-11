@@ -11,6 +11,12 @@ sidebar_position: 19
 - Spanish translations for digital call buttons.
 - Improve sign in flow for new users when using Microsoft accounts.
 
+### 2025-04-07
+
+#### Fixes
+- 118: Unable to add new locker in MyStore.
+- 483: Error when editing OrderUp drop zones.
+
 ### 2025-03-11
 
 #### Fixes
