@@ -102,6 +102,8 @@ SYNQ Call For Help Buttons are powered by 4 x AA batteries.
 
 Every time a call button communicates with the SYNQ cloud it reports its battery level. The last reported battery level of each button is shown in the __Call for Help Buttons__ section.
 
+![Call Button Battery Level](/img/whats-new/2025-01-23-battery-level.png)
+
 ## Mounting Buttons
 SYNQ Call For Help Buttons are versatile and intended to support a number of mounting situations.
 Before deploying your buttons you should give some though to where each button will be placed and what type of mounting application they will need.
@@ -203,6 +205,18 @@ For all deployments we recommend you create a "Manager" or "Escalations" channel
 |Meats|Meats|
 
 ## Troubleshooting
+
+### Hub LED indicator lights
+There are four indicator lights on the hub. Two on the external RJ45 jack and two internal ones on the circuit board.
+
+The indicator lights on the hub during the startup process are as follows:
+1. When the hub gets plugged into your switch, the internal green power indicator LED will be solid on.
+   - If this LED is not lit, the hub is not receiving power. This suggests that your switch is not providing Power over Ethernet (PoE).
+2. The internal green micro controller activity LED will blink. 
+   - If this LED is solid on or off this indicates a micro controller error condition.
+3. The amber light on the RJ45 jack will be solid on when the LAN chip is configured and the device requests an IP address from the network DHCP server.
+4. Once the network assigns the hub an IP address, the green indicator light on the RJ45 jack will go solid on, and the amber light will begin to blink with data activity.
+
 ### Button can't communicate with the hub
 If a button press does not result in a Teams notification the button may be having trouble connecting to the hub due to Wi-Fi interference.
 1. Try moving the button closer to the hub and testing again. If the button works closer to the hub you can wander around with the button (keep in mind the 120 second throttle) to try to identify areas of interference. You may need to relocate the hub, or add another hub.
@@ -213,7 +227,7 @@ The configured notification channel of the button my be incorrect.
 2. Verify that button is configured to with the the expected Teams channel.
 
 ### Message arrives in Teams, but does not notify
-Notifications may be disabled in the channel in Teams.
+Notifications may be disabled for the channel in Teams.
 1. Click the `...` menu on the channel in Teams
 2. Select __Channel notifications__
 3. Modify the notification setting
