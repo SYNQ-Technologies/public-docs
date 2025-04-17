@@ -5,11 +5,15 @@ sidebar_position: 19
 # What's New
 
 ### Coming Soon
-- Customer facing user interface updates for digital call buttons.
 - Support Webex as a communication platform provider.
 - Customer supplied voice and text prompts for digital call buttons.
 - Spanish translations for digital call buttons.
 - Improve sign in flow for new users when using Microsoft accounts.
+
+### 2025-04-16
+
+#### Features
+- Customer facing user interface updates for digital call buttons.
 
 ### 2025-04-07
 
