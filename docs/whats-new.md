@@ -6,14 +6,31 @@ sidebar_position: 19
 
 ### Coming Soon
 - Support Webex as a communication platform provider.
-- Customer supplied voice and text prompts for digital call buttons.
-- Spanish translations for digital call buttons.
+- Support for Retevis and Baofeng radios.
+- Support for IBM Watson with SYNQ Radio.
+
+### 2025-05-12
+#### Features
+- Tabular Call for Help report.
+
+### 2025-05-01
+#### Features
+- Support for Dewalt DXFRS300/800 radios.
+
+### 2025-04-25
+#### Features
 - Improve sign in flow for new users when using Microsoft accounts.
+  - You can add users to a store in advance using their Microsoft email addresses so that then don't need to request to join the store the first time they sign in.
+  - You can configure a list of email domains that a user must belong to for them to be able to request to join a store.
+- Administrator configurable verification tokens for webhooks. 
+  - When configured, all webhook requests will be signed using a verification token. Your application that receives the webhook request is then able to validate the signature of the request and know that the request is from SYNQ.
 
 ### 2025-04-16
 
 #### Features
 - Customer facing user interface updates for digital call buttons.
+- Customer supplied voice and text prompts for digital call buttons.
+- Spanish translations for digital call buttons.
 
 ### 2025-04-07
 

@@ -25,9 +25,17 @@ What you need to get up and running with SYNQ Radio AI:
 
 ## Supported Radio Models
 Our growing list of tested and supported radio models:
-- ICOM IC-F2000 
-- ICOM IC-M37
-- Motorola CLP1043
-- Motorola DLR1020
+- Dewalt
+  - DXFRS300
+  - DXFRS800
+- ICOM
+  - IC-F1000 
+  - IC-F2000 
+  - IC-M37
+- Motorola
+  - CLP1043
+  - CLP1083
+  - DLR1020
+  - DLR1060
 
 We can accommodate additional radio models so long as the model supports some form of external headset jack. Get in touch with us at contact@synqtech.com and let us know what radio models you use.
