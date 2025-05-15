@@ -9,6 +9,17 @@ sidebar_position: 19
 - Support for Retevis and Baofeng radios.
 - Support for IBM Watson with SYNQ Radio.
 
+### 2025-05-15
+#### Features
+- Expose Call for Help escalation events via webhooks.
+- Announce the following events over radios:
+  - Call for Help escalations
+  - Curbside arrivals
+
+### 2025-05-13
+#### Features
+- Show escalations to customer on digital call buttons.
+
 ### 2025-05-12
 #### Features
 - Tabular Call for Help report.
