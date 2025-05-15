@@ -14,6 +14,12 @@ Any event observed by SYNQ modules, like a call button press or curbside pickup 
 
 Enable AI agents and your staff can interact with those agents directly over the radio using natural language. They can look up product inventory and store information, or ask an agent to perform any task that agent understands. 
 
+## Architecture
+![SYNQ Radio Architecture](/img/radio/synq-radio-high-level-architecture.png)
+- The SYNQ Radio Edge hears all in-store radio traffic and relays it to the SYNQ Radio Cloud.
+- The SYNQ Radio Cloud logs transcripts of the traffic and delegates conversations to configurable AI agents.
+- The SYNQ Radio Cloud delivers responses from AI agents to the SYNQ Radio Edge when they are broadcast over the radio and heard by associates.
+
 ## Requirements
 What you need to get up and running with SYNQ Radio AI:
 - SYNQ Radio Edge Compute
