@@ -1,0 +1,90 @@
+openapi: 3.0.3
+info:
+  title: SYNQ Radio API
+  description: APIs for interacting with SYNQ Radio.
+  version: 1.0.0
+
+servers:
+  - url: "{scheme}://{host}:{port}"
+    description: Configurable server URL
+    variables:
+      scheme:
+        default: "http"
+        description: The protocol scheme.
+        enum:
+          - "http"
+          - "https"
+      host:
+        default: "localhost"
+        description: The hostname or IP address.
+      port:
+        default: "5000"
+        description: The port number.
+        
+components:
+  securitySchemes:
+    ApiKey:
+      type: apiKey
+      name: api-key
+      in: header
+      description: >
+        Use the API key for your edge device.
+
+paths:
+  /webhooks/incoming/generic:
+    post:
+      summary: Play text as audio
+      description: >
+        This endpoint allows you to play text as audio on the edge device.
+      security:
+        - ApiKey: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                edgeId:
+                  type: string
+                  description: Unique identifier for the SYNQ Radio edge device.
+                  example: "6803a571-8904-441d-b2ec-6886e9307635"
+                text:
+                  type: string
+                  description: The text to convert to speech and play as audio.
+                  example: "The store will be closing in 10 minutes."
+                actor:
+                  type: string
+                  description: The name of the actor responsible for this audio.
+                  example: "My External Application"
+                process:
+                  type: boolean
+                  description: Indicated whether to process all voice handlers for this message.                
+                  default: false
+              required:
+                - edgeId
+                - text
+                - actor
+      responses:
+        '200':
+          description: Success Response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: Success response.
+                    example: true
+        '403':
+          description: Not Authorized.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid API KEY."
+  
