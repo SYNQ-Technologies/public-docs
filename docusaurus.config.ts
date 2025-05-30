@@ -71,6 +71,10 @@ const config: Config = {
                         id: 'lockers-api',
                         spec: 'static/api/lockers-api.yaml',
                     },
+                    {
+                        id: 'radio-api',
+                        spec: 'static/api/radio-api.yaml',
+                    },
                 ],
                 theme: {
                     primaryColor: '#01a2ff',

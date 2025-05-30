@@ -11,3 +11,9 @@ Garner never before captured insights from your in-store radio traffic with our 
 - Analyze radio traffic with AI.
 - Identify trends from in-store voice data.
 - Trigger automatic actions with keyword flagging.
+
+## Supported AI Agents
+- Azure OpenAI
+- IBM Watsonx
+
+SYNQ aims to be agnostic of the type of agent to allow you to bring your own agent if you so desire. Get in touch with us at contact@synqtech.com and let us know what types of agents your organization uses. 

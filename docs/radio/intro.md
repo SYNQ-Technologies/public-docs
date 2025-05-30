@@ -45,3 +45,25 @@ Our growing list of tested and supported radio models:
   - DLR1060
 
 We can accommodate additional radio models so long as the model supports some form of external headset jack. Get in touch with us at contact@synqtech.com and let us know what radio models you use.
+
+## Supported Voice Providers
+- Azure AI Services
+- IBM Watsonx
+
+## Installation
+
+### Prepare donor radio
+- Disable "Roger Beep".
+- Turn on radio and select the desired channel.
+- Set radio volume to approximately 1/3rd.
+
+### Connect Devices
+- Connect radio speaker/mic jack to the hardware adapter.
+- Connect radio to power (typically a charging dock or USB cable).
+- Connect Ethernet to PC.
+- Connect power to PC.
+
+### Verify
+- Verify that the PC power light is illuminated.
+- You should hear a "SYNQ Radio (Channel #) is online." announcement after approximately 10 seconds.
+- Verify that the donor radio is properly seated on the charging dock.

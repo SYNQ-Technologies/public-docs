@@ -7,7 +7,14 @@ sidebar_position: 19
 ### Coming Soon
 - Support Webex as a communication platform provider.
 - Support for Retevis and Baofeng radios.
-- Support for IBM Watson with SYNQ Radio.
+
+### 2025-05-30
+#### Features
+- Improved radio latency. 
+- Automatic updates of radio edge devices.
+- Configurable which Call for Help events get announced over the radios.
+#### Fixes
+- 612/613: Call for Help escalations cannot be claimed over the radio.
 
 ### 2025-05-15
 #### Features
@@ -26,6 +33,7 @@ sidebar_position: 19
 
 ### 2025-05-01
 #### Features
+- Support for IBM Watson with SYNQ Radio.
 - Support for Dewalt DXFRS300/800 radios.
 
 ### 2025-04-25
