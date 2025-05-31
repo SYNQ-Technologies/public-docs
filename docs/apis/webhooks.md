@@ -107,8 +107,10 @@ To verify the signature of a webhook request received by your application:
 1. Securely make the __Verification Token__ secret value available to your server application.
    - For example, using a environment variable or a key vault.
 2. In your request pipeline extract the `x-signature` and `x-timestamp` headers.
+   - `x-timestamp` represents the time of the request in the number of seconds since the Unix Epoch (January 1, 1970 GMT) .
+   - `x-signature` represents the SHA256 HMAC of the `x-timestamp` value + the raw request body.
 3. Verify that the `x-timestamp` matches the current time (within an acceptable tolerance).
-4. Verify that the SHA256 HMAC of the `x-timestamp` combined with the raw request body matches the `x-signature`.
+4. Verify that the SHA256 HMAC of the `x-timestamp` combined with the received raw request body matches the `x-signature`.
 
 The following is an example implementation that validates a signed request in a NodeJS Express application.
 ```javascript
@@ -118,8 +120,8 @@ import express, { json } from "express";
 const app = express();
 app.use(json({
     verify: (req, res, buf, encoding) => {
-        const currentTime = Date.now();
-        const maxTimeDifference = 60 * 1000;
+        const currentTime = Date.now() / 1000;
+        const maxTimeDifference = 60;
         const secretKey = process.env.secretKey;
         if (!secretKey) {
             throw new Error("Missing secretKey");
