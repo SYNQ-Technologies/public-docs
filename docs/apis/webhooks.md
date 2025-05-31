@@ -94,9 +94,60 @@ You can use a webhook Verification Token to verify that a webhook delivery came 
 
 When enabled, each webhook request is signed with your secret verification token. The server that receives the webhook request can then use the same secret verification token to confirm the authenticity of the request.
 
+### Enable Signed Webhook Requests
 To enable signed webhook requests:
 1. Sign into __MyStore__ as a Location Administrator
 2. Select __Location Config__
 3. Scroll down to __Webhooks__
 4. Provide a strong secret value for the the __Verification Token__
 5. Click __Update Location Settings__
+
+### Validate Signed Webhook Requests
+To verify the signature of a webhook request received by your application:
+1. Securely make the __Verification Token__ secret value available to your server application.
+   - For example, using a environment variable or a key vault.
+2. In your request pipeline extract the `x-signature` and `x-timestamp` headers.
+3. Verify that the `x-timestamp` matches the current time (within an acceptable tolerance).
+4. Verify that the SHA256 HMAC of the `x-timestamp` combined with the raw request body matches the `x-signature`.
+
+The following is an example implementation that validates a signed request in a NodeJS Express application.
+```javascript
+import { createHmac, timingSafeEqual } from "crypto";
+import express, { json } from "express";
+
+const app = express();
+app.use(json({
+    verify: (req, res, buf, encoding) => {
+        const currentTime = Date.now();
+        const maxTimeDifference = 60 * 1000;
+        const secretKey = process.env.secretKey;
+        if (!secretKey) {
+            throw new Error("Missing secretKey");
+        }
+        const signature = req.headers["x-signature"] as string;
+        if (!signature) {
+            throw new Error("Missing signature");
+        }
+        const timestamp = req.headers["x-timestamp"];
+        if (!timestamp) {
+            throw new Error("Missing timestamp");
+        }
+        if (Math.abs(currentTime - parseInt(timestamp)) > maxTimeDifference) {
+            throw new Error("Expired timestamp");
+        }
+        const body = buf.toString();
+        const message = timestamp + body;
+        const serverSignature = createHmac("sha256", secretKey)
+            .update(message)
+            .digest("hex");
+        if (timingSafeEqual(
+            Buffer.from(signature, "hex"), 
+            Buffer.from(serverSignature, "hex"))
+        ) {
+            console.log("Valid signature");
+        } else {
+            throw new Error("Invalid signature");
+        }
+    },
+}));
+```
