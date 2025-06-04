@@ -8,6 +8,14 @@ sidebar_position: 19
 - Support Webex as a communication platform provider.
 - Support for Retevis and Baofeng radios.
 
+### 2025-06-04
+#### Features
+- Configurable staff actions on Call for Help prompts. 
+   - Now when you create a Call for Help prompt you can determine the action buttons presented to your staff. See [Staff Actions](./call-for-help/settings#staff-actions) for more information.
+#### Fixes
+- 575: Intermittent refresh issues on Curbside pickup control.
+- 617: Standardize on helpdesk@synqtech.com email address.
+
 ### 2025-05-30
 #### Features
 - Improved radio latency. 
