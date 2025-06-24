@@ -82,7 +82,8 @@ To add a new call button to your Call for Help system:
      :::tip
      The MAC Address is printed on a label on the back of the button.
      :::
-   - Prompt Notification Channel
+   - Prompt
+   - Notification Channel
    - Escalations Channel
 7. Click __Submit Options__
 

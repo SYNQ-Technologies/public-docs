@@ -18,9 +18,9 @@ All SYNQ products require a subscription.
 SYNQ leverages the existing communication platform that your frontline workers already use every day to deliver alerts and notifications.
 
 SYNQ supports the following platforms:
-- Microsoft Teams
-- BlueFletch Messaging
-- RingCentral
+- [Microsoft Teams](/docs/getting-started/microsoft-teams.md)
+- [BlueFletch Messaging](/docs/getting-started/bluefletch.md)
+- [RingCentral](/docs/getting-started/ringcentral.md)
 
 ## Associate Devices
 SYNQ products are used on a range of associate devices, including organizations using

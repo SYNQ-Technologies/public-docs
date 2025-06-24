@@ -32,6 +32,7 @@ Pulse IoT Devices are added to the Call for Help system exactly the same way as 
      :::tip
      The MAC Address is printed on a label on the back of the device.
      :::
-   - Prompt Notification Channel
+   - Prompt
+   - Notification Channel
    - Escalations Channel
 7. Click __Submit Options__
