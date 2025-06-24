@@ -14,7 +14,7 @@ sidebar_position: 19
 
 ### 2025-06-18
 #### Features
-- Support for Retevis radios.
+- Support for Retevis radios. [Learn more](/docs/radio/intro.md#supported-radio-models).
 - Radios are now able to receive webhook requests from Twilio.
 #### Fixes
 - 640: Radio transcript viewer action buttons overflow on small devices.
@@ -31,20 +31,20 @@ sidebar_position: 19
 #### Features
 - Improved radio latency. 
 - Automatic updates of radio edge devices.
-- Configurable which Call for Help events get announced over the radios.
+- Configure which Call for Help events get announced over the radios.
 #### Fixes
 - 612/613: Call for Help escalations cannot be claimed over the radio.
 
 ### 2025-05-15
 #### Features
-- Expose Call for Help escalation events via webhooks.
+- Expose Call for Help escalation events via webhooks. [Learn more](/docs/apis/webhooks.md#call-for-help).
 - Announce the following events over radios:
   - Call for Help escalations
   - Curbside arrivals
 
 ### 2025-05-13
 #### Features
-- Show escalations to customer on digital call buttons.
+- Show escalations to customer on digital call buttons. [Learn more](/docs/call-for-help/digital-call-buttons.md#customer-facing-escalations).
 
 ### 2025-05-12
 #### Features
