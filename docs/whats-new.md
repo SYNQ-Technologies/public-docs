@@ -6,7 +6,18 @@ sidebar_position: 19
 
 ### Coming Soon
 - Support Webex as a communication platform provider.
-- Support for Retevis and Baofeng radios.
+- Support for Baofeng radios.
+
+### 2025-06-24
+#### Features
+- Updated documentation to include resources and videos for each product.
+
+### 2025-06-18
+#### Features
+- Support for Retevis radios.
+- Radios are now able to receive webhook requests from Twilio.
+#### Fixes
+- 640: Radio transcript viewer action buttons overflow on small devices.
 
 ### 2025-06-04
 #### Features

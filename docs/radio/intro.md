@@ -43,6 +43,12 @@ Our growing list of tested and supported radio models:
   - CLP1083
   - DLR1020
   - DLR1060
+- Retevis
+  - RT17
+  - RT19
+  - RT22
+  - RT27
+  - RT68
 
 We can accommodate additional radio models so long as the model supports some form of external headset jack. Get in touch with us at contact@synqtech.com and let us know what radio models you use.
 

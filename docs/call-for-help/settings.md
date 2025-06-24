@@ -35,6 +35,7 @@ Defaults:
 - Default Management Channel: The default channel for all call for help escalations.
 
 Each call button or display you create can override these default channels.
+
 ## Prompts
 Prompts are simple sentences that provide context to a call for help request. These prompts assist both the customer and the associate.
 
