@@ -8,6 +8,12 @@ sidebar_position: 19
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
 
+### 2025-07-10
+#### Features
+- The user management page in MyStore now shows the last logged in time of each user.
+- Weekly report now includes a link to the detailed Call for Help report.
+- Weekly report now only shows metrics for the apps enabled for your location.
+
 ### 2025-06-24
 #### Features
 - Updated documentation to include resources and videos for each product.
