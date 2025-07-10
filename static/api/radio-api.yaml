@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.1.1
 info:
   title: SYNQ Radio API
   description: APIs for interacting with SYNQ Radio.
@@ -87,4 +87,94 @@ paths:
                   error:
                     type: string
                     example: "Invalid API KEY."
-  
+        '404':
+          description: Not Found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "The edge device was not found."
+
+  /webhooks/incoming/twilio/{edgeId}:
+    post:
+      summary: Play text message from Twilio webhook as audio
+      description: >
+        This endpoint receives webhook requests from Twilio and plays text messages as audio on the edge device.
+        See [Twilio's request to your application](https://www.twilio.com/docs/messaging/twiml#twilios-request-to-your-application) for more information.
+      parameters:
+        - in: path
+          name: edgeId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier for the SYNQ Radio edge device.
+          example: "6803a571-8904-441d-b2ec-6886e9307635"
+        - in: header
+          name: X-Twilio-Signature
+          schema:
+            type: string
+          required: true
+          description: "The signature of the request. The signature uses the HMAC-SHA1 hashing algorithm with your Twilio account's auth token as the secret key."
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                AccountSid:
+                  type: string
+                  description: The 34 character ID of the Twilio account this message is associated with.
+                  example: "9glkJaPJtTknSrTEsymfACE27kpMpdbbtS"
+                Body:
+                  type: string
+                  description: The text body of the message.
+                  example: "New order received."
+                From:
+                  type: string
+                  description: The phone number that sent this message.
+                  example: "14017122661"
+                To:
+                  type: string
+                  description: The phone number of the recipient.
+                  example: "15558675310"
+              required:
+                - AccountSid
+                - Body
+                - From
+                - To
+      responses:
+        '200':
+          description: Success Response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: Success response.
+                    example: true
+        '403':
+          description: Not Authorized.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid signature."
+        '404':
+          description: Not Found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "The edge device was not found."
