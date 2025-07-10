@@ -57,19 +57,37 @@ We can accommodate additional radio models so long as the model supports some fo
 - IBM Watsonx
 
 ## Installation
+Installation of SYNQ Radio involves deployment of the edge radio kit into your premises. Typically this will be in or near a networking room. 
+
+:::note
+The install location needs to be in an area with good radio reception.
+:::
+
+### Radio Kit
+The radio kit houses your donor radio and the necessary hardware to connect it to SYNQ's cloud services. 
+
+#### Dimensions
+- Height: 14"
+- Width: 14"
+- Depth: 4.5"
+
+#### Mounting
+The radio kit includes four screw holes for wall mounting applications.
 
 ### Prepare donor radio
-- Disable "Roger Beep".
-- Turn on radio and select the desired channel.
-- Set radio volume to approximately 1/3rd.
+1. Disable "Roger Beep" on the donor radio (if applicable).
+2. Turn on the donor radio and select the desired channel.
+3. Set the donor radio's volume to approximately 1/3rd.
 
 ### Connect Devices
-- Connect radio speaker/mic jack to the hardware adapter.
-- Connect radio to power (typically a charging dock or USB cable).
-- Connect Ethernet to PC.
-- Connect power to PC.
+1. Open the radio kit.
+2. Connect the donor radio speaker/mic jack to the hardware adapter.
+3. Connect the donor radio to power (typically a charging dock or USB cable).
+4. Connect Ethernet to radio kit.
+5. Connect power to radio kit. The radio kit will automatically turn on.
 
 ### Verify
-- Verify that the PC power light is illuminated.
-- You should hear a "SYNQ Radio (Channel #) is online." announcement after approximately 10 seconds.
-- Verify that the donor radio is properly seated on the charging dock.
+1. Verify that the PC power light is illuminated.
+2. You should hear a "SYNQ Radio (Channel #) is online." announcement after approximately 10 seconds.
+3. Verify that the donor radio is properly seated on the charging dock (if applicable).
+4. Close the radio kit.

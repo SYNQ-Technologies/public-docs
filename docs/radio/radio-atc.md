@@ -59,3 +59,21 @@ To enable Curbside over the radio:
 
 By default the following Curbside events get announced over the radio:
 - `created` New request
+
+## Twilio Webhook Integration
+You can use Twilio webhooks to relay text messages to a Twilio number to SYNQ Radio and announce the message over the radio.
+
+1. Sign into the [Twilio Console](https://console.twilio.com/)
+2. Select an existing number or create a new one
+    - The number must have the `SMS` capability
+3. Select the __Configure__ tab
+4. Scroll down to __Messaging Configuration__
+5. Configure:
+   - __A call comes in__: `Webhook`
+   - __URL__: `your-synq-radio-instance.domain.com/webhooks/incoming/twilio/<edge-id>`
+     - Where `<edge-id>` is the unique ID of your edge device
+   - __HTTP__: `HTTP Post`
+
+:::tip
+Alternatively you can define these settings in a reusable __Messaging Service__ and assign it to the number.
+:::
