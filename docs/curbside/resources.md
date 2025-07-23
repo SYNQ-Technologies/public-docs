@@ -17,4 +17,4 @@ sidebar_position: 16
 <iframe style={{aspectRatio: "16/9", width: "100%"}} src="https://www.youtube.com/embed/kfW2PaRxd3M" title="SYNQ Technology - Curbside staff process" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Need Help? 
-For technical support contact: contact@synqtech.com 
+For technical support contact: helpdesk@synqtech.com 

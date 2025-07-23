@@ -28,4 +28,4 @@ If your organization already has a Microsoft Azure subscription you can subscrib
 1.  Click __Subscribe__
 
 ## Manual Setup
-If you don't have a Microsoft Azure subscription, or you simply want help getting started, contact SYNQ Support at `contact@synqtech.com` and we can guide you through the process.
+If you don't have a Microsoft Azure subscription, or you simply want help getting started, contact SYNQ Support at `helpdesk@synqtech.com` and we can guide you through the process.
