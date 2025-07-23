@@ -23,4 +23,4 @@ sidebar_position: 16
 <iframe style={{aspectRatio: "16/9", width: "100%"}} src="https://www.youtube.com/embed/GR28MT__QAg" title="SYNQ Technology - How to set up a StockOut display" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Need Help? 
-For technical support contact: contact@synqtech.com 
+For technical support contact: helpdesk@synqtech.com 

@@ -13,4 +13,4 @@ sidebar_position: 16
 <iframe style={{aspectRatio: "16/9", width: "100%"}} src="https://www.youtube.com/embed/68rsydfRkHA" title="SYNQ Technology - Take analog devices to the cloud with AI radio gateway" frameborder="0" allow="encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Need Help? 
-For technical support contact: contact@synqtech.com 
+For technical support contact: helpdesk@synqtech.com 
