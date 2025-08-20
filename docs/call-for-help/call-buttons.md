@@ -205,6 +205,12 @@ For all deployments we recommend you create a "Manager" or "Escalations" channel
 |Deli|Deli|
 |Meats|Meats|
 
+## Button to Hub Communication Protocol
+- Protocol: [ESP-NOW](https://www.espressif.com/en/solutions/low-power-solutions/esp-now)
+- Frequency: 2.4 GHz (channel 1)
+- Data Rate: 250 kbps
+- Power: -20 dBm
+
 ## Troubleshooting
 
 ### Hub LED indicator lights
