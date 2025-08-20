@@ -8,6 +8,10 @@ sidebar_position: 19
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
 
+### 2025-08-13
+#### Fixes
+- 713: When a Call for Help request comes from a OrderUp tablet the Adaptive Card is missing the staff action buttons.
+
 ### 2025-07-10
 #### Features
 - The user management page in MyStore now shows the last logged in time of each user.
