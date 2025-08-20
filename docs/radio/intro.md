@@ -67,9 +67,9 @@ The install location needs to be in an area with good radio reception.
 The radio kit houses your donor radio and the necessary hardware to connect it to SYNQ's cloud services. 
 
 #### Dimensions
-- Height: 14"
-- Width: 14"
-- Depth: 4.5"
+- Height: 17"
+- Width: 17"
+- Depth: 6"
 
 #### Mounting
 The radio kit includes four screw holes for wall mounting applications.
