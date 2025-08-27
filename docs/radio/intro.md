@@ -41,6 +41,9 @@ Our growing list of tested and supported radio models:
 - Motorola
   - CLP1043
   - CLP1083
+  - CLS1410
+  - CLS1413
+  - CLS1810
   - DLR1020
   - DLR1060
 - Retevis
@@ -67,9 +70,9 @@ The install location needs to be in an area with good radio reception.
 The radio kit houses your donor radio and the necessary hardware to connect it to SYNQ's cloud services. 
 
 #### Dimensions
-- Height: 17"
-- Width: 17"
-- Depth: 6"
+- Height: 15.75"
+- Width: 15.5"
+- Depth: 5.5"
 
 #### Mounting
 The radio kit includes four screw holes for wall mounting applications.
