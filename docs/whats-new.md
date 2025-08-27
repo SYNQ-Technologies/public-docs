@@ -8,6 +8,10 @@ sidebar_position: 19
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
 
+### 2025-08-21
+#### Features
+- Support for Motorola CLS radios. [Learn more](/docs/radio/intro.md#supported-radio-models).
+
 ### 2025-08-13
 #### Fixes
 - 713: When a Call for Help request comes from a OrderUp tablet the Adaptive Card is missing the staff action buttons.
