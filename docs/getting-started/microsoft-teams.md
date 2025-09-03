@@ -49,8 +49,11 @@ Microsoft provides detailed instructions on how to create teams and channels [he
 3. Provide the following:
    - Team name
    - Description
-   - Channel type: Standard, Shared, or Private \
+   - Channel type: Standard or Shared \
    ![Add Channel](/img/teams/create-channel.png)
+      :::note
+      Private channels are not supported. This is a [limitation](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/channel-and-group-conversations?tabs=dotnet) of Microsoft Teams.
+      :::
 4. Click __Create__
 5. Repeat for all the channels you want to add
 :::note
