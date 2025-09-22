@@ -115,9 +115,9 @@ Before deploying your buttons you should give some though to where each button w
 
 ## Dimensions
 - Call Button
-  - Height: 6.5"
-  - Width: 3"
-  - Depth: 2.5"
+  - Height: 4.1875"
+  - Width: 3.1875"
+  - Depth: 2.25"
 - Hub
   - Height: 5.5"
   - Width: 3.355"
@@ -244,3 +244,10 @@ Notifications may be disabled for the channel in Teams.
 - Long press releasing after the second flash of the LEDs. The LEDs blink out the firmware version number. For example: `1.2.3`.
 - Long press releasing after the fifth flash of the LEDs. Hard reset of the button.
 
+## Legacy Form Factor
+<img src="/img/call-for-help/call-button-1.jpg" alt="Legacy Call Button" style={{width: '300px' }} />
+
+- Dimensions
+  - Height: 6.5"
+  - Width: 3"
+  - Depth: 2.5"
