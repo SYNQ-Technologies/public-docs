@@ -11,8 +11,8 @@ A typical store deployment includes the following hardware components:
 - Multiple Call Buttons
 
 ### Call Button
-![Call Button](/img/call-for-help/call-button-1.jpg)
-![Call Button](/img/call-for-help/call-button-2.jpg)
+![Call Button](/img/call-for-help/call-button-4.png)
+![Call Button](/img/call-for-help/call-button-3.png)
 
 ### Call Button Hub
 ![Call Button Hub](/img/call-for-help/call-button-hub-1.jpg)
@@ -125,8 +125,7 @@ Before deploying your buttons you should give some though to where each button w
 
 ## Button Label
 A label is applied to the front face of the call button. This label provides instructions and feedback to the customer, but it can also include your store's branding.
-- [Example Generic Label](../../static/img/call-for-help/call-button-label-generic.png)
-- [Label Cut Dimensions](../../static/img/call-for-help/call-button-label-cut-dimensions.png)
+- [Example Generic Label](../../static/img/call-for-help/call-button-label-generic-2.png)
 
 ## Button Signage
 Before deploying your buttons it is a good idea to consider if you want to apply signage to or near your button to draw your customer's attention to it. This can increase the likelihood that customers will use the button.
