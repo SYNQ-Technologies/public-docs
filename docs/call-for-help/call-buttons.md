@@ -247,7 +247,11 @@ Notifications may be disabled for the channel in Teams.
 ## Legacy Form Factor
 <img src="/img/call-for-help/call-button-1.jpg" alt="Legacy Call Button" style={{width: '300px' }} />
 
-- Dimensions
-  - Height: 6.5"
-  - Width: 3"
-  - Depth: 2.5"
+#### Dimensions
+- Height: 6.5"
+- Width: 3"
+- Depth: 2.5"
+
+#### Button Label
+- [Example Generic Label](../../static/img/call-for-help/call-button-label-generic.png)
+- [Label Cut Dimensions](../../static/img/call-for-help/call-button-label-cut-dimensions.png)
