@@ -5,8 +5,19 @@ sidebar_position: 19
 # What's New
 
 ### Coming Soon
+- Support Zebra Workcloud Sync as a communication platform provider.
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
+
+### 2025-09-19
+#### Fixes
+- 774: Customer facing call for help progress indicator is misaligned when mascot is not enabled.
+- 765: Ensure sufficient delay between last radio capture before sending transmission.
+- 711: Adaptive card should distinguish between resolved and expired escalations.
+
+### 2025-09-10
+#### Features
+- Preserve selected signage color for QR Code displays.
 
 ### 2025-08-21
 #### Features
