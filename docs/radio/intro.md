@@ -23,11 +23,18 @@ Enable AI agents and your staff can interact with those agents directly over the
 ## Requirements
 What you need to get up and running with SYNQ Radio AI:
 - SYNQ Radio Edge Compute
-  - Power (120V)
+  - Power (110V)
   - Ethernet connectivity
 - SYNQ Radio Hardware Adapter
 - Donor Radio (see [Supported Radio Models](#supported-radio-models))
   - Power for donor radio (typically via a docking charger)
+
+### Networking Requirements
+The radio kit needs to make outbound requests to the internet via the Ethernet connection it gets plugged into.
+- DHCP enabled.
+- Outbound protocols: HTTPS and WSS.
+- Outbound ports: 443.
+- The radio kit does not require any inbound network access.
 
 ## Supported Radio Models
 Our growing list of tested and supported radio models:
@@ -44,6 +51,7 @@ Our growing list of tested and supported radio models:
   - CLS1410
   - CLS1413
   - CLS1810
+  - CURVE
   - DLR1020
   - DLR1060
 - Retevis
@@ -57,6 +65,7 @@ We can accommodate additional radio models so long as the model supports some fo
 
 ## Supported Voice Providers
 - Azure AI Services
+- Deepgram
 - IBM Watsonx
 
 ## Installation
@@ -74,8 +83,6 @@ The radio kit houses your donor radio and the necessary hardware to connect it t
 - Width: 15.5"
 - Depth: 5.5"
 
-#### Mounting
-The radio kit includes four screw holes for wall mounting applications.
 
 ### Prepare donor radio
 1. Disable "Roger Beep" on the donor radio (if applicable).
