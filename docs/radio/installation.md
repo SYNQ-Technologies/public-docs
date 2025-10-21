@@ -27,6 +27,7 @@ Jacks:
    - **Radio #1** is the "donor" radio that remains permanently docked/connected inside the radio kit.
    - **Radio #2** is for testing the system and can be returned when installation completes.
 3. Verify that the radios are on the channel, frequency, and privacy code used at this location.
+4. Disable the "Roger Beep" feature on the **Radio #1** (if applicable).
 
 ### Location
 It is important to select a suitable install location for the radio kit.
