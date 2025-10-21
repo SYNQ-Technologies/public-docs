@@ -29,6 +29,10 @@ Jacks:
 3. Verify that the radios are on the channel, frequency, and privacy code used at this location.
 4. Disable the "Roger Beep" feature on the **Radio #1** (if applicable).
 
+:::important
+The donor radio needs to be in good working condition.
+:::
+
 ### Location
 It is important to select a suitable install location for the radio kit.
 1. Test that radios operate normally with good reception and transmission from this location.
@@ -36,6 +40,10 @@ It is important to select a suitable install location for the radio kit.
 3. Does the location have 110V power?
 4. Does the location have a wall to mount the radio kit to, or a shelf that it can sit on?
 5. Is the location secure so that the kit will not be tampered with?
+
+:::important
+The install location needs to be in an area with good radio reception. Do not sacrifice radio reception quality, for ease of installation.
+:::
 
 ### Network
 When the device is plugged into Ethernet will it be able to reach the internet? Or are there special networking requirements that must be satisfied?
