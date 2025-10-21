@@ -9,6 +9,30 @@ sidebar_position: 19
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
 
+### 2025-10-20
+- Support for ongoing "nag" alerts for unanswered Call for Help requests.
+
+### 2025-10-13
+- MyStore user interface update and modernization.
+
+### 2025-10-07
+#### Features
+- Support for Motorola Curve radios.
+#### Fixes
+- 812: Support BlueFletch browser variants.
+
+### 2025-09-29
+#### Features
+- Administrators can now export the QR code URLs for all QR code enabled Call for Help displays.
+- Administrators can now see dashboards of Locker activity in MyStore.
+#### Fixes
+- 768: Prevent selection of private Teams channels that are not bot-enabled.
+- 798: Prevent error when staff reply to the customer before claiming the Text for Help request.
+
+### 2025-09-25
+#### Features
+- Support for configurable header background and text colors on web-based Call for Help user interface.
+
 ### 2025-09-19
 #### Fixes
 - 774: Customer facing call for help progress indicator is misaligned when mascot is not enabled.
