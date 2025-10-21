@@ -10,7 +10,15 @@ sidebar_position: 19
 - Support for Baofeng radios.
 
 ### 2025-10-20
-- Support for ongoing "nag" alerts for unanswered Call for Help requests.
+- Support for ongoing "nag" alerts for unanswered Call for Help requests and escalations.
+
+### 2025-10-19
+#### Fixes
+- 843 Applications should gracefully degrade when third party cloud providers like Pusher are offline.
+
+### 2025-10-18
+#### Fixes
+- 844 OrderUp links from Teams adaptive card do not select the preferred worker role.
 
 ### 2025-10-13
 - MyStore user interface update and modernization.
