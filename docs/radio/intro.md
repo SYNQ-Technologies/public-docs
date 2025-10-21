@@ -71,9 +71,7 @@ We can accommodate additional radio models so long as the model supports some fo
 ## Installation
 Installation of SYNQ Radio involves deployment of the edge radio kit into your premises. Typically this will be in or near a networking room. 
 
-:::note
-The install location needs to be in an area with good radio reception.
-:::
+See the full [installation procedure](./installation.md).
 
 ### Radio Kit
 The radio kit houses your donor radio and the necessary hardware to connect it to SYNQ's cloud services. 
