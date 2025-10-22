@@ -80,3 +80,12 @@ The radio kit houses your donor radio and the necessary hardware to connect it t
 - Height: 15.75"
 - Width: 15.5"
 - Depth: 5.5"
+
+## Public Address Systems
+SYNQ Radio can also interface with public address systems. The SYNQ Radio kit supports a 3.5mm TRRS audio connection for microphone input and speaker output.
+
+Every PA system and deployment can be different, so the exact cabling and connections will vary, but conceptually it is simple:
+1. Connect the speaker output of the radio kit to the `Microphone 2` input of the PA receiver. 
+   - Audio messages that SYNQ Radio plays will be heard over the PA. 
+2. Connect the microphone input of the radio kit to the same audio source that is connected to the `Microphone 1` input of the PA receiver. 
+   - Audio messages from other sources that will be heard over the PA will also be delivered to SYNQ Radio.
