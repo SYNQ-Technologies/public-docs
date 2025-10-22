@@ -4,16 +4,16 @@ sidebar_position: 10
 
 # Installation
 
-## External Front View
-![Front View](/img/radio/radio-kit-front.png)
+## Exterior Front View
+![Front View](/img/radio/radio-kit-front.webp)
 
-## Internal Front View
-![Inside View](/img/radio/radio-kit-interior.png)
+## Interior Front View
+![Inside View](/img/radio/radio-kit-interior.webp)
 
-This view features a Motorola DLR1020.
+This kit features a Motorola DLR1020.
 
-## External Right Side View
-![Right Side View](/img/radio/radio-kit-side.png)
+## Exterior Right Side View
+![Right Side View](/img/radio/radio-kit-side.webp)
 
 Jacks:
 - Top: Ethernet 
@@ -63,7 +63,7 @@ When the device is plugged into Ethernet will it be able to reach the internet? 
 ## Wall Mounting
 The case is equipped with four keyhole anchor points for wall/surface mount applications. 
 
-![keyhole anchor points](/img/radio/radio-kit-wall-mount.png)
+![keyhole anchor points](/img/radio/radio-kit-wall-mount.webp)
 
 The kit includes a paper mounting template that you can use to mark the locations for the anchor screws.
 
@@ -86,7 +86,7 @@ The mounting hardware (screws and wall anchors) are not included.
 4. Verify that the radio is on the channel, frequency, and privacy code used at the location.
 5. Connect the donor radio speaker/mic jack(s) to the hardware adapter. This step can vary depending on your radio model.
    1. For most radio this means connecting the 3.5mm (speaker) and 2.5mm (microphone) audio cables from the hardware adapter to the corresponding speaker and microphone jacks on the radio. \
-   ![Radio speaker/mic jacks](/img/radio/motorola-cls1410.png)
+   ![Radio speaker/mic jacks](/img/radio/motorola-cls1410.webp)
    :::note
    You may need to open an accessory cover to access the speaker/mic jack(s).
    :::
