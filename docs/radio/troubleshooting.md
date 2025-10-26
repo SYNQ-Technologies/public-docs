@@ -6,8 +6,32 @@ sidebar_position: 15
 
 This section documents some common issues and solutions.
 
+## General
+Check whether the radio kit has power.
+1. Verify that the radio kit is plugged in to power.
+2. Open the radio kit.
+3. Verify that the blue power indicator is lit on the PC.
+4. Verify that the red power indicator is lit on the adapter.
+
+Check whether the radio kit has internet.
+1. Verify that the radio kit is plugged in to Ethernet.
+2. Open the radio kit.
+3. Verify that the Ethernet activity indicator lights are flashing on the Ethernet port of the PC.
+
+Check cables for any loose connections.
+1. Open the radio kit.
+2. Verify that the audio cable connections to the donor radio of properly seated.
+3. Verify that all other cable connection are properly seated.
+
+Check donor radio.
+1. Open the radio kit.
+2. Verify that the donor radio is turned on.
+3. Verify that the volume of the donor radio is approximately 50%.
+4. Verify that the channel the donor radio is tuned to matches your other radios.
+   1. If necessary, disconnect the donor radio and test that it can communicate with your other radios.
+
 ## Battery is dead on donor radio
-If the radio is not properly seated in the charging dock it will not charge, and the battery will die after approximately 1 day. 
+If the donor radio is not properly seated in the charging dock it will not charge, and the battery will die after approximately 1 day. 
 
 If your donor radio's battery is dead:
 1. Open the kit.
