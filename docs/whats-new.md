@@ -9,6 +9,10 @@ sidebar_position: 19
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
 
+### 2025-10-23
+- Expand list of claim phrases for answering call for help requests over the radio.
+- Allow explicit configuration of microphone capture volume for radios.
+
 ### 2025-10-20
 - Support for ongoing "nag" alerts for unanswered Call for Help requests and escalations.
 
