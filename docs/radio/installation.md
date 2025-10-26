@@ -23,11 +23,15 @@ Jacks:
 
 ### Donor Radios
 1. Confirm the location uses a SYNQ [supported radio model](./intro.md#supported-radio-models).
-2. You will need two radios complete do the installation.
+2. You will need two radios to complete the installation.
    - **Radio #1** is the "donor" radio that remains permanently docked/connected inside the radio kit.
    - **Radio #2** is for testing the system and can be returned when installation completes.
 3. Verify that the radios are on the channel, frequency, and privacy code used at this location.
-4. Disable the "Roger Beep" feature on the **Radio #1** (if applicable).
+4. Verify that the radios are able to communicate with each other.
+   1. Turn both radios on.
+   2. Press the push-to-talk button on **Radio #1** and say a test phrase like "testing-testing 1-2-3". You should be able to hear the message on **Radio #2**.
+   3. Repeat from **Radio #2** to confirm it can communicate with **Radio #1**.
+5. Disable the "Roger Beep" feature on the **Radio #1** (if applicable).
 
 :::important
 The donor radio needs to be in good working condition.
@@ -97,17 +101,26 @@ The mounting hardware (screws and wall anchors) are not included.
    1. Connect Ethernet to the jack on the lower right-hand side on the outside of the kit.
    2. Connect other end of Ethernet cable to your network switch.
 8. Turn on **Radio #2**.
-9.  Connect Power
+9. Connect Power
    1. Connect the power adapter to the lower right-hand side on the outside of the kit.
    2. Plug the power adapter into a 110V power outlet.
-   3. Verify that the blue LED power indicator illuminates on the PC within the case.
-   4. The radio kit will start up automatically.
+   3. The radio kit will start up automatically.
+   4. Verify that the blue LED power indicator illuminates on the PC within the case.
+   5. Verify that the red LED power indicator illuminates on radio adapter.
 10. Wait one minute.
     1.  Depending on your settings you may hear a "SYNQ Radio (Channel #) is online." announcement after approximately 10 seconds.
 11. Speak a test phrase into **Radio #2**. For example, "testing-testing 1-2-3".
 12. If applicable, verify that the LED indicator on the charging dock is illuminated. Different charging docks provide different indicators, but typically:
     - Solid red means charging.
-    - Solid green means fully charges.
+    - Solid green means fully charged.
     - Flashing red means an error state.
 13. Verify that the **Radio #1** is firmly seated the charging the dock inside the kit. 
 14. Close the case.
+
+## Radio Adapter LEDs
+The Radio Adapter provides three indicator LEDs.
+- Red: Power
+- Green: Push-to-talk (PTT) enabled
+- Blue: Charging enabled 
+
+![Radio adapter LEDs](/img/radio/radio-adapter.webp)
