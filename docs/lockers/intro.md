@@ -74,4 +74,6 @@ Though we are prototyping four-season outdoor locker designs, there are substant
 
 ## Troubleshooting
 - What light sequence (if any) do the locker show?
+   - Dull red: No internet connection.
+      - Dull red, but pulsing to bright red for 5 seconds every 5 minutes: Connected to the local network, but no internet connection.
 - Are you able to see the Raspberry Pi? Is it running with the green activity LED blinking periodically, and the Ethernet LEDs active?
