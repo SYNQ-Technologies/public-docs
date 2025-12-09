@@ -58,3 +58,10 @@ To manage your email preferences:
 5. Click your username.
 6. Click the __Manage your Email Preferences__ link.
 7. Toggle on/off the desired email notifications.
+
+### Available Emails
+The following email alerts and reports are available:
+- New user(s) approved for your MyStore dashboard
+- A new user has requested access to your store
+- Weekly store report
+- Weekly Call for Help report
