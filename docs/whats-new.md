@@ -8,6 +8,20 @@ sidebar_position: 19
 - Support Zebra Workcloud Sync as a communication platform provider.
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
+- New staff-facing dispatch boards that provide web pages with a configurable grid of digital call buttons.
+
+### 2025-11-05
+- Include correlation IDs in error messages presented in Microsoft Teams.
+
+### 2025-11-04
+- Digital call buttons now allow you to specify the notification channel to use for each display option.
+
+### 2025-10-30
+#### Fixes
+- 860: Call for Help requests marked as "on the way" by radio should be automatically resolved.
+- 865: Missing Call for Help settings for Mascot Image and Custom Input.
+- 864: Missing Organization setting for auto-linking Microsoft accounts.
+- 862: OrderUp product search fails.
 
 ### 2025-10-23
 - Expand list of claim phrases for answering call for help requests over the radio.
@@ -18,11 +32,11 @@ sidebar_position: 19
 
 ### 2025-10-19
 #### Fixes
-- 843 Applications should gracefully degrade when third party cloud providers like Pusher are offline.
+- 843: Applications should gracefully degrade when third party cloud providers like Pusher are offline.
 
 ### 2025-10-18
 #### Fixes
-- 844 OrderUp links from Teams adaptive card do not select the preferred worker role.
+- 844: OrderUp links from Teams adaptive card do not select the preferred worker role.
 
 ### 2025-10-13
 - MyStore user interface update and modernization.
