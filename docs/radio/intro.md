@@ -51,7 +51,7 @@ Our growing list of tested and supported radio models:
   - CLS1410
   - CLS1413
   - CLS1810
-  - CURVE
+  - DLR110 (Curve)
   - DLR1020
   - DLR1060
 - Retevis
