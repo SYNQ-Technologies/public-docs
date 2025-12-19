@@ -13,20 +13,38 @@ SYNQ provides different roles that control what each user can access:
 
 ## Manage Users
 To manage the users of a location:
-1. Sign into __MyStore__ as an Organization or Location Administrator
-2. Select __Manage Users__
+1. Sign into __MyStore__ as an Organization or Location Administrator.
+2. Select __Manage Users__.
 
 ### Add a User with Username and Password
-1. Sign into __MyStore__ as an Organization or Location Administrator
-2. Select __Manage Users__
-3. Click __Add A New User__
-4. Enter the following information:
-   - User Full Name
+1. Sign into __MyStore__ as an Organization or Location Administrator.
+2. Select __Manage Users__.
+3. Click the __+__ button at the top of the Users table to add a new user.
+4. Select the desired __Role__.
+5. Click __Continue__.
+6. Select the desired login method:
+   - Microsoft account
+   - Username and password
+   :::note
+   The available login method options will depend on your organization's allowed login methods.
+   :::
+7. Click __Continue__
+8. Enter the email address of the user and press Enter.
+   :::note
+   You can add multiple users by pressing the __Add New__ button, ot by supplying a comma separated list of emails.
+   :::
+9. For __username and password__ accounts enter the following information:
    - Email
+   - User Full Name
    - Password
-5. Select the desired __User Location__
-6. Select the desired __User Role__
-7. Click __Create User__
+   :::note 
+   This is only an initial password. The user will be required to set a new password when they sign in for the first time.
+   Be sure to copy the initial password value to distribute it to your users.
+   :::
+10. For __Microsoft__ accounts only a valid Microsoft email is required.
+11. Click __Continue__.
+12. Verify the user information is correct.
+13. Click __Create__.
 
 ### Microsoft Accounts
 The __Manage Users__ page provides a setting that allows users that sign in with Microsoft accounts to request access to your store location. When enabled, users can request access that must be approved by an Organization or Location Administrator.
@@ -40,11 +58,11 @@ To approve user access to a store location requested by a Microsoft account:
 
 ## Password Reset
 So long as a user has registered with a valid email address they are able to reset their own password. 
-1. Sign into __MyStore__
-2. Click __Login__
-3. Click __Forgot password__
-4. Enter your email address (which is your username)
-5. Click __Send Password Reset Link__
+1. Sign into __MyStore__.
+2. Click __Login__.
+3. Click __Forgot password__.
+4. Enter your email address (which is your username).
+5. Click __Send Password Reset Link__.
 6. Check your inbox for an email from `noreply@synqtech.com` that includes a password reset link.
    :::tip
    Check your junk email folder if the email does not arrive in your inbox.
