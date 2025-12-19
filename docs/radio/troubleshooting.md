@@ -26,9 +26,18 @@ Check cables for any loose connections.
 Check donor radio.
 1. Open the radio kit.
 2. Verify that the donor radio is turned on.
-3. Verify that the volume of the donor radio is approximately 50%.
+3. Verify that the volume of the donor radio is set to approximately 50%.
 4. Verify that the channel the donor radio is tuned to matches your other radios.
    1. If necessary, disconnect the donor radio and test that it can communicate with your other radios.
+
+Power cycle the radio kit.
+1. Unplug the radio kit from wall power. 
+2. Wait 20 seconds.
+3. Plug it back in again.
+4. The kit should come online after about 20 seconds. This will announce "SYNQ Radio (Channel #) is online" over the radios.
+   :::note 
+   In some deployments this announcement feature may be disabled.
+   :::
 
 ## Battery is dead on donor radio
 If the donor radio is not properly seated in the charging dock it will not charge, and the battery will die after approximately 1 day. 
