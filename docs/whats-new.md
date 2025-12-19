@@ -8,12 +8,26 @@ sidebar_position: 19
 - Support Zebra Workcloud Sync as a communication platform provider.
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
-- New staff-facing dispatch boards that provide web pages with a configurable grid of digital call buttons.
+- Scan-to-complete flow for call buttons.
+
+### 2025-12-17
+#### Features
+- Add call button name and location label to summary of Teams adaptive cards.
+- Radio now supports [Google Gemini](https://ai.google.dev/gemini-api/docs/speech-generation) and [Cartesia](https://cartesia.ai/) as speech-to-text and text-to-speech providers.
+- Radio now supports Cognizant voice agents.
+- Radio transcript viewer supports up arrow to send last user supplied text.
+#### Fixes
+- 829: OrderUp picking UI is difficult to see in Teams dark mode.
+- 922: Add "EZ Find" numbers to OrderUp showcases.
+- 938: Improve fuzzy matching of call button claim phrases over the radio.
 
 ### 2025-11-05
+#### Features
+- New staff-facing dispatch boards that provide web pages with a configurable grid of digital call buttons.
 - Include correlation IDs in error messages presented in Microsoft Teams.
 
 ### 2025-11-04
+#### Features
 - Digital call buttons now allow you to specify the notification channel to use for each display option.
 
 ### 2025-10-30
@@ -24,10 +38,12 @@ sidebar_position: 19
 - 862: OrderUp product search fails.
 
 ### 2025-10-23
+#### Features
 - Expand list of claim phrases for answering call for help requests over the radio.
 - Allow explicit configuration of microphone capture volume for radios.
 
 ### 2025-10-20
+#### Features
 - Support for ongoing "nag" alerts for unanswered Call for Help requests and escalations.
 
 ### 2025-10-19
@@ -39,7 +55,9 @@ sidebar_position: 19
 - 844: OrderUp links from Teams adaptive card do not select the preferred worker role.
 
 ### 2025-10-13
+#### Features
 - MyStore user interface update and modernization.
+- Radio now supports [Deepgram](https://deepgram.com/) as a speech-to-text and text-to-speech provider.
 
 ### 2025-10-07
 #### Features
