@@ -27,6 +27,29 @@ To enable escalations:
 6. Select the number of minutes to allow a call for help request to go unclaimed before triggering an escalation.
 7. Click __Save__.
 
+## Repeating Alerts
+Repeating alerts provide a way to send recurring reminders for unresolved call for help requests and escalations.
+
+:::note
+Repeating alerts are only supported for prompts with the `Staff Action` set to `Claim & On the Way` or `On the Way`.
+:::
+
+:::note
+Repeating alerts are not supported as radio announcements.
+:::
+
+To enable repeating alerts:
+1. Sign into __MyStore__.
+2. Select __Call for Help__.
+3. Select __Settings__.
+4. Scroll down to __Repeating Alerts__.
+5. Check the __Enable Repeating Alert__ checkbox to send recurring reminders for unresolved call for help requests.
+6. Check the __Enable Escalation Repeating Alert__ checkbox to send recurring reminders for unresolved call for help escalations.
+7. Set the __Alert Capacity__ to the maximum number of minutes that the repeating alerts should to continue to be sent.
+8. Set the __Alert Interval for Unclaimed Requests__ to the desired interval to send alerts for unclaimed requests.
+9. Set the __Alert Interval for Unacknowledged On the Way Requests__ to the desired interval to send alerts for requests that are claimed but not yet marked as on the way.
+10. Click __Save__.
+
 ## Channels
 Channels determine where call for help requests are routed. 
 
@@ -107,4 +130,27 @@ To create a new outcome:
 
 :::tip
 You can click and drag to update the presentation order of the outcomes.
+:::
+
+## Scan to Complete
+Scan to Complete is an optional flow that replaces explicitly defined outcomes. Instead it prompts the user to scan a barcode on the button that call for help request came from.
+Scanning the button requires the associate to visit the physical location of the call button.
+
+To enable scan to complete:
+1. Sign into __MyStore__.
+2. Select __Call for Help__.
+3. Select __Settings__.
+4. Check the __Scan to Complete for Buttons__ checkbox to enable scan to complete for your call buttons.
+5. Click __Save__.
+
+:::note
+When enabled, scan to complete replaces outcomes.
+:::
+
+:::note
+Scan to complete is only supported for call buttons that have prompts with the `Staff Action` set to `Claim & On the Way` or `On the Way`.
+:::
+
+:::note
+Scan to complete is only supported on Microsoft Teams and Zebra Workcloud Sync.
 :::
