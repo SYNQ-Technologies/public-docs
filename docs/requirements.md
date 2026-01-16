@@ -21,6 +21,7 @@ SYNQ supports the following platforms:
 - [Microsoft Teams](/docs/getting-started/microsoft-teams.md)
 - [BlueFletch Messaging](/docs/getting-started/bluefletch.md)
 - [RingCentral](/docs/getting-started/ringcentral.md)
+- [Zebra Workcloud Sync](/docs/getting-started/zebra-workcloud-sync.md)
 
 ## Associate Devices
 SYNQ products are used on a range of associate devices, including organizations using
