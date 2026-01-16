@@ -58,7 +58,6 @@ SYNQ provides the following webhook event payloads as `application/json` data.
 ```
 
 ### OrderUp
-Coming soon!
 ```json
 {
     "type": "orderup",
@@ -72,7 +71,8 @@ Coming soon!
     "internal_location_id": 1,
     "internal_id": 999,
     "store_number": "001",
-    "message": "A Picking Utility Order has been created (Order#: <order_number>)"
+    "message": "A Picking Utility Order has been created (Order#: <order_number>)",
+    "uuid": "00000000-0000-0000-0000-000000000000"
 }
 ```
 
