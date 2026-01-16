@@ -69,7 +69,7 @@ The case is equipped with four keyhole anchor points for wall/surface mount appl
 
 ![keyhole anchor points](/img/radio/radio-kit-wall-mount.webp)
 
-The kit includes a paper mounting template that you can use to mark the locations for the anchor screws.
+The kit includes a paper [mounting template](../../static/img/radio/radio-kit-mounting-template.pdf) that you can use to mark the locations for the anchor screws.
 
 :::note
 The mounting hardware (screws and wall anchors) are not included.
