@@ -5,10 +5,23 @@ sidebar_position: 19
 # What's New
 
 ### Coming Soon
-- Support Zebra Workcloud Sync as a communication platform provider.
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
+- Support for Kenwood radios.
+- Support for Zebra Workcloud Sync push-to-talk with radios.
+
+### 2026-01-10
+#### Features
+- Support Zebra Workcloud Sync as a communication platform provider.
 - Scan-to-complete flow for call buttons.
+
+### 2025-12-19
+#### Features
+- Modernize MyStore login and password reset pages.
+- Enable webhooks for OrderUp.
+- Show last connection time for call buttons and hubs.
+#### Fixes
+- 931: Standardize call button name and location label shown on Teams adaptive cards.
 
 ### 2025-12-17
 #### Features
