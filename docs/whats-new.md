@@ -14,6 +14,10 @@ sidebar_position: 19
 #### Features
 - Support Zebra Workcloud Sync as a communication platform provider.
 - Scan-to-complete flow for call buttons.
+#### Fixes
+- 935: Call for help webhook signature validation fails if the button/display name contains a forward slash.
+- 958: Add fallback to OrderUp when a product exists but has no location-specific mapping.
+- 962: Fix inefficient creation of OrderUp drop zones.
 
 ### 2025-12-19
 #### Features
