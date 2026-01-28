@@ -13,6 +13,10 @@ To configure SYNQ to use Zebra Workcloud Sync for your store location you need t
 3. Configure SYNQ to be aware of your Zebra Workcloud Sync instance channels.
 4. Configure SYNQ apps and devices to send their notifications to your Zebra Workcloud Sync groups.
 
+Once configured, SYNQ Frontline Hero delivers customer requests from call buttons, QRs, and OrderUp orders to your staff as ToDos in Workcloud Sync.
+
+![Zebra Workcloud Sync ToDo](/img/zebra/workcloud-sync-todo.jpg)
+
 ## Supported Modules
 Zebra Workcloud Sync is supported for the following SYNQ modules:
 - Call for Help
@@ -25,3 +29,14 @@ The following information is required to integrate Workcloud Sync with SYNQ:
   - Tenant ID
   - Client ID
   - Client Secret
+
+## Configuration
+Frontline Hero requires a Workcloud Sync API Client user and credentials.
+
+To obtain the `Client ID` and `Client Secret` of a Workcloud Sync API Client user:
+1. Obtain a `Platform Token` as a Workcloud Sync Tenant Administrator.
+2. Using the tenant administrator platform token, create an API Client user.
+3. Assign a Workcloud Sync license to the API client user.
+4. Assign an appropriate `Role` to the API client user.
+5. Assign an appropriate `Site` to the API client user.
+6. Provide the `Tenant ID`, `Client ID` and `Client Secret` to SYNQ Frontline Hero.
