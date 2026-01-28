@@ -64,8 +64,12 @@ Our growing list of tested and supported radio models:
 We can accommodate additional radio models so long as the model supports some form of external headset jack. Get in touch with us at contact@synqtech.com and let us know what radio models you use.
 
 ## Supported Voice Providers
+SYNQ Radio allows you to select your preferred cloud provider for speech-to-text and text-to-speech services.
 - Azure AI Services
+- Cartesia
 - Deepgram
+- Google Gemini
+- Groq
 - IBM Watsonx
 
 ## Installation
