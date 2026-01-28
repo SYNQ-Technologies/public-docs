@@ -10,6 +10,16 @@ sidebar_position: 19
 - Support for Kenwood radios.
 - Support for Zebra Workcloud Sync push-to-talk with radios.
 
+### 2026-01-27
+#### Features
+- Radio now supports [Groq](https://console.groq.com/docs/speech-to-text) as a speech-to-text and text-to-speech provider.
+#### Fixes
+- 973: Weekly store report times out.
+
+### 2026-01-23
+#### Fixes
+- 945: MyStore onboarding page style fixes.
+
 ### 2026-01-10
 #### Features
 - Support Zebra Workcloud Sync as a communication platform provider.
