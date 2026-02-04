@@ -10,6 +10,15 @@ sidebar_position: 19
 - Support for Kenwood radios.
 - Support for Zebra Workcloud Sync push-to-talk with radios.
 
+### 2026-01-29
+#### Features
+- Support [Groq Open AI](https://console.groq.com/docs/openai) agents.
+- Support fine-tuned Whisper models for speech-to-text.
+- Support composite speech configuration to allow mixing speech-to-text and text-to-speech services from different providers.
+#### Fixes
+- 977: Error when trying to restart a completed curbside arrival.
+- 987: Fix styling of OrderUp/Picking dashboard.
+
 ### 2026-01-27
 #### Features
 - Radio now supports [Groq](https://console.groq.com/docs/speech-to-text) as a speech-to-text and text-to-speech provider.
