@@ -10,6 +10,10 @@ sidebar_position: 19
 - Support for Kenwood radios.
 - Support for Zebra Workcloud Sync push-to-talk with radios.
 
+### 2026-02-03
+#### Fixes
+- 990: MyStore account lockout page fails to render.
+
 ### 2026-01-29
 #### Features
 - Support [Groq Open AI](https://console.groq.com/docs/openai) agents.
