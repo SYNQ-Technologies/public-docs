@@ -13,6 +13,8 @@ sidebar_position: 19
 ### 2026-02-09
 #### Features
 - Radio transcripts are now available to location and organization administrators through MyStore.
+#### Fixes
+- 1003: Apply maximum duration to speech-to-text transcriptions.
 
 ### 2026-02-05
 #### Features
