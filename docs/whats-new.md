@@ -10,6 +10,15 @@ sidebar_position: 19
 - Support for Kenwood radios.
 - Support for Zebra Workcloud Sync push-to-talk with radios.
 
+### 2026-02-09
+#### Features
+- Radio transcripts are now available to location and organization administrators through MyStore.
+
+### 2026-02-05
+#### Features
+- Radio now supports **Azure OpenAI** as a speech-to-text and text-to-speech provider.
+- Radio now supports a configurable delay following PTT release before it begins capturing new incoming audio.
+
 ### 2026-02-03
 #### Fixes
 - 990: MyStore account lockout page fails to render.

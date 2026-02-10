@@ -100,3 +100,15 @@ To connect SYNQ Radio to a PA receiver:
    - Audio messages that SYNQ Radio plays will be heard over the PA. 
 2. Connect the microphone input of the radio kit to the same audio source that is connected to the `Microphone 1` input of the PA receiver. 
    - Audio messages from other sources that will be heard over the PA will also be delivered to SYNQ Radio.
+
+## Transcript Viewer
+SYNQ Radio provides a transcript of all the radio traffic it receives. This transcript also includes all messages played over the radios (like call button announcements, or responses to agentic queries). 
+
+To access the transcript viewer:
+1. Sign into __MyStore__ as a Location Administrator.
+2. Select __Radio__.
+3. Select the desired channel and date. 
+
+:::note
+Only Location and Organization Administrators are able to view radio transcripts.
+:::
