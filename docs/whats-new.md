@@ -7,8 +7,19 @@ sidebar_position: 19
 ### Coming Soon
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
-- Support for Kenwood radios.
 - Support for Zebra Workcloud Sync push-to-talk with radios.
+
+### 2026-02-25
+#### Features
+- Radio
+  - Support for Kenwood NX-1000 Series radios.
+  - Support for [Zello Push-to-talk](https://zello.com/).
+  - Outbound webhooks are configurable and support request signing.
+- Call for Help
+  - You can now enable scan-to-complete on each call button, digital call button (QR), or dispatch board button.
+  - The scan-to-complete user interface now supports small format devices like the wearable Zebra WS301.
+  - Bar codes required for scan-to-complete enabled buttons are now available from the Call for Help settings page in MyStore.
+  - Improve consistency of Call for Help settings page.
 
 ### 2026-02-09
 #### Features
