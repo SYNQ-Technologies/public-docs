@@ -16,7 +16,7 @@ To manage the users of a location:
 1. Sign into __MyStore__ as an Organization or Location Administrator.
 2. Select __Manage Users__.
 
-### Add a User with Username and Password
+### Add a User
 1. Sign into __MyStore__ as an Organization or Location Administrator.
 2. Select __Manage Users__.
 3. Click the __+__ button at the top of the Users table to add a new user.

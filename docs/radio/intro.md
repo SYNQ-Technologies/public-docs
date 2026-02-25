@@ -45,9 +45,13 @@ Our growing list of tested and supported radio models:
   - IC-F1000 
   - IC-F2000 
   - IC-M37
+- Kenwood
+  - NX-1300
+  - NX-P1300
 - Motorola
   - CLP1043
   - CLP1083
+  - CLP1083e
   - CLS1410
   - CLS1413
   - CLS1810
@@ -66,11 +70,13 @@ We can accommodate additional radio models so long as the model supports some fo
 ## Supported Voice Providers
 SYNQ Radio allows you to select your preferred cloud provider for speech-to-text and text-to-speech services.
 - Azure AI Services
+- Azure Open AI
 - Cartesia
 - Deepgram
 - Google Gemini
 - Groq
 - IBM Watsonx
+- Whisper (self hosted)
 
 ## Installation
 Installation of SYNQ Radio involves deployment of the edge radio kit into your premises. Typically this will be in or near a networking room. 
@@ -84,6 +90,13 @@ The radio kit houses your donor radio and the necessary hardware to connect it t
 - Height: 15.75"
 - Width: 15.5"
 - Depth: 5.5"
+
+## Push-to-Talk Systems
+SYNQ Radio can also interface with other push-to-talk (PTT) systems. This allows you to join your two-way radio channels with channels on your push-to-talk smartphone app.
+
+SYNQ Radio supports the following push-to-talk systems:
+- Zebra Workcloud Sync
+- Zello
 
 ## Public Address Systems
 SYNQ Radio can also interface with public address systems. The SYNQ Radio kit supports a 3.5mm TRRS audio connection for microphone input and speaker output.
