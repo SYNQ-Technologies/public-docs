@@ -136,6 +136,23 @@ You can click and drag to update the presentation order of the outcomes.
 Scan to Complete is an optional flow that replaces explicitly defined outcomes. Instead it prompts the user to scan a barcode on the button that call for help request came from.
 Scanning the button requires the associate to visit the physical location of the call button.
 
+Scan to complete also improves the overall data captured for help requests because it provides accurate times of arrival of associates.
+
+### Associate Experience
+The following images show the associate experience of scan to complete in Microsoft Teams:
+<img src="/img/call-for-help/scan-to-complete-1.jpg" alt="Teams adaptive card showing scan to complete" style={{width: 300}} />
+<img src="/img/call-for-help/scan-to-complete-2.jpg" alt="Scan to complete - I've arrived" style={{width: 300}} />
+<img src="/img/call-for-help/scan-to-complete-3.jpg" alt="Scan to complete - Did you fnd the customer?" style={{width: 300}} />
+<img src="/img/call-for-help/scan-to-complete-4.jpg" alt="Scan to complete - Waiting for scan..." style={{width: 300}} />
+<img src="/img/call-for-help/scan-to-complete-5.jpg" alt="Scan to complete - Is the customer buying a product?" style={{width: 300}} />
+<img src="/img/call-for-help/scan-to-complete-6.jpg" alt="Scan to complete - Scan complete" style={{width: 300}} />
+
+
+In the event that the associate responding does not possess a scanner enabled device, there is the option for them to manually enter an alphanumeric code printed below the barcode rather than scanning.
+<img src="/img/call-for-help/scan-to-complete-manual.jpg" alt="Scan to complete - Manual entry" style={{width: 300}} />
+
+### Configuration
+
 To enable scan to complete:
 1. Sign into __MyStore__.
 2. Select __Call for Help__.
