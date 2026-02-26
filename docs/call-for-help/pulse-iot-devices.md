@@ -24,7 +24,7 @@ Pulse IoT Devices are added to the Call for Help system exactly the same way as 
 2. Select __Call for Help__
 3. Select __Settings__
 4. Scroll down to __Call for Help Buttons__
-5. Click __Create a new Call for Help Button__
+5. Click the __＋__ button
 6. Enter the following information:
    - Name
    - In Store Location Label
@@ -35,4 +35,4 @@ Pulse IoT Devices are added to the Call for Help system exactly the same way as 
    - Prompt
    - Notification Channel
    - Escalations Channel
-7. Click __Submit Options__
+7. Click __Create__

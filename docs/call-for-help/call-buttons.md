@@ -74,7 +74,7 @@ To add a new call button to your Call for Help system:
 2. Select __Call for Help__
 3. Select __Settings__
 4. Scroll down to __Call for Help Buttons__
-5. Click __Create a new Call for Help Button__
+5. Click the __＋__ button
 6. Enter the following information:
    - Name
    - In Store Location Label
@@ -85,7 +85,7 @@ To add a new call button to your Call for Help system:
    - Prompt
    - Notification Channel
    - Escalations Channel
-7. Click __Submit Options__
+7. Click __Create__
 
 
 ## Modify Call Button Properties
@@ -94,9 +94,9 @@ To change properties of a call button, such as the Name, Location, or Notificati
 2. Select __Call for Help__
 3. Select __Settings__
 4. Scroll down to __Call for Help Buttons__
-5. Click __Edit__ on the desired call button
+5. Click the __⋮__ menu on the desired call button and select __Edit__
 6. Update the button settings as desired
-7. Click __Submit Options__
+7. Click __Update__
 
 ## Battery Level
 SYNQ Call For Help Buttons are powered by 4 x AA batteries.
@@ -234,7 +234,7 @@ The configured notification channel of the button my be incorrect.
 
 ### Message arrives in Teams, but does not notify
 Notifications may be disabled for the channel in Teams.
-1. Click the `...` menu on the channel in Teams
+1. Click the __⋯__ menu on the channel in Teams
 2. Select __Channel notifications__
 3. Modify the notification setting
 4. Click __Save__
