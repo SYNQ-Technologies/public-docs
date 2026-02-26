@@ -7,12 +7,12 @@ sidebar_position: 19
 ### Coming Soon
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
-- Support for Zebra Workcloud Sync push-to-talk with radios.
 
 ### 2026-02-25
 #### Features
 - Radio
   - Support for Kenwood NX-1000 Series radios.
+  - Support for Zebra Workcloud Sync push-to-talk.
   - Support for [Zello Push-to-talk](https://zello.com/).
   - Outbound webhooks are configurable and support request signing.
 - Call for Help
