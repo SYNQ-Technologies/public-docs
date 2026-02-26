@@ -100,12 +100,12 @@ To create a new prompt:
 2. Select __Call for Help__.
 3. Select __Settings__.
 4. Scroll down to __Call for Help Prompts__.
-5. Click __Create a new prompt__.
+5. Click the __＋__ button
 6. Check the __Save Option to Organization__ checkbox if you want to make this prompt available to all stores in your organization, otherwise it will only be available to the current store location.
 7. Provide the text (__Customer Text__) that will appear for the customer on digital call buttons.
 8. Provide the text (__Staff Prompt__) that will appear on the notification presented to staff.
 9. Select the buttons (__Staff Actions__) that you want to appear on the notification presented to staff.
-10. Click __Create Call For Help Display Option__.
+10. Click __Create Display Option__.
 
 ## Displays
 See [Digital Call Buttons](./digital-call-buttons.md).
@@ -123,9 +123,9 @@ To create a new outcome:
 2. Select __Call for Help__.
 3. Select __Settings__.
 4. Scroll down to __Call for Help Outcomes__.
-5. Click __Create a new Outcome__.
+5. Click the __＋__ button
 7. Provide the text that will appear for the associate.
-8. Click __Submit Options__.
+8. Click __Create Outcome__.
 9. Repeat as needed to create the desired list of outcomes.
 
 :::tip
@@ -140,15 +140,17 @@ To enable scan to complete:
 1. Sign into __MyStore__.
 2. Select __Call for Help__.
 3. Select __Settings__.
-4. Check the __Scan to Complete for Buttons__ checkbox to enable scan to complete for your call buttons.
-5. Click __Save__.
+4. Scroll down to __Call for Help Displays__, __Call for Help Buttons__, or __Call for Help Dispatch Boards__.
+5. Click the __⋮__ menu on the desired button or display and select __Edit__
+6. Check the __Require Scan to Complete__ checkbox to enable scan to complete.
+7. Click __Update__.
 
 :::note
 When enabled, scan to complete replaces outcomes.
 :::
 
 :::note
-Scan to complete is only supported for call buttons that have prompts with the `Staff Action` set to `Claim & On the Way` or `On the Way`.
+Scan to complete is only supported for call buttons and displays that have prompts with the `Staff Action` set to `Claim & On the Way` or `On the Way`.
 :::
 
 :::note

@@ -11,7 +11,7 @@ To create a new digital call button QR Code:
 2. Select __Call for Help__
 3. Select __Settings__
 4. Scroll down to __Call for Help Displays__
-5. Click __Create a new Call for Help display__
+5. Click the __＋__ button
 6. Enter the following information:
    - Display Name
    - Notification Channel
@@ -20,7 +20,7 @@ To create a new digital call button QR Code:
    - You can include between one and four options.
    - The list of available options come from your configured list of Call for Help Prompts. See [Prompts](./settings.md#prompts) for more information.
 8. Check the __Enable QR Code__ checkbox
-9. Click __Submit Options__
+9. Click __Create Display__
 
 ## Test a QR Code Display
 To test a QR Code display:
@@ -28,9 +28,9 @@ To test a QR Code display:
 2. Select __Call for Help__
 3. Select __Settings__
 4. Scroll down to __Call for Help Buttons__
-5. Click __Download Display QRCode__
+5. Click the __⋮__ menu on the desired display and select __Download QR Code__
 6. To test the display from your PC, click the __Try it Out__ button.
-7. A popup window open (emulating the customer's experience on their smart phone)
+7. A popup window opens (emulating the customer's experience on their smart phone)
 8. Select an option
 9. Validate that the call for help request appears as a notification in the expected Teams channel
 
@@ -88,35 +88,13 @@ To update the branding of your digital call buttons:
 2. Select __Call for Help__
 3. Select __Settings__
 4. Scroll down to __Custom Style__
-
-To set the logo:
-1. Provide the URL to a SVG or PNG image of your brand logo
+5. Click __Open Style Editor__
+6. Provide the __Logo URL__ to a SVG or PNG image of your brand logo
    - The image's size will be adjusted automatically:
      - Maximum height: 100 pixels
      - Maximum width: 150 pixels
    - We recommend using an image with a transparent background
-2. Click __Apply__
+7. Use the __Color Pickers__ to select your brand colors
+8. Click __Save Logo and Colors__
 
-To set brand fonts and colors:
-1. Provide valid CSS definitions in the "Custom CSS" editor.
-2. Click __Update Custom CSS__
-
-For example:
-```css
-:root {
-  /*Page Style*/
-  --branding-bar-background: black;
-  --branding-page-background: white;
-  --display-name-text-color: white;
-
-  /*Button Style*/
-  --button-color: white;
-  --button-color-pressed: black;
-  --button-border-color: black;
-  --button-text-color: black;
-  --button-text-color-pressed: white;
-
-  /*Progress Modal Style*/
-  --progress-circle-color: black;
-}
-```
+For more advanced branding control you may also update the __Component Stylings__.

@@ -23,7 +23,7 @@ Your store may not be licensed for Digital Call Buttons. Contact SYNQ Support an
 
 - The Digital Call Button display may not be enabled for QR code use.
   1. Go to __MyStore > Call for Help > Settings > Call for Help Displays__
-  2. Click __Edit__ on the desired display
+  2. Click the __⋮__ menu on the desired display and select __Edit__
   3. Ensure that __Enable QR Code__ is checked.
 
 ## Escalation alerts aren't triggering 
@@ -32,6 +32,6 @@ Your store may not be licensed for Digital Call Buttons. Contact SYNQ Support an
   2. Confirm that escalations are enabled and verify the number of minutes before expiry. 
 - Check which channel escalations are sent to. 
   1. Go to __MyStore > Call for Help > Settings > Call for Help Displays__
-  2. Click __Edit__ on the display
+  2. Click the __⋮__ menu on the display and select __Edit__
   3. Verify which __Escalations Channel__ is selected
   4. Check in Microsoft Teams that you (or your staff) are a member of the team containing the selected __Escalations Channel__, that the channel is visible, and that notifications are enabled for that channel. 
