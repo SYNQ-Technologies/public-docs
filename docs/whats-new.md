@@ -7,6 +7,34 @@ sidebar_position: 19
 ### Coming Soon
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
+- Tools to help digitize manual pencil and paper based logs like restroom cleaning, aisle sweeps, and inspections.
+- Access dispatch boards via the SYNQ Apps tab in Microsoft Teams.
+
+### 2026-03-10
+#### Features
+- New application header bar in MyStore. This includes location switching and a consolidated user menu for accessing your user profile, email preferences, and language selection.
+- New Generic Agent that provides a simple, standard interface for integrating any external agent with SYNQ Radio. Implementers only need to expose a single `POST /chat` endpoint that accepts `{ text: string,   sessionId?: string, edgeId?: string }` and returns `{ text: string, sessionId: string }`. SYNQ Radio handles wake/stop phrase detection, session continuity, and request signing automatically.
+- Dispatch boards support 20 additional icon types.
+- The SYNQ Apps tab in Microsoft Teams respects the user's current theme.
+#### Fixes
+- 1051: Improve validation of Call for Help prompts.
+- 1063: Each dispatch board button now has a unique barcode for scan-to-complete.
+
+### 2026-03-05
+#### Features
+- New layout for Radio Transcript Viewer.
+- French translation of Radio Transcript Viewer.
+- Improve radio announcement of dispatch board buttons.
+#### Fixes
+- 1066: Transcription can stop on default speech-to-text service.
+
+### 2026-03-04
+#### Fixes
+- 1068: OrderUp QR codes for individual products open the showcase rather than the product.
+
+### 2026-02-27
+#### Features
+- Radio can now distinguish between call button when there are multiple active requests. Simply include the button name in your claim response. For example: "I've got Aisle 7", or "On my way to auto parts".
 
 ### 2026-02-25
 #### Features

@@ -19,7 +19,7 @@ To manage the users of a location:
 ### Add a User
 1. Sign into __MyStore__ as an Organization or Location Administrator.
 2. Select __Manage Users__.
-3. Click the __+__ button at the top of the Users table to add a new user.
+3. Click the __＋__ button at the top of the Users table to add a new user.
 4. Select the desired __Role__.
 5. Click __Continue__.
 6. Select the desired login method:
@@ -72,10 +72,10 @@ So long as a user has registered with a valid email address they are able to res
 ## Email Preferences
 To manage your email preferences:
 1. Sign into __MyStore__.
-2. Hover the mouse over the store name and logo in the top left of the page.
-5. Click your username.
-6. Click the __Manage your Email Preferences__ link.
-7. Toggle on/off the desired email notifications.
+2. Open the User menu by clicking the user icon on the top right of the page.
+3. Click __Profile__.
+4. Click the __Manage your Email Preferences__ link.
+5. Toggle on/off the desired email notifications.
 
 ### Available Emails
 The following email alerts and reports are available:

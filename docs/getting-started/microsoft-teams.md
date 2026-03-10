@@ -44,7 +44,7 @@ Microsoft provides detailed instructions on how to create teams and channels [he
 
 ### Add Channels to the team
 1. On the __Teams__ tab
-2. Click the `...` menu of the desired team and select __Add channel__ \
+2. Click the __⋯__ menu of the desired team and select __Add channel__ \
    ![Team Menu](/img/teams/team-menu.png)
 3. Provide the following:
    - Team name
@@ -65,7 +65,7 @@ We recommend that you create a "Testing" channel. This can serve as a staging ar
 
 ### Add Users to the team
 1. On the __Teams__ tab
-2. Click the `...` menu of the desired team and select __Add member__ \
+2. Click the __⋯__ menu of the desired team and select __Add member__ \
    ![Team Menu](/img/teams/team-menu.png)
 3. Enter the name or email of the desired user or security group to add
    - You can add multiple users at once
@@ -78,7 +78,7 @@ We recommend you get started by only adding a few users that will be involved wi
 
 ### Manage Team Members and Permissions
 1. On the __Teams__ tab
-2. Click the `...` menu of the desired team and select __Manage team__ \
+2. Click the __⋯__ menu of the desired team and select __Manage team__ \
    ![Team Menu](/img/teams/team-menu.png)
 3. Select the __Members__ tab
 4. All Members of your team will be listed here, separated into two categories: __Owners__ and __Members and guests__
@@ -90,9 +90,9 @@ We recommend you get started by only adding a few users that will be involved wi
 ## Add the Frontline Hero App to Microsoft Teams
 Once your Team is created, channels are added, and relevant users are added, you'll need to add the SYNQ Frontline Hero to the Team.
 1. On the __Teams__ tab
-2. Click the `...` menu of the desired team and select __Manage team__
+2. Click the __⋯__ menu of the desired team and select __Manage team__
 3. Select the __Apps__ tab at the top of the screen
-4. Click __+ Get more apps__
+4. Click __＋ Get more apps__
 5. Search for "SYNQ Frontline Hero"
     :::note
     Canadian Tire stores should contact "Canadian Tire Corporate" to add the "MyStore by SYNQ" app instead for their location.
@@ -114,7 +114,7 @@ Notifications can be configured, in Teams, from your workstation or mobile devic
 
 ### Workstation
 1. In the Teams application, locate the channel that you wish to enable/disable notifications on.
-2. Click the three dots `...` to the right of the channel name to open a popup menu.
+2. Click the three dots __⋯__ to the right of the channel name to open a popup menu.
 3. Click __Channel Notifications__.
 4. Set the notification preferences as needed. The below image shows the needed settings to receive notifications.
 ![Notification Preferences](/img/teams/notifications.png)
