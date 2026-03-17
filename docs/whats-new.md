@@ -10,10 +10,22 @@ sidebar_position: 19
 - Tools to help digitize manual pencil and paper based logs like restroom cleaning, aisle sweeps, and inspections.
 - Access dispatch boards via the SYNQ Apps tab in Microsoft Teams.
 
+### 2026-03-17
+#### Features
+- Radio OpenAI voice agents now support aliases.
+- Curbside radio announcements are now configurable and include unclaimed and undelivered escalations by default. 
+
+### 2026-03-16
+#### Fixes
+- 1077: Improve performance of long radio transcripts.
+- 1078: Call for Help states to announce over the radio can default to none after editing.
+- 1080: Exclude unnecessary source field from radio transcript CSV exports.
+- 1086: Deep linking to Teams tab can be enabled when making unrelated changes to location configuration.
+
 ### 2026-03-10
 #### Features
 - New application header bar in MyStore. This includes location switching and a consolidated user menu for accessing your user profile, email preferences, and language selection.
-- New Generic Agent that provides a simple, standard interface for integrating any external agent with SYNQ Radio. Implementers only need to expose a single `POST /chat` endpoint that accepts `{ text: string,   sessionId?: string, edgeId?: string }` and returns `{ text: string, sessionId: string }`. SYNQ Radio handles wake/stop phrase detection, session continuity, and request signing automatically.
+- New Generic Agent that provides a simple, standard interface for integrating any external agent with SYNQ Radio. Implementers only need to expose a single `POST /chat` endpoint that accepts `{ text: string, sessionId?: string, edgeId?: string }` and returns `{ text: string, sessionId: string }`. SYNQ Radio handles wake/stop phrase detection, session continuity, and request signing automatically.
 - Dispatch boards support 20 additional icon types.
 - The SYNQ Apps tab in Microsoft Teams respects the user's current theme.
 #### Fixes
