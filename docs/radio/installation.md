@@ -109,13 +109,21 @@ The mounting hardware (screws and wall anchors) are not included.
    5. Verify that the red LED power indicator illuminates on radio adapter.
 10. Wait one minute.
     1.  Depending on your settings you may hear a "SYNQ Radio (Channel #) is online." announcement after approximately 10 seconds.
-11. Speak a test phrase into **Radio #2**. For example, "testing-testing 1-2-3".
-12. If applicable, verify that the LED indicator on the charging dock is illuminated. Different charging docks provide different indicators, but typically:
+11. Sign into __MyStore__ as a Location Administrator.
+    1.  Select __Radio__.
+    2.  The Transcript Viewer opens to the first channel and current date.
+    3.  Select the desired channel if you have multiple radio kits. 
+12. Speak a test phrase into **Radio #2**. For example, "testing-testing 1-2-3".
+    1.  You should see the transcription of your test phrase appear.
+13. Type in a test phrase into chat interface of the transcript viewer and press the **Send** button.
+    1.  The test phrase will be broadcast over the radios. 
+    2.  You should hear it through **Radio #2**.
+14. If applicable, verify that the LED indicator on the charging dock is illuminated. Different charging docks provide different indicators, but typically:
     - Solid red means charging.
     - Solid green means fully charged.
     - Flashing red means an error state.
-13. Verify that the **Radio #1** is firmly seated the charging the dock inside the kit. 
-14. Close the case.
+15. Verify that the **Radio #1** is firmly seated the charging the dock inside the kit. 
+16. Close the case.
 
 ## Radio Adapter LEDs
 The Radio Adapter provides three indicator LEDs.
