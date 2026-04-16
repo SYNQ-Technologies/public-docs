@@ -7,8 +7,37 @@ sidebar_position: 19
 ### Coming Soon
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
-- Tools to help digitize manual pencil and paper based logs like restroom cleaning, aisle sweeps, and inspections.
+
+### 2026-04-15
+#### Features
+- Claim Curbside arrivals over the radio.
+- Radio general configuration tab now provides a Check Status button that returns the current edge device software version and IP address. 
+#### Fixes
+- 1165: Organization administrators are unable to edit radio configuration settings.
+
+### 2026-04-10
+#### Features
+- Introducing [Scan Log](./scan-log/intro.md). A set of tools to help digitize manual pencil and paper based logs like restroom cleaning, aisle sweeps, and inspections.
+- Location administrators can now control all configuration settings of SYNQ Radio.
+- Push-to-talk integrations (Zebra and Zello) now support optional wake phrases.
+- Call for help repeating alerts can now be announced over the radio.
+
+### 2026-04-08
+#### Features
+- Location administrators can now create Service Account users and generate Personal Access Tokens that allow other applications to perform scoped authenticated actions.
+- Support for Kenwood PKT-300 radios.
+#### Fixes
+- 1123: Modal dialogs in MyStore can be behind application banner.
+
+### 2026-04-01
+#### Features
+- Improve load times of Radio transcript viewer.
+
+### 2026-03-23
+#### Features
 - Access dispatch boards via the SYNQ Apps tab in Microsoft Teams.
+#### Fixes
+- 1094: Fix intermittent transcript glitch when changing dates/channels.
 
 ### 2026-03-17
 #### Features
