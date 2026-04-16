@@ -48,6 +48,7 @@ Our growing list of tested and supported radio models:
 - Kenwood
   - NX-1300
   - NX-P1300
+  - PKT-300
 - Motorola
   - CLP1043
   - CLP1083
