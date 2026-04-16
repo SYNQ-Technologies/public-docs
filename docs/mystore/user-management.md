@@ -83,3 +83,30 @@ The following email alerts and reports are available:
 - A new user has requested access to your store
 - Weekly store report
 - Weekly Call for Help report
+
+## Service Accounts
+Service accounts provide a means for other applications to access services. For example, the SYNQ Radio application uses a service account to claim Call for Help requests.
+
+To create a service account:
+1. Sign into __MyStore__ as an Organization or Location Administrator.
+2. Select __Manage Users__.
+3. Select the __Service Account__ role.
+4. Click __Continue__.
+5. Service accounts always authenticate using a Personal Access Token, so there are no authentication options to select. Click __Continue__.
+6. Supply a __Full Name__ for the user.
+7. Click __Continue__.
+8. Click __Create__.
+
+### Personal Access Tokens
+To assign a Personal Access Token (PAT) to a Service Account user:
+1. Sign into __MyStore__ as an Organization or Location Administrator.
+2. Select __Manage Users__.
+3. Click the __Edit__ button of the desired service account user.
+4. In the __Personal Access Tokens__ section provide the following:
+   - __Token Name__: A display name to help you remember the purpose/use of this token.
+   - __Scopes__: Select the capabilities you want to grant this token.
+5. Click __Generate Token__.
+6. Copy the generated token value so you can use it in another application. This token is a credential so keep it secure.
+:::important
+This is the only chance you get to copy the token value. If you don't record it you will need to delete the token and generate a new one.
+:::
