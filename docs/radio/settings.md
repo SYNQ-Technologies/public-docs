@@ -12,7 +12,7 @@ To access the transcript viewer:
 2. Select __Radio__.
 
 ## Making Changes
-1. Select the __Settings__ tab. 
+1. Select the __Settings__ tab from the sidebar. 
 2. Select the desired device. 
 3. This loads a read only view of the current settings.
 4. Click the __⋮__ menu and select __Edit__
@@ -24,12 +24,57 @@ To access the transcript viewer:
 Setting appropriate volume levels is critical to a well performing system. You want levels to be loud enough to hear, but no so loud that it causes distortion or clipping of the audio signal.
 
 To make volume adjustments:
-1. Select the __Audio__ tab. 
+1. Select the __Audio__ tab.
 2. __Speaker Volume__ controls the output volume of the audio played over the donor radio.
 3. __Microphone Volume__ controls the capture volume of the audio received by the donor radio.
 :::note
 The donor radio also has physical volume controls (knobs or buttons). In most cases the volume of the donor radio should be set to 50% or lower.
 :::
+
+## Speech Providers
+SYNQ Radio allows you to select your preferred cloud provider for speech-to-text and text-to-speech services.
+
+To change speech provider settings:
+1. Select the __Speech__ tab.
+2. Select the desired speech provider __Type__.
+   - The `Default` provider type is `Azure`
+3. Depending on the selected type different provider specific configuration settings appear. 
+4. Typically you will need to configure settings such as:
+   - Connection information like a URL and API Key.
+   - The LLM models to use when transcribing and generating speech.
+   - The language to use when transcribing and generating speech.
+   - The voice to use when generating speech.
+5. Click __Save__.
+
+### Azure
+- __Subscription Key__: The Azure subscription key for the speech service.
+- __Region__: The Azure [region name](https://aka.ms/csspeech/region). For example, `eastus`.
+- __Voice Name__: The [voice name](https://aka.ms/speech/tts-languages). For example, `en-US-JennyNeural`.
+- __Language__: The [language](https://aka.ms/speech/tts-languages) of the speech synthesizer. For example, `en-US`.
+
+### Azure OpenAI
+- __API Key__: The Azure OpenAI API Key.
+- __Endpoint__: The Azure URL endpoint where your OpenAI service is hosted. For example `https://example-resource.cognitiveservices.azure.com`
+- __API Version__: The API version to use when communicating with the service.
+- __STT Deployment__: ID of the speech-to-text model to use. For example, `gpt-4o-transcribe`.
+- __Language__: The ISO-639-1 language of the input audio. For example, `en`.
+- __Prompt__: The prompt to provide to the speech service.
+- __TTS Deployment__: ID of the text-to-speech model to use. For example, `gpt-4o-mini-tts`.
+- __Voice Name__: The voice name. For example, `alloy`.
+- __Instructions__: Additional instructions to control the voice of your generated audio.
+- __Speed__: The speed of the generated audio. Select a value from `0.25` to `4.0`. `1.0` is the default.
+
+### Groq
+- __API Version__: The API version to use when communicating with the service.
+- __Language__: The ISO-639-1 language of the input audio. For example, `en`.
+- __STT Model__: ID of the speech-to-text model to use. For example, `whisper-large-v3`.
+- __STT Prompt__: Additional instruction to provide the the speech-to-text model.
+- __TTS Model__: ID of the text-to-speech model to use. For example, `canopylabs/orpheus-v1-english`.
+- __Voice__: The voice to use when generating the audio. For example, `troy`.
+- __Speed__: The speed of the generated audio.
+
+### Composite
+Most speech providers offer both speech-to-text and text-to-speech capabilities. The __Composite__ provider type allows you to select one provider type for speech-to-text and a different type for text-to-speech.
 
 ## Frontline Hero
 To enable SYNQ Radio to work with Frontline Hero applications like Call for Help and Curbside:
@@ -64,12 +109,82 @@ To enable SYNQ Radio to work with Frontline Hero applications like Call for Help
 18. Enter the __Verification Token__ from above as the __Webhook Validation Secret__.
 19. Click __Save__.
 
+## Agents
+SYNQ Radio can talk to a variety of off-the-shelf and custom agents. Agent configuration typically requires:
+- Connection settings like a URL and API Key.
+- Model setting that define what type of LLM model to use.
+- Messages that represents prompts to to provide to LLM-based models.
+
+To configure an agent:
+1. Select the __Agents__ tab.
+2. Click the __Add Agent__ button.
+3. Select the desired agent __Type__.
+   - `Azure OpenAI`
+   - `Generic`
+   - `OpenAI`
+   - `Watson`
+4. Depending on the selected type different configuration settings apply.
+   - __Azure OpenAI__
+     - __Name__: The name of your agent.
+     - __Aliases__: Alternate names or name spellings of your agent.
+     - __Endpoint__: The Azure URL endpoint where your agent is hosted. For example `https://example-resource.azure.openai.com/`
+     - __API Key__: The Azure OpenAI API Key.
+     - __Deployment__: The name of your Azure OpenAI deployment.
+     - __Version__: The API version to use when communicating with your agent. For example, `2024-10-21`.
+     - __Model__: The Model ID used to generate responses. For example, `gpt-4o-mini`.
+     - Click __Add Message__.
+       - Add messages that represent the system prompts for your agent.
+   - __Generic__
+     - __Name__: The name of your agent.
+     - __Aliases__: Alternate names or name spellings of your agent.
+     - __Endpoint__: The URL endpoint where your agent is hosted.
+     - __Secret__: The secret used to apply HMAC signatures to requests from SYNQ Radio to the agent endpoint.
+   - __OpenAI__
+     - __Name__: The name of your agent.
+     - __Aliases__: Alternate names or name spellings of your agent.
+     - __Endpoint__: The URL endpoint where your agent is hosted.
+     - __API Key__: The OpenAI API Key.
+     - __Model__: The Model ID used to generate responses. For example, `gpt-4o-mini`.
+     - Click __Add Message__.
+       - Add messages that represent the system prompts for your agent.
+   - __Watson__
+     - __Name__: The name of your agent.
+     - __Service URL__: The base URL for the Watson service where your Watson agent is hosted.
+     - __Assistant ID__: The ID of your Watson assistant.
+     - __Environment ID__: The environment ID of the environment where the assistant is deployed.
+     - __Version__: The API version date to use with the service, in "YYYY-MM-DD" format.
+5. Click the __Save__ button on the dialog.
+6. Click the __Save__ button on the form to commit your changes.
+
+### Implementing a Generic Agent
+To implement a generic agent all you need is a service that accepts a `POST` to a `/chat` endpoint with the following `application/json` payload:
+```json
+{ 
+   text: string,      // The transcribed text from the user.
+   sessionId: string, // The current session ID if your agent supports multi-turn sessions, and session ID was provided on a previous turn.
+   edgeId: string     // The ID of the edge device the request originated from.
+}
+``` 
+The endpoint should provide an  `application/json` response matching:
+```json
+{ 
+   text: string,      // The optional response text to real aloud over the radio.
+   sessionId: string  // The optional session ID generated by your agent if it supports multi-turn conversations.
+}
+``` 
+
+See [Validate Signed Webhook Requests](../apis/webhooks.md#validate-signed-webhook-requests) for details on how to validate the signature of the request.
+
+:::note
+The SYNQ Radio application can only make requests to services that support HTTPS and are exposed to the internet. For example, it can't make a request to an agent you are building in a development environment hosted on `http://localhost:3000`. You can use services like Ngrok, or `cloudflared tunnel --url http://localhost:3000` to expose services in development publicly over HTTPS.
+:::
+
 ## Push-to-talk
 Integration with push-to-talk systems is managed via the __Secondary Transports__ tab.
 
 ### Zello PTT
 To enable Zello PTT:
-1. Select the __Secondary Transports__ tab. 
+1. Select the __Secondary Transports__ tab.
 2. Click the __Add Transport__ button.
 3. Configure the following settings:
    - __Type__: `Zello`
