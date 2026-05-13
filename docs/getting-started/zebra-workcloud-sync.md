@@ -13,30 +13,67 @@ To configure SYNQ to use Zebra Workcloud Sync for your store location you need t
 3. Configure SYNQ to be aware of your Zebra Workcloud Sync instance channels.
 4. Configure SYNQ apps and devices to send their notifications to your Zebra Workcloud Sync groups.
 
-Once configured, SYNQ Frontline Hero delivers customer requests from call buttons, QRs, and OrderUp orders to your staff as ToDos in Workcloud Sync.
+Once configured, SYNQ Frontline Hero delivers customer requests from call buttons, QRs, and OrderUp orders to your staff as __To-Dos__ in Workcloud Sync.
 
-![Zebra Workcloud Sync ToDo](/img/zebra/workcloud-sync-todo.jpg)
+![Zebra Workcloud Sync To-Dos](/img/zebra/workcloud-sync-todo.jpg)
 
 ## Supported Modules
 Zebra Workcloud Sync is supported for the following SYNQ modules:
 - Call for Help
 - OrderUp
+- Radio
 
 ## Requirements
-
-The following information is required to integrate Workcloud Sync with SYNQ:
-- Workcloud Sync
-  - Tenant ID
-  - Client ID
-  - Client Secret
+The following information is required to integrate Workcloud Sync with SYNQ Frontline Hero:
+- Workcloud Sync API client credentials.
+- Workcloud Sync Roles that represent the Workcloud Sync user groups that should receive notifications.
 
 ## Configuration
-Frontline Hero requires a Workcloud Sync API Client user and credentials.
+SYNQ Frontline Hero requires Zebra Workcloud Sync API client credentials.
 
-To obtain the `Client ID` and `Client Secret` of a Workcloud Sync API Client user:
-1. Obtain a `Platform Token` as a Workcloud Sync Tenant Administrator.
-2. Using the tenant administrator platform token, create an API Client user.
-3. Assign a Workcloud Sync license to the API client user.
-4. Assign an appropriate `Role` to the API client user.
-5. Assign an appropriate `Site` to the API client user.
-6. Provide the `Tenant ID`, `Client ID` and `Client Secret` to SYNQ Frontline Hero.
+To obtain Zebra Workcloud Sync API client credentials:
+1. Login to the Zebra Workcloud Admin Portal
+   - For example, https://prod-ui-zwsusprod01p.pp.zebra.com/
+2. Expand __System Configuration__.
+3. Select __Device Provisioning__.
+4. Note the __Tenant ID__.
+5. Note the __Tenant URL__.
+   - Note the instance name within the URL. For example, `zwsusprod01`.
+6. Select __Client Credentials__.
+7. Click __Add New Client__.
+8. Provide the following:
+   - __Client Friendly Name__: `SYNQ Service Account`
+   - __Client Validity__: `Type: Forever`
+   - __Token Validity__: `Type: Hours` `24 Hours`
+   - __Assign Role(s)__: Select an existing role that includes the following Workcloud Sync permission:
+      - To-Dos:
+         - Base
+         - Task-creation
+         - Task-creation-checklist
+         - Task-creation-instore
+         - Task-reassign
+   - __Assign Site__: Select the existing site that the users are assigned to.
+9. Click __Add__.
+
+To provide Frontline Hero with the Zebra Workcloud Sync API client credentials:
+1. Sign into __MyStore__ as a Location Administrator
+2. Select __Configure Store__
+3. Select __Settings__
+4. Scroll down to __Bot configuration + Channels__
+5. Set __Notification Method__ to `Zebra Workcloud Bot`
+6. Provide the following from the Zebra Workcloud Admin Portal:
+   - __Zebra Workcloud Client ID__
+   - __Zebra Workcloud Client Secret__
+   - __Zebra Workcloud Tenant ID__
+   - __Zebra Workcloud Instance__
+      - For example, `zwsusprod01`, or `zwseuprod01`.
+
+To define a target Zebra Workcloud Sync group that should receive Frontline Hero notifications:
+1. Click the __Add Bot Instance__ button.
+2. Provide the following:
+   - __Site__: The name of the Workcloud Sync Site that contains your target users.
+   - __Department__: The ID of the Workcloud Sync Department that contains your target users.
+   - __Role__: The name of the Workcloud Sync Role that contains the users that should receive notifications.
+   - __Target Name__: A name for this group of users. This is how the group will appear elsewhere in MyStore when you are selecting which group will receive notifications.
+3. Click __Save__.
+4. Repeat to add other groups.
