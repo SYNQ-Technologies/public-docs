@@ -87,15 +87,17 @@ See the full [installation procedure](./installation.md).
 ### Radio Kit
 The radio kit houses your donor radio and the necessary hardware to connect it to SYNQ's cloud services. 
 
-#### Dimensions
+#### Physical Specifications
 - Height: 15.75"
 - Width: 15.5"
 - Depth: 5.5"
+- Weight: Approximately 9lbs depending on the donor radio model
 
 ## Push-to-Talk Systems
 SYNQ Radio can also interface with other push-to-talk (PTT) systems. This allows you to join your two-way radio channels with channels on your push-to-talk smartphone app.
 
 SYNQ Radio supports the following push-to-talk systems:
+- ESChat
 - Zebra Workcloud Sync
 - Zello
 
