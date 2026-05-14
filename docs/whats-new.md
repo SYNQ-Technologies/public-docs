@@ -7,9 +7,19 @@ sidebar_position: 19
 ### Coming Soon
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
+- Support Radio deployments that use an OIDC provider for authentication.
+- Support delivering Call for Help and Radio announcements to SIP enabled system.
+
+### 2026-05-14
+#### Features
+- Support for [ESChat Push-to-Talk](https://eschat.com/).
+- Support Radio deployments that use an OIDC provider for authentication.
+- Radio agents can now continue an ongoing conversation without the user needing to address the agent by name on each interaction.
+#### Fixes
+- 1201: Improve modal dialog buttons in radio configuration.
+- 1227: Improve contrast in dark mode for radio.
 
 ### 2026-05-09
-- Support for [ESChat Push-to-Talk](https://eschat.com/).
 - Configurable call button cool down time that determines the minimum time between call button presses.
 
 ### 2026-04-27
