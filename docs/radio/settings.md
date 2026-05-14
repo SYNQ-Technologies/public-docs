@@ -238,6 +238,7 @@ To enable Zebra PTT:
    - __Remote Port__: The remote port of the Zebra SBC. Optional: defaults to `45015`.
    - __Local Host__: The local IP Address to listen for incoming RTP packets from the Zebra SBC. Optional: defaults to `0.0.0.0`. Alternatively you can explicitly set it to match the active IP Address of the device.
    - __Local Port__: The local port to listen for incoming RTP packets from the Zebra SBC. Optional: defaults to `45015`.
+   - __Encoder Codec__: `Opus`
 7. Click the __OK__ button on the dialog.
 8. Click the __Save__ button on the form to commit your changes.
 9. Following Zebra's documentation, update the SBC radio user configuration to use the IP Address of the SYNQ Radio device and the Local Port (or its default value of `45015`).
