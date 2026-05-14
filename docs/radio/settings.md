@@ -153,7 +153,7 @@ To configure an agent:
      - __Assistant ID__: The ID of your Watson assistant.
      - __Environment ID__: The environment ID of the environment where the assistant is deployed.
      - __Version__: The API version date to use with the service, in "YYYY-MM-DD" format.
-5. Click the __Save__ button on the dialog.
+5. Click the __OK__ button on the dialog.
 6. Click the __Save__ button on the form to commit your changes.
 
 ### Implementing a Generic Agent
@@ -182,6 +182,67 @@ The SYNQ Radio application can only make requests to services that support HTTPS
 ## Push-to-talk
 Integration with push-to-talk systems is managed via the __Secondary Transports__ tab.
 
+### ESChat PTT
+Connecting your SYNQ Radio to an ESChat PTT channel requires configuration of:
+- An RTP Gateway in the ESChat Management Portal
+- An SYNQ secondary transport that matches the ESChat RTP Gateway
+
+:::note
+The SYNQ Radio device communicates with the ESChat RTP Gateway via UDP. The SYNQ Radio device is typically able to initiate outbound connections to the gateway, but you will need to configure appropriate firewall rules and port forwarding so that the ESChat gateway can reach the device. You will also need to provide ESChat with a public IP address for the device.
+:::
+
+To enable ESChat PTT:
+1. Select the __General__ tab.
+2. Click the __Check Status__ button.
+3. Note the active (**bold**) IP Address of the SYNQ Radio device.
+   :::note
+   This is often an internal IP address. You will need to provide ESChat with the public IP address of the device instead.
+   ::: 
+4. Following ESCHat's [RTP Gateway Setup](https://kb.eschat.com/hc/en-us/articles/8836244209819-RTP-Gateway-Setup) documentation add and configure an RTP Gateway.
+   1. Note the **Assigned Server IP Address** and **Assigned Server UDP Port**.
+   2. Set the **Remote IP Address** to the IP Address of the SYNQ Radio device.
+   3. Set the **Remote UDP Port** to the desired port you want to expose from the SYNQ Radio device. For example `45015`.
+   4. Set the **Internal Data Payload Format** to `G.711, mu-Law`.
+5. Select the __Secondary Transports__ tab. 
+6. Click the __Add Transport__ button.
+7. Configure the following settings:
+   - __Type__: `RTP`
+   - __Remote Host__: The remote ESChat Assigned Server IP Address.
+   - __Remote Port__: The remote ESChat Assigned Server UDP Port.
+   - __Local Host__: The local IP Address to listen for incoming RTP packets from the ESChat RTP Gateway. Optional: defaults to `0.0.0.0`. Alternatively you can explicitly set it to match the active IP Address of the device.
+   - __Local Port__: The local port to listen for incoming RTP packets from the ESChat RTP Gateway. Optional: defaults to `45015`.
+   - __Encoder Codec__: `PCMU (G.711 μ-law)`
+8.  Click the __OK__ button on the dialog.
+9.  Click the __Save__ button on the form to commit your changes.
+10. Click the __⋮__ menu and select __Restart Edge__.
+11. Wait two minutes for the SBC and SYNQ Radio device to reload.
+12. Test communication between the radios and Zebra Workcloud Sync PTT users.
+
+### Zebra PTT
+Connecting your SYNQ Radio to a Zebra Workcloud Sync PTT channel requires a Zebra Session Border Controller (SBC) appliance. The SBC securely relays audio between the two applications. Configuration of the SBC is covered by Zebra's documentation. At a high level it needs:
+- A Zebra Workcloud Sync "group" that represents the PTT channel where communication between radios and Workcloud Sync users will happen.
+- A Zebra Workcloud Sync "radio user" that is a member of that group. This is the Workcloud Sync user that the SYNQ Radio acts as.
+- The IP Address and port of the of the SYNQ radio kit.
+
+To enable Zebra PTT:
+1. Select the __General__ tab.
+2. Click the __Check Status__ button.
+3. Note the active (**bold**) IP Address of the SYNQ Radio device.
+4. Select the __Secondary Transports__ tab. 
+5. Click the __Add Transport__ button.
+6. Configure the following settings:
+   - __Type__: `RTP`
+   - __Remote Host__: The remote IP Address of the Zebra SBC.
+   - __Remote Port__: The remote port of the Zebra SBC. Optional: defaults to `45015`.
+   - __Local Host__: The local IP Address to listen for incoming RTP packets from the Zebra SBC. Optional: defaults to `0.0.0.0`. Alternatively you can explicitly set it to match the active IP Address of the device.
+   - __Local Port__: The local port to listen for incoming RTP packets from the Zebra SBC. Optional: defaults to `45015`.
+7. Click the __OK__ button on the dialog.
+8. Click the __Save__ button on the form to commit your changes.
+9. Following Zebra's documentation, update the SBC radio user configuration to use the IP Address of the SYNQ Radio device and the Local Port (or its default value of `45015`).
+10. Click the __⋮__ menu and select __Restart Edge__.
+11. Wait two minutes for the SBC and SYNQ Radio device to reload.
+12. Test communication between the radios and Zebra Workcloud Sync PTT users.
+
 ### Zello PTT
 To enable Zello PTT:
 1. Select the __Secondary Transports__ tab.
@@ -199,7 +260,7 @@ To enable Zello PTT:
 5. Configure the following settings:
    - __Channel Name__: The name of the Zello channel to connect to.
 6. If desired, configure additional channels.
-7. Click the __Save__ button on the dialog.
+7. Click the __OK__ button on the dialog.
 8. Click the __Save__ button on the form to commit your changes.
 9. Click the __⋮__ menu and select __Restart Edge__.
 11. Wait two minutes for the SYNQ Radio device to reload.
