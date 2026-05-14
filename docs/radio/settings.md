@@ -207,6 +207,7 @@ To enable ESChat PTT:
 6. Click the __Add Transport__ button.
 7. Configure the following settings:
    - __Type__: `RTP`
+   - __ID__: A unique ID to identify this RTP gateway.
    - __Remote Host__: The remote ESChat Assigned Server IP Address.
    - __Remote Port__: The remote ESChat Assigned Server UDP Port.
    - __Local Host__: The local IP Address to listen for incoming RTP packets from the ESChat RTP Gateway. Optional: defaults to `0.0.0.0`. Alternatively you can explicitly set it to match the active IP Address of the device.
@@ -232,6 +233,7 @@ To enable Zebra PTT:
 5. Click the __Add Transport__ button.
 6. Configure the following settings:
    - __Type__: `RTP`
+   - __ID__: A unique ID to identify this Zebra SBC.
    - __Remote Host__: The remote IP Address of the Zebra SBC.
    - __Remote Port__: The remote port of the Zebra SBC. Optional: defaults to `45015`.
    - __Local Host__: The local IP Address to listen for incoming RTP packets from the Zebra SBC. Optional: defaults to `0.0.0.0`. Alternatively you can explicitly set it to match the active IP Address of the device.
@@ -258,6 +260,7 @@ To enable Zello PTT:
    - __Auth Token__: The Zello API authentication token to authenticate with. This is an alternative to providing Username and Password that is only used with "Zello Friends and Family".
 4. Click __Add Channel__
 5. Configure the following settings:
+   - __ID__: A unique ID to identify this channel.
    - __Channel Name__: The name of the Zello channel to connect to.
 6. If desired, configure additional channels.
 7. Click the __OK__ button on the dialog.
