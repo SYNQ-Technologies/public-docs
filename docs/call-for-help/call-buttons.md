@@ -113,15 +113,17 @@ Before deploying your buttons you should give some though to where each button w
 - Velcro
 - Double sided tape
 
-## Dimensions
+## Physical Specifications
 - Call Button
   - Height: 4.1875"
   - Width: 3.1875"
   - Depth: 2.25"
+  - Weight: 7oz
 - Hub
   - Height: 5.5"
   - Width: 3.355"
   - Depth: 1.357"
+  - Weight: 5oz
 
 ## Button Label
 A label is applied to the front face of the call button. This label provides instructions and feedback to the customer, but it can also include your store's branding.
