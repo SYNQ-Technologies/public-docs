@@ -8,6 +8,18 @@ sidebar_position: 19
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
 
+### 2026-05-09
+- Support for [ESChat Push-to-Talk](https://eschat.com/).
+- Configurable call button cool down time that determines the minimum time between call button presses.
+
+### 2026-04-27
+#### Fixes
+- 1189: Add configuration for Groq STT Prompt and Voice Name.
+
+### 2026-04-17
+#### Fixes
+- 1182: Radio check status button does not appear for location administrators.
+
 ### 2026-04-15
 #### Features
 - Claim Curbside arrivals over the radio.
