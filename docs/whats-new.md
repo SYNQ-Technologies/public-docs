@@ -13,7 +13,6 @@ sidebar_position: 19
 ### 2026-05-14
 #### Features
 - Support for [ESChat Push-to-Talk](https://eschat.com/).
-- Support Radio deployments that use an OIDC provider for authentication.
 - Radio agents can now continue an ongoing conversation without the user needing to address the agent by name on each interaction.
 #### Fixes
 - 1201: Improve modal dialog buttons in radio configuration.
