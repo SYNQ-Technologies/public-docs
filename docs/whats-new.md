@@ -7,15 +7,22 @@ sidebar_position: 19
 ### Coming Soon
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
+
+### 2026-05-18
+#### Features
 - Support Radio deployments that use an OIDC provider for authentication.
 - Support delivering Call for Help and Radio announcements to SIP enabled system.
+#### Fixes
+- 1233: Call button announcements can queue up and be delayed under certain conditions.
 
 ### 2026-05-14
 #### Features
 - Support for [ESChat Push-to-Talk](https://eschat.com/).
 - Radio agents can now continue an ongoing conversation without the user needing to address the agent by name on each interaction.
+- Radio edge device can be configured with High Pass and Noise gate audio filters.
 #### Fixes
 - 1201: Improve modal dialog buttons in radio configuration.
+- 1209: Update `axios` library to address [CVE-2026-42035](https://github.com/advisories/GHSA-6chq-wfr3-2hj9).
 - 1227: Improve contrast in dark mode for radio.
 
 ### 2026-05-09
