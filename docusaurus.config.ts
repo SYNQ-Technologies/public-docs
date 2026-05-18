@@ -95,6 +95,7 @@ const config: Config = {
             logo: {
                 alt: 'SYNQ Logo',
                 src: 'img/logo.svg',
+                srcDark: 'img/logo-dark.svg',
             },
             items: [
                 {
@@ -128,6 +129,10 @@ const config: Config = {
                         {
                             label: 'Microsoft Teams',
                             to: '/docs/getting-started/microsoft-teams',
+                        },
+                        {
+                            label: 'Zebra Workcloud Sync',
+                            to: '/docs/getting-started/zebra-workcloud-sync',
                         },
                     ],
                 },
