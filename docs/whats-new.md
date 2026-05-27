@@ -5,8 +5,19 @@ sidebar_position: 19
 # What's New
 
 ### Coming Soon
+- Support [Retail Zipline](https://getzipline.com) as a communication platform provider.
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
+
+### 2026-05-27
+#### Fixes
+- 1231: Remove unnecessary Media Manager sub menu.
+- 1245: Location Administrators should be able to change the notification method on the Location Settings page.
+
+### 2026-05-20
+#### Fixes
+- 1230: MyStore sidebar translations missing on some pages.
+- 1243: Curbside arrival form data decoding error.
 
 ### 2026-05-18
 #### Features

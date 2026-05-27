@@ -58,10 +58,9 @@ To obtain Zebra Workcloud Sync API client credentials:
 To provide Frontline Hero with the Zebra Workcloud Sync API client credentials:
 1. Sign into __MyStore__ as a Location Administrator
 2. Select __Configure Store__
-3. Select __Settings__
-4. Scroll down to __Bot configuration + Channels__
-5. Set __Notification Method__ to `Zebra Workcloud Bot`
-6. Provide the following from the Zebra Workcloud Admin Portal:
+3. Scroll down to __Bot configuration + Channels__
+4. Set __Notification Method__ to `Zebra Workcloud Bot`
+5. Provide the following from the Zebra Workcloud Admin Portal:
    - __Zebra Workcloud Client ID__
    - __Zebra Workcloud Client Secret__
    - __Zebra Workcloud Tenant ID__
