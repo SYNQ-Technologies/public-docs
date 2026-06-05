@@ -98,6 +98,7 @@ SYNQ Radio can also interface with other push-to-talk (PTT) systems. This allows
 
 SYNQ Radio supports the following push-to-talk systems:
 - ESChat
+- Kenwood Boundless PTT
 - Zebra Workcloud Sync
 - Zello
 
