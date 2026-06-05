@@ -8,6 +8,23 @@ sidebar_position: 19
 - Support [Retail Zipline](https://getzipline.com) as a communication platform provider.
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
+- Support for decoding DTMF tones received by radios.
+
+### 2026-06-05
+- Add support for configuring MCP servers for your Radio agents.
+#### Fixes
+- 1262: RTP wake phrases only work when using legacy ID format.
+
+### 2026-05-30
+#### Features
+- Support for Kenwood Boundless PTT.
+#### Fixes
+- 1223: Call for Help fails when no notification selected.
+
+### 2026-05-29
+#### Fixes
+- 1229: Fix logo spacing on Call for Help tracker page.
+- 1246: Scan-to-complete link not appearing in Workcloud Sync To-dos.
 
 ### 2026-05-27
 #### Fixes
