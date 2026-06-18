@@ -9,6 +9,7 @@
         "Cartesia",
         "Deepgram",
         "Dewalt",
+        "DTMF",
         "Entra",
         "Groq",
         "HMAC",
@@ -17,6 +18,7 @@
         "SYNQ",
         "Touchless",
         "Workcloud",
-        "Zello"
+        "Zello",
+        "Zipline"
     ]
 }

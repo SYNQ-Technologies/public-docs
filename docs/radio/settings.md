@@ -219,6 +219,9 @@ To enable ESChat PTT:
 11. Wait two minutes for the SBC and SYNQ Radio device to reload.
 12. Test communication between the radios and Zebra Workcloud Sync PTT users.
 
+### Kenwood Boundless PTT
+Follow [ESChat PTT](#eschat-ptt) procedure.
+
 ### Zebra PTT
 Connecting your SYNQ Radio to a Zebra Workcloud Sync PTT channel requires a Zebra Session Border Controller (SBC) appliance. The SBC securely relays audio between the two applications. Configuration of the SBC is covered by Zebra's documentation. At a high level it needs:
 - A Zebra Workcloud Sync "group" that represents the PTT channel where communication between radios and Workcloud Sync users will happen.
