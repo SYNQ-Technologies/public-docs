@@ -5,13 +5,25 @@ sidebar_position: 19
 # What's New
 
 ### Coming Soon
-- Support [Retail Zipline](https://getzipline.com) as a communication platform provider.
 - Support Webex as a communication platform provider.
 - Support for Baofeng radios.
 - Support for decoding DTMF tones received by radios.
 
+### 2026-06-17
+#### Features
+- Export CSV radio transcripts for the selected week.
+#### Fixes
+- 1284: Improve validation of MCP server names.
+- 1303: Radio does not apply configured high pass and noise gate filters.
+
+### 2026-06-10
+#### Features
+- Support [Retail Zipline](https://getzipline.com) as a communication platform provider.
+
 ### 2026-06-05
+#### Features
 - Add support for configuring MCP servers for your Radio agents.
+- Radio agents can now respond directly to a PTT channel if the query originated there.
 #### Fixes
 - 1262: RTP wake phrases only work when using legacy ID format.
 

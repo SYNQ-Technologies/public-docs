@@ -20,6 +20,7 @@ SYNQ leverages the existing communication platform that your frontline workers a
 SYNQ supports the following platforms:
 - [Microsoft Teams](/docs/getting-started/microsoft-teams.md)
 - [BlueFletch Messaging](/docs/getting-started/bluefletch.md)
+- [Retail Zipline](/docs/getting-started/retail-zipline.md)
 - [RingCentral](/docs/getting-started/ringcentral.md)
 - [Zebra Workcloud Sync](/docs/getting-started/zebra-workcloud-sync.md)
 
