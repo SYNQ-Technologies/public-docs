@@ -6,8 +6,25 @@ sidebar_position: 19
 
 ### Coming Soon
 - Support Webex as a communication platform provider.
-- Support for Baofeng radios.
 - Support for decoding DTMF tones received by radios.
+
+### 2026-06-26
+#### Features
+- Improve PTT wake phrase match recognition.
+
+### 2026-06-25
+#### Features
+- Link to documentation from Radio transcript viewer.
+#### Fixes
+- 1331: Audio file uploads from secondary transport can hang radio transmit.
+
+### 2026-06-22
+#### Features
+- Easily download audio `.wav` files from audio analysis player/visualizer.
+- Easily restart the Radio edge audio layer without needing to restart the entire service.
+#### Fixes
+- 1310: Improve logging on Radio edge application shutdown.
+- 1314: Reuse Azure OpenAI connections to avoid reconnect exhaustion.
 
 ### 2026-06-17
 #### Features
