@@ -43,3 +43,18 @@
 .header-github-link:hover::before {
   background-color: var(--ifm-navbar-link-hover-color);
 }
+
+/* Use decimal numbers for ordered lists at every nesting level
+   (Docusaurus/browsers default to lower-alpha and lower-roman when nested). */
+.markdown ol {
+  list-style-type: decimal;
+}
+
+/* Firefox clips sidebar descenders (g, y, p, j) because its overflow clipping
+   is stricter than Chrome's. Give the menu link a bit more line-height, but
+   only in Firefox so Chrome's spacing is unaffected. */
+@-moz-document url-prefix() {
+  .menu__link {
+    line-height: 1.36;
+  }
+}
