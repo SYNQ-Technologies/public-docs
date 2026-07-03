@@ -8,9 +8,23 @@ sidebar_position: 19
 - Support Webex as a communication platform provider.
 - Support for decoding DTMF tones received by radios.
 
+### 2026-07-01
+#### Features
+- Support for SRTP protocol for RTP gateways.
+- Support for Advanced Wireless AWR-4000 radios.
+- Support for Motorola RMU2040 radios.
+- Simplify editing radio settings.
+
+### 2026-06-30
+#### Fixes
+- 1337: Improve microphone diagnostic logging.
+- 1338: Consolidate RTP implementations.
+
 ### 2026-06-26
 #### Features
 - Improve PTT wake phrase match recognition.
+#### Fixes
+- 1317: Automatically restart audio capture if microphone stops.
 
 ### 2026-06-25
 #### Features
@@ -83,6 +97,7 @@ sidebar_position: 19
 - 1227: Improve contrast in dark mode for radio.
 
 ### 2026-05-09
+#### Features
 - Configurable call button cool down time that determines the minimum time between call button presses.
 
 ### 2026-04-27
