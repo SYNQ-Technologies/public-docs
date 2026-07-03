@@ -15,7 +15,7 @@ To access the transcript viewer:
 1. Select the __Settings__ tab from the sidebar. 
 2. Select the desired device. 
 3. This loads a read only view of the current settings.
-4. Click the __⋮__ menu and select __Edit__
+4. Click the __Edit__ button.
 5. The settings are now editable.
 6. Make the desired changes.
 7. Click the __Save__ button to commit your changes.
@@ -93,7 +93,7 @@ To enable SYNQ Radio to work with Frontline Hero applications like Call for Help
 9. Select __Radio__ from the sidebar.
 10. Select __Settings__.
 11. Select the desired edge device.
-12. Click the __⋮__ menu and select __Edit__.
+12. Click the __Edit__ button.
 13. Select the __Frontline Hero__ tab.
 14. Toggle on/off announcements for Call for Help.
     1.  Optionally check the desired __States to Announce__.
@@ -156,6 +156,9 @@ To configure an agent:
 5. Click the __OK__ button on the dialog.
 6. Click the __Save__ button on the form to commit your changes.
 
+### MCP Servers
+Azure OpenAI and OpenAI agents support extensibility with [Model Context Protocol (MCP)](https://modelcontextprotocol.io) servers.
+
 ### Implementing a Generic Agent
 To implement a generic agent all you need is a service that accepts a `POST` to a `/chat` endpoint with the following `application/json` payload:
 ```json
@@ -215,7 +218,7 @@ To enable ESChat PTT:
    - __Encoder Codec__: `PCMU (G.711 μ-law)`
 8.  Click the __OK__ button on the dialog.
 9.  Click the __Save__ button on the form to commit your changes.
-10. Click the __⋮__ menu and select __Restart Edge__.
+10. Click the __⋮__ menu and select __Restart Edge Audio__.
 11. Wait two minutes for the SBC and SYNQ Radio device to reload.
 12. Test communication between the radios and Zebra Workcloud Sync PTT users.
 
@@ -245,7 +248,7 @@ To enable Zebra PTT:
 7. Click the __OK__ button on the dialog.
 8. Click the __Save__ button on the form to commit your changes.
 9. Following Zebra's documentation, update the SBC radio user configuration to use the IP Address of the SYNQ Radio device and the Local Port (or its default value of `45015`).
-10. Click the __⋮__ menu and select __Restart Edge__.
+10. Click the __⋮__ menu and select __Restart Edge Audio__.
 11. Wait two minutes for the SBC and SYNQ Radio device to reload.
 12. Test communication between the radios and Zebra Workcloud Sync PTT users.
 
@@ -269,7 +272,7 @@ To enable Zello PTT:
 6. If desired, configure additional channels.
 7. Click the __OK__ button on the dialog.
 8. Click the __Save__ button on the form to commit your changes.
-9. Click the __⋮__ menu and select __Restart Edge__.
+9. Click the __⋮__ menu and select __Restart Edge Audio__.
 11. Wait two minutes for the SYNQ Radio device to reload.
 12. Test communication between the radios and Zello PTT users.
 

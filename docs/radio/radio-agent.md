@@ -11,6 +11,7 @@ Garner never before captured insights from your in-store radio traffic with our 
 - Analyze radio traffic with AI.
 - Identify trends from in-store voice data.
 - Trigger automatic actions with keyword flagging.
+- Connect agents with live data and services using Model Context Protocol (MCP) servers.
 
 ## Supported AI Agents
 - Azure OpenAI

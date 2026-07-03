@@ -31,13 +31,14 @@ What you need to get up and running with SYNQ Radio AI:
 
 ### Networking Requirements
 The radio kit needs to make outbound requests to the internet via the Ethernet connection it gets plugged into.
-- DHCP enabled.
 - Outbound protocols: HTTPS and WSS.
 - Outbound ports: 443.
 - The radio kit does not require any inbound network access.
 
 ## Supported Radio Models
 Our growing list of tested and supported radio models:
+- Advanced Wireless
+  - AWR-4000
 - Dewalt
   - DXFRS300
   - DXFRS800
@@ -49,6 +50,7 @@ Our growing list of tested and supported radio models:
   - NX-1300
   - NX-P1300
   - PKT-300
+  - PKT-300LF
 - Motorola
   - CLP1043
   - CLP1083
@@ -59,12 +61,14 @@ Our growing list of tested and supported radio models:
   - DLR110 (Curve)
   - DLR1020
   - DLR1060
+  - RMU2040
 - Retevis
   - RT17
   - RT19
   - RT22
   - RT27
   - RT68
+  - RT68B
 
 We can accommodate additional radio models so long as the model supports some form of external headset jack. Get in touch with us at contact@synqtech.com and let us know what radio models you use.
 
