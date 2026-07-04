@@ -8,6 +8,15 @@ sidebar_position: 19
 - Support Webex as a communication platform provider.
 - Support for decoding DTMF tones received by radios.
 
+### 2026-07-03
+- Add paging to various MyStore settings sections, like Call for Help prompts and call buttons.
+- Improve Call for Help hub error reporting.
+#### Fixes
+- 1228: Fix Workcloud Sync settings typo.
+- 1253: Improve migration of locations between organizations.
+- 1335: Twilio token update does not work.
+- 1355: Radio settings tabs do not scroll on mobile.
+
 ### 2026-07-01
 #### Features
 - Support for SRTP protocol for RTP gateways.
