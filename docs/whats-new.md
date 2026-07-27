@@ -8,7 +8,23 @@ sidebar_position: 19
 - Support Webex as a communication platform provider.
 - Support for decoding DTMF tones received by radios.
 
+### 2026-07-23
+#### Fixes
+- 1385: Deduplicate pub sub messages caused by Azure API reconnect.
+
+### 2026-07-22
+#### Features
+- Configurable delay before restoring power to radio following audio playback.
+
+### 2026-07-09
+#### Features
+- Ability to configure repeated announcements from Frontline Hero.
+#### Fixes
+- 1356: Ignore PTT-originated speech when evaluating PTT wake phrase handler.
+- 1357: Audio player overlaps statistics on Chrome.
+
 ### 2026-07-03
+#### Features
 - Add paging to various MyStore settings sections, like Call for Help prompts and call buttons.
 - Improve Call for Help hub error reporting.
 #### Fixes
