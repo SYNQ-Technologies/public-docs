@@ -15,10 +15,20 @@ Any event observed by SYNQ modules, like a call button press or curbside pickup 
 Enable AI agents and your staff can interact with those agents directly over the radio using natural language. They can look up product inventory and store information, or ask an agent to perform any task that agent understands. 
 
 ## Architecture
+### High-Level Architecture
 ![SYNQ Radio Architecture](/img/radio/synq-radio-high-level-architecture.png)
-- The SYNQ Radio Edge hears all in-store radio traffic and relays it to the SYNQ Radio Cloud.
+- The SYNQ Radio Edge hears all in-store radio traffic from the donor radio and relays it to the SYNQ Radio Cloud.
 - The SYNQ Radio Cloud logs transcripts of the traffic and delegates conversations to configurable AI agents.
-- The SYNQ Radio Cloud delivers responses from AI agents to the SYNQ Radio Edge when they are broadcast over the radio and heard by associates.
+- The SYNQ Radio Cloud delivers responses from AI agents to the SYNQ Radio Edge when they are broadcast over the donor radio and heard by associates.
+
+### Detailed Architecture
+![SYNQ Radio Architecture](/img/radio/synq-radio-detailed-architecture.png)
+
+### Zebra PTT Architecture
+![SYNQ Radio Architecture](/img/radio/synq-radio-zebra-ptt-architecture.png)
+In addition to the default architecture:
+- The SYNQ Radio Edge sends and receives audio via RTP with a Zebra Session Border Controller (SBC) appliance deployed on the same local network.
+- The Zebra SBC handles communication with Zebra's cloud services which in turn handles communication with Zebra devices.
 
 ## Requirements
 What you need to get up and running with SYNQ Radio AI:
