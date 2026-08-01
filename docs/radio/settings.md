@@ -20,6 +20,24 @@ To access the transcript viewer:
 6. Make the desired changes.
 7. Click the __Save__ button to commit your changes.
 
+## Checking Device Status
+The __Check Status__ button sends a message to the edge device and displays the response. It is the most direct way to confirm that a device is online and reachable.
+
+To check the status of a device:
+1. Select the __Settings__ tab from the sidebar.
+2. Select the desired device.
+3. Select the __General__ tab.
+4. Click the __Check Status__ button.
+
+The device reports:
+- __Version__: The software version currently running on the edge device.
+- __MAC Address__: The hardware address of the device's network interface.
+- __IP Address__: The addresses assigned to the device. Where a device has more than one, the address currently in use is shown in **bold**.
+
+:::note
+If the device does not respond it is not reachable. See [Troubleshooting](./troubleshooting.md).
+:::
+
 ## Adjusting Volume
 Setting appropriate volume levels is critical to a well performing system. You want levels to be loud enough to hear, but no so loud that it causes distortion or clipping of the audio signal.
 
