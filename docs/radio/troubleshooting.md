@@ -7,6 +7,11 @@ sidebar_position: 15
 This section documents some common issues and solutions.
 
 ## General
+Check whether the radio kit is reachable.
+1. Sign into __MyStore__ as a Location Administrator.
+2. Select __Radio__.
+3. [Check the device status](./settings.md#checking-device-status). If the device reports its version and network information it is online.
+
 Check whether the radio kit has power.
 1. Verify that the radio kit is plugged in to power.
 2. Open the radio kit.
@@ -58,4 +63,10 @@ If your donor radio's battery is dead:
 ## Transcriptions are "Inaudible"
 When the speech to text model is not able to transcribe the captured audio it reports in the transaction log a message like "Inaudible (2000ms)" that indicated there was an inaudible message with the specified duration (in milliseconds).
 1. Check that the volume on the donor radio is set to approximately 50%.
- 
+   :::note
+   Every donor radio model is different, so the ideal volume setting varies from one radio to the next. Treat 50% as a starting point and adjust in small increments, testing a phrase after each change.
+
+   The goal is audio that is loud enough for SYNQ Radio to hear clearly, but not so loud that it distorts. When audio is too loud it becomes "clipped", meaning the loudest parts of the sound are cut off flat because they are louder than the equipment can carry. It sounds much like a car stereo turned up past its limit: harsh and muddy rather than clearer, with words becoming harder to make out.
+
+   Clipped audio is more difficult to transcribe than audio that is slightly too quiet, so if you are unsure, err on the quieter side.
+   :::
