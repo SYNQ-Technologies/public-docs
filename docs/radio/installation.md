@@ -115,6 +115,7 @@ The mounting hardware (screws and wall anchors) are not included.
     3.  Select the desired channel if you have multiple radio kits. 
 12. Speak a test phrase into **Radio #2**. For example, "testing-testing 1-2-3".
     1.  You should see the transcription of your test phrase appear.
+    2.  Click the __⋮__ menu and select __Enable Audio Analysis__, then speak another test phrase. The transcript view now shows an audio player and waveform for the capture. Play it back and confirm the audio sounds clean and the waveform is not squared off flat at the top and bottom, which indicates clipping. If it is clipped, lower the volume on **Radio #1** and test again. See [Audio Analysis](./settings.md#audio-analysis).
 13. Type in a test phrase into chat interface of the transcript viewer and press the **Send** button.
     1.  The test phrase will be broadcast over the radios. 
     2.  You should hear it through **Radio #2**.
