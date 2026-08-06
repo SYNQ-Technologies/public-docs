@@ -70,3 +70,5 @@ When the speech to text model is not able to transcribe the captured audio it re
 
    Clipped audio is more difficult to transcribe than audio that is slightly too quiet, so if you are unsure, err on the quieter side.
    :::
+2. Use [Audio Analysis](./settings.md#audio-analysis) to hear and see exactly what SYNQ Radio captured. This takes the guesswork out of setting volume levels: you can play back the capture and look at its waveform to confirm whether the audio is clipped, too quiet, or clean.
+3. Check that the __Microphone Volume__ on the __Audio__ tab is appropriate. See [Adjusting Volume](./settings.md#adjusting-volume).

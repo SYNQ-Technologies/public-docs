@@ -49,6 +49,46 @@ To make volume adjustments:
 The donor radio also has physical volume controls (knobs or buttons). In most cases the volume of the donor radio should be set to 50% or lower.
 :::
 
+### Audio Analysis
+Audio Analysis is the most reliable way to tune volume levels. It shows you what SYNQ Radio actually heard, rather than leaving you to guess from the quality of the transcriptions.
+
+When Audio Analysis is enabled, entries in the transcript view include an audio player and a waveform visualization of the captured audio. You can play back the capture, inspect its waveform, and download it as a `.wav` file.
+
+To enable Audio Analysis:
+1. Sign into __MyStore__ as a Location Administrator.
+2. Select __Radio__.
+3. Select the desired channel and date.
+4. Click the __⋮__ menu and select __Enable Audio Analysis__.
+
+:::note
+Depending on your configured [speech provider](#speech-providers), captured audio is not necessarily a one-to-one match with transcript entries. A single capture may be split across several transcript entries, or a transcript entry may have no capture of its own.
+:::
+
+#### Tuning the Volume
+The rule of thumb is simple: if the audio sounds bad to you, the speech provider will have a hard time with it too.
+
+1. Enable Audio Analysis as described above.
+2. Speak a test phrase, such as "testing-testing 1-2-3", into a second radio.
+3. Find the new entry in the transcript view.
+   - The transcription may be correct, incorrect, or reported as "Inaudible".
+4. Play back the captured audio and look at its waveform.
+   - __Good audio__: speech is clearly audible, and the waveform has visible peaks and valleys that stay within the top and bottom of the display.
+   - __Too quiet__: speech is faint, and the waveform is a thin band near the centre line.
+   - __Clipped__: speech sounds harsh, muddy, or distorted, and the peaks of the waveform are squared off flat against the top and bottom of the display.
+5. If the audio is clipped, lower the volume on the donor radio a small amount.
+6. Repeat from step 2 until the audio sounds clean and the waveform is no longer flat-topped.
+7. Once the donor radio is no longer clipping, use __Microphone Volume__ on the __Audio__ tab to fine tune the level that the radio kit captures.
+
+:::important
+Always correct clipping at the donor radio first. Clipping most commonly happens before the radio kit receives the audio, so lowering __Microphone Volume__ only produces quieter clipped audio.
+:::
+
+:::note
+Clipped audio is harder to transcribe than audio that is slightly too quiet. If you are unsure, err on the quieter side.
+:::
+
+Audio Analysis turns itself off automatically after five minutes. If you need more time, enable it again from the __⋮__ menu.
+
 ## Speech Providers
 SYNQ Radio allows you to select your preferred cloud provider for speech-to-text and text-to-speech services.
 
