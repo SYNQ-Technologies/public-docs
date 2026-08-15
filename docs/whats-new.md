@@ -8,6 +8,25 @@ sidebar_position: 19
 - Support Webex as a communication platform provider.
 - Support for decoding DTMF tones received by radios.
 
+### 2026-08-14
+#### Features
+- Digital call buttons (QRs) now include translations for Chinese, Japanese, and Korean. Additionally, you can configure the customer facing prompts for those languages.
+#### Fixes
+- 1439: Organization logo missing in MyStore.
+- 1456: Escalation image misaligned on digital call buttons.
+
+### 2026-08-13
+#### Features
+- Radio now supports announcing and claiming Call for Help requests in French.
+
+### 2026-08-10
+#### Fixes
+- 1351: Call button simulator does not load.
+
+### 2026-08-06
+#### Fixes
+- 1402: QR code download should validate hex colors.
+
 ### 2026-07-23
 #### Fixes
 - 1385: Deduplicate pub sub messages caused by Azure API reconnect.
