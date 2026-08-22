@@ -8,6 +8,10 @@ sidebar_position: 19
 - Support Webex as a communication platform provider.
 - Support for decoding DTMF tones received by radios.
 
+### 2026-08-19
+#### Fixes
+- 1470: Intermittent failures when call button hub checks button status for buttons with long names. 
+
 ### 2026-08-14
 #### Features
 - Digital call buttons (QRs) now include translations for Chinese, Japanese, and Korean. Additionally, you can configure the customer facing prompts for those languages.
