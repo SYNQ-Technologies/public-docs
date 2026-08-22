@@ -13,7 +13,7 @@ This page describes what data SYNQ Radio captures, where that data goes, how lon
 | Radio audio to speech-to-text | Yes | Speech provider you select | No |
 | Generated speech from text-to-speech | Yes | Speech provider you select | No |
 | Transcripts to SYNQ storage | Yes | SYNQ cloud (Azure) | 1 year by default |
-| Radio audio to SYNQ storage | No, opt in | SYNQ cloud (Azure) | 2 weeks |
+| Radio audio to SYNQ storage | No, opt in | SYNQ cloud (Azure) | 2 weeks by default |
 | Transcripts to an AI agent, after a wake word | No, you enable and configure the agent | Agent endpoint you configure | Per that provider |
 
 All data flows are encrypted in transit using HTTPS or WSS. All data stored by SYNQ is encrypted at rest.
@@ -32,8 +32,6 @@ Transcripts of radio traffic are written to SYNQ's cloud storage. This includes 
 
 Transcripts are retained for **1 year** by default. This retention period can be adjusted for your organization.
 
-Transcripts are visible only to Location Administrators and Organization Administrators. See [Transcript Viewer](./intro.md#transcript-viewer).
-
 ## Radio Audio
 
 SYNQ Radio does not store radio audio by default. Audio is converted to text and discarded.
@@ -44,6 +42,18 @@ You can opt in to having audio stored, for either of two reasons:
 - **Speech-to-text fine tuning.** If you have engaged us to build a fine-tuned speech-to-text model, audio capture is how the training data is collected. See [Fine-Tuned Speech-to-Text Models](#fine-tuned-speech-to-text-models).
 
 Stored audio is retained for **2 weeks** by default and then deleted. This retention period can be adjusted for your organization.
+
+## Deletion
+
+Transcripts and stored audio are deleted automatically once they reach the end of their retention period. This is enforced by the retention period itself and requires no action from you.
+
+Data can also be deleted on request, ahead of its retention period.
+
+## Access Controls
+
+Within your organization, you control who can see radio data. Transcripts are visible only to Location Administrators and Organization Administrators, and you decide who holds those roles. See [Transcript Viewer](./intro.md#transcript-viewer) and [User Management](../mystore/user-management.md).
+
+Within SYNQ, access is limited to staff whose role requires it: those responsible for maintaining the production environment, and those supporting your organization.
 
 ## AI Agents
 
@@ -77,6 +87,7 @@ If you ask us to, SYNQ can operate services on your behalf with providers other 
 - We do not use your data to train AI models or voice models.
 - We do not sell your data.
 - We do not share your data with third parties.
+- We do not use your data for any purpose other than providing and supporting the SYNQ Radio service for your organization.
 
 ## Fine-Tuned Speech-to-Text Models
 
