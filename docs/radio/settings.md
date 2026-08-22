@@ -169,10 +169,12 @@ To enable SYNQ Radio to work with Frontline Hero applications like Call for Help
 
 ## Agents
 SYNQ Radio can talk to a variety of off-the-shelf and custom agents. Agent configuration typically requires:
+- Name that identifies the agent and acts as a wake word.
 - Connection settings like a URL and API Key.
 - Model setting that define what type of LLM model to use.
 - Messages that represents prompts to to provide to LLM-based models.
 
+### Agent Configuration
 To configure an agent:
 1. Select the __Agents__ tab.
 2. Click the __Add Agent__ button.
