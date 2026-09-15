@@ -72,3 +72,10 @@ When the speech to text model is not able to transcribe the captured audio it re
    :::
 2. Use [Audio Analysis](./settings.md#audio-analysis) to hear and see exactly what SYNQ Radio captured. This takes the guesswork out of setting volume levels: you can play back the capture and look at its waveform to confirm whether the audio is clipped, too quiet, or clean.
 3. Check that the __Microphone Volume__ on the __Audio__ tab is appropriate. See [Adjusting Volume](./settings.md#adjusting-volume).
+
+## Agent doesn't respond
+If you ask a question of an agent and you don't get a response:
+1. First, check the transcript to confirm what was actually transcribed. If nothing was transcribed, then it is a transcription issue, rather than an agent issue.
+2. Does the transcription contain the name or alias of the agent within the first few words of the transcription?
+   - You typically need to wake up an agent using its name or alias. For example, "Hey Toby, how many...". If the agent's name is missing from the transcription it may not be responding because it didn't think the message was intended for it.
+   - Once awake, an agent typically stays active for a configured Session Timeout interval. For example, 30 seconds. During this _awake_ interval you can carry on a conversation with the agent without addressing it by name each time. However, once that interval elapses, you'll need to wake it up again. Check the times of the transcript entries to determine whether the agent isn't responding because the session timeout has elapsed.

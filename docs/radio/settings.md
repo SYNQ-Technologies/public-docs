@@ -192,6 +192,7 @@ To configure an agent:
      - __Deployment__: The name of your Azure OpenAI deployment.
      - __Version__: The API version to use when communicating with your agent. For example, `2024-10-21`.
      - __Model__: The Model ID used to generate responses. For example, `gpt-4o-mini`.
+     - __Session Timeout__: The time in seconds that the agent remains active after it is awoken. Once awake, you can continue a conversation with the agent without saying the agent's name or alias each time you address it. The default is 30 seconds.
      - Click __Add Message__.
        - Add messages that represent the system prompts for your agent.
    - __Generic__
