@@ -7,6 +7,28 @@ sidebar_position: 19
 ### Coming Soon
 - Support Webex as a communication platform provider.
 - Support for decoding DTMF tones received by radios.
+- Support for configurable code words and actions for radio transcriptions.
+
+### 2026-09-09
+#### Features
+- Call button LEDs and QR tracking page now transition through each step even when staff skip the claiming step.
+#### Fixes
+- 1489: QR tracking page shows incorrect text when the configured staff action is "Acknowledge" or "Done".
+
+### 2026-09-01
+#### Features
+- Run weekly reports on demand.
+
+### 2026-08-28
+#### Features
+- Show call button name on Teams activity page and notifications.
+- Include call button name on escalation adaptive cards.
+#### Fixes
+- 1475: Call for Help QR tracking page font legibility issues.
+
+### 2026-08-28
+#### Features
+- Support for Microsoft MAI-Transcribe speech-to-text service.
 
 ### 2026-08-19
 #### Fixes
