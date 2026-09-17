@@ -81,10 +81,12 @@ SYNQ provides the following webhook event payloads as `application/json` data.
 {
     "type": "radio",
     "created_at": "2024-11-13T17:42:44Z",
-    "status": "speech-detected",
+    "status": "transcript-appended",
     "details": {
         "edge_id": "6803a571-8904-441d-b2ec-6886e9307635",
         "text": "Cleanup on aisle 4.",
+        "actor": "SYNQ Radio (Channel 2)",
+        "timestamp": "2024-11-13T17:42:16Z"
     }
 }
 ```

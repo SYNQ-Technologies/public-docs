@@ -89,6 +89,39 @@ Clipped audio is harder to transcribe than audio that is slightly too quiet. If 
 
 Audio Analysis turns itself off automatically after five minutes. If you need more time, enable it again from the __⋮__ menu.
 
+## Setting the Language
+The default language is English. Running SYNQ Radio in another language is a matter of setting the language in two places: the system language on the __General__ tab, and the language settings of your [speech provider](#speech-providers) on the __Speech__ tab.
+
+### System Language
+The system language controls the language of any messages that SYNQ Radio itself produces, such as a call button announcement.
+
+To set the system language:
+1. Select the __General__ tab.
+2. Select the desired __Language__.
+3. Click __Save__.
+
+### Speech Provider Language
+The system language tells SYNQ Radio what to say. The speech provider settings tell the speech-to-text and text-to-speech services how to listen and how to speak. Each provider has its own flavour of configuration, but they all cover the same two things:
+- __Speech-to-text language__: A hint to the transcription service about the language you expect to hear on the radio. Without it the service has to guess, and short radio transmissions rarely give it enough to guess well.
+- __Text-to-speech language and voice__: The language, and a voice in that language, used for any message read aloud over the radio. The voice determines the accent and dialect of what staff hear, so choose one that matches your region.
+
+To set the speech provider language:
+1. Select the __Speech__ tab.
+2. Set the language settings for your selected provider __Type__:
+   - __Azure__: Set __Language__ and choose a matching __Voice Name__.
+   - __Azure OpenAI__: Set __Language__ for speech-to-text and choose a __Voice Name__ for text-to-speech.
+   - __Groq__: Set __Language__ for speech-to-text and choose a __TTS Model__ and __Voice__ that support your language.
+   - __Composite__: Set the speech-to-text language on the provider selected for speech-to-text, and the text-to-speech language and voice on the provider selected for text-to-speech.
+3. Click __Save__.
+
+:::important
+Set the language for both speech-to-text and text-to-speech even if your provider uses multilingual models. A multilingual model can recognize and speak many languages, but the language setting is still what tells it which one to expect on the radio and which accent and dialect to use when it responds.
+:::
+
+:::note
+Keep the system language and the speech provider language aligned. If the system language is French but the text-to-speech voice is English, French announcements are read aloud by an English voice.
+:::
+
 ## Speech Providers
 SYNQ Radio allows you to select your preferred cloud provider for speech-to-text and text-to-speech services.
 
@@ -116,7 +149,7 @@ To change speech provider settings:
 - __API Version__: The API version to use when communicating with the service.
 - __STT Deployment__: ID of the speech-to-text model to use. For example, `gpt-4o-transcribe`.
 - __Language__: The ISO-639-1 language of the input audio. For example, `en`.
-- __Prompt__: The prompt to provide to the speech service.
+- __Prompt__: The prompt to provide to the speech service. Write the prompt in the same language as the configured __Language__. A prompt written in a different language can cause the service to transcribe in that language instead.
 - __TTS Deployment__: ID of the text-to-speech model to use. For example, `gpt-4o-mini-tts`.
 - __Voice Name__: The voice name. For example, `alloy`.
 - __Instructions__: Additional instructions to control the voice of your generated audio.
@@ -126,7 +159,7 @@ To change speech provider settings:
 - __API Version__: The API version to use when communicating with the service.
 - __Language__: The ISO-639-1 language of the input audio. For example, `en`.
 - __STT Model__: ID of the speech-to-text model to use. For example, `whisper-large-v3`.
-- __STT Prompt__: Additional instruction to provide the the speech-to-text model.
+- __STT Prompt__: Additional instruction to provide to the speech-to-text model. Write the prompt in the same language as the configured __Language__. A prompt written in a different language can cause the model to transcribe in that language instead.
 - __TTS Model__: ID of the text-to-speech model to use. For example, `canopylabs/orpheus-v1-english`.
 - __Voice__: The voice to use when generating the audio. For example, `troy`.
 - __Speed__: The speed of the generated audio.
