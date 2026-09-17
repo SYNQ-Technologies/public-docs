@@ -7,7 +7,15 @@ sidebar_position: 19
 ### Coming Soon
 - Support Webex as a communication platform provider.
 - Support for decoding DTMF tones received by radios.
-- Support for configurable code words and actions for radio transcriptions.
+
+### 2026-09-16
+#### Features
+- Configurable code words and actions for radio transcriptions. For example, if someone says specific words/phrases like "gun", "violence", "fight", etc. over the radio it can trigger an action, like posting to a Microsoft Teams channel to immediately notify others in your organization. You can configure the code words and what action to take.
+- Radio webhooks now expose a `transcript-appended` event that fires for every entry added to the transcript. This includes call button announcements, and agent responses. This new event supersedes the `speech-detected` event that only fired for transcribed speech.
+#### Fixes
+- 1459: Improve editing of agent messages and add example prompts.
+- 1535: Improve display of dates on Call for Help and Text for Help web admin tools.
+- 1539: Radio online announcement is now localized.
 
 ### 2026-09-09
 #### Features
