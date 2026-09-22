@@ -276,6 +276,34 @@ See [Validate Signed Webhook Requests](../apis/webhooks.md#validate-signed-webho
 The SYNQ Radio application can only make requests to services that support HTTPS and are exposed to the internet. For example, it can't make a request to an agent you are building in a development environment hosted on `http://localhost:3000`. You can use services like Ngrok, or `cloudflared tunnel --url http://localhost:3000` to expose services in development publicly over HTTPS.
 :::
 
+## Code Words
+Code Words define phrases that, when heard on the radio and transcribed, trigger an action. A code word can read a spoken response aloud over the radio, post a message to a Microsoft Teams channel, or both. For example, a code word named "Code Red" with the phrase "code red" could announce an acknowledgement over the radio and notify a Teams channel of the transcription that triggered it.
+
+### Code Word Configuration
+To configure a code word:
+1. Select the __Code Words__ tab.
+2. Click the __Add Code Word__ button.
+3. Configure the following settings:
+   - __Name__: The name of the code word.
+   - __Phrases__: The phrases that trigger the code word. Type a phrase and press __Enter__ to add it. Add as many phrases as you like, including alternate wordings and common mistranscriptions. Click the __x__ on a phrase to remove it.
+   - __Spoken Response__: An optional message to read aloud over the radio when the code word is detected.
+   - __Cancel Window__: The number of seconds after a detection in which a radio user can speak a cancel phrase to cancel the action. Set to `0` to disable cancellation, or select a value from `5` to `30` seconds.
+      :::note
+      The __Cancel Phrases__, __Cancel Instructions__, and __Cancel Response__ settings only apply when the __Cancel Window__ is greater than `0`. When cancellation is disabled the action runs immediately after detection.
+      :::
+   - __Cancel Phrases__: The phrases a radio user speaks to cancel the code word action. Type a phrase and press __Enter__ to add it.
+   - __Cancel Instructions__: Optional instructions, read aloud following the __Spoken Response__, that tell radio users what to say to cancel the action.
+   - __Cancel Response__: An optional message to read aloud over the radio when the action is cancelled.
+   - __Completed Response__: An optional message to read aloud over the radio once the code word action has completed.
+   - __Teams Webhook URL__: An optional URL of a Microsoft Teams incoming webhook. When specified, a message is posted to the Teams channel as the action following a code word detection. See [Create an Incoming Webhook](https://learn.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) in the Microsoft Teams documentation for instructions on setting up a webhook for your channel.
+   - __Teams Message__: The formatted message to post to Microsoft Teams. The text you enter will be rendered as the text content of an adaptive card `TextBlock`. Teams supports basic Markdown formatting, so you can use bold, italics, lists, and quotes to make the message easier to read. The message can also include a `{{message}}` token, which is replaced with the entire transcription that triggered the code word. For example, the following posts the name of the code word in bold, followed by the transcription that triggered it as a quote on its own line:
+      ```md
+      __Code Red__ code word received by radio.
+      >{{message}}
+      ```
+4. Click the __OK__ button on the dialog.
+5. Click the __Save__ button on the form to commit your changes.
+
 ## Push-to-talk
 Integration with push-to-talk systems is managed via the __Secondary Transports__ tab.
 
