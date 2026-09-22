@@ -14,6 +14,8 @@ sidebar_position: 19
   - Kenwood PKT300 Call Alert
   - Motorola CLS Call Alert
 - Support configurable toggles to allow you to easily enable/disable radio agents and webhooks.
+#### Fixes
+- 1549: Suppress Azure OpenAI transcription hallucinations like `"..."` and `"。"` that correspond to silence.
 
 ### 2026-09-16
 #### Features
