@@ -6,7 +6,14 @@ sidebar_position: 19
 
 ### Coming Soon
 - Support Webex as a communication platform provider.
-- Support for decoding DTMF tones received by radios.
+
+### 2026-09-22
+#### Features
+- Support for decoding various tones received by radios:
+  - DTMF
+  - Kenwood PKT300 Call Alert
+  - Motorola CLS Call Alert
+- Support configurable toggles to allow you to easily enable/disable radio agents and webhooks.
 
 ### 2026-09-16
 #### Features
