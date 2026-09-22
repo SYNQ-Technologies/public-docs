@@ -305,12 +305,12 @@ To configure a code word:
 5. Click the __Save__ button on the form to commit your changes.
 
 ## Push-to-talk
-Integration with push-to-talk systems is managed via the __Secondary Transports__ tab.
+Integration with push-to-talk systems is managed via the __Transports__ tab. A "transport" defines the connection to a secondary audio stream and the settings that control how your radio channel joins a channel on a PTT system.
 
 ### ESChat PTT
 Connecting your SYNQ Radio to an ESChat PTT channel requires configuration of:
 - An RTP Gateway in the ESChat Management Portal
-- An SYNQ secondary transport that matches the ESChat RTP Gateway
+- A SYNQ transport that matches the ESChat RTP Gateway
 
 :::note
 The SYNQ Radio device communicates with the ESChat RTP Gateway via UDP. The SYNQ Radio device is typically able to initiate outbound connections to the gateway, but you will need to configure appropriate firewall rules and port forwarding so that the ESChat gateway can reach the device. You will also need to provide ESChat with a public IP address for the device.
@@ -328,7 +328,7 @@ To enable ESChat PTT:
    2. Set the **Remote IP Address** to the IP Address of the SYNQ Radio device.
    3. Set the **Remote UDP Port** to the desired port you want to expose from the SYNQ Radio device. For example `45015`.
    4. Set the **Internal Data Payload Format** to `G.711, mu-Law`.
-5. Select the __Secondary Transports__ tab. 
+5. Select the __Transports__ tab. 
 6. Click the __Add Transport__ button.
 7. Configure the following settings:
    - __Type__: `RTP`
@@ -357,7 +357,7 @@ To enable Zebra PTT:
 1. Select the __General__ tab.
 2. Click the __Check Status__ button.
 3. Note the active (**bold**) IP Address of the SYNQ Radio device.
-4. Select the __Secondary Transports__ tab. 
+4. Select the __Transports__ tab. 
 5. Click the __Add Transport__ button.
 6. Configure the following settings:
    - __Type__: `RTP`
@@ -376,7 +376,7 @@ To enable Zebra PTT:
 
 ### Zello PTT
 To enable Zello PTT:
-1. Select the __Secondary Transports__ tab.
+1. Select the __Transports__ tab.
 2. Click the __Add Transport__ button.
 3. Configure the following settings:
    - __Type__: `Zello`
@@ -404,7 +404,7 @@ For more detail on Zello connection properties see the [Zello Channel API specif
 Conversations initiated from the PTT application in the radio channel are always delivered immediately to the radios. However, not all radio traffic warrants delivery to the same PTT channel. Wake phrases allow you to configure a required phrase, like "Call supervisor channel", to initiate the connection to the PTT channel.
 
 To enable a wake phrase for a PTT channel:
-1. Select the __Secondary Transports__ tab. 
+1. Select the __Transports__ tab. 
 2. Click the __Edit__ button of the desired PTT transport.
 3. Configure the following settings:
    - __Wake Phrase__: The phrase a radio user must say to initiate a call to the PTT application.

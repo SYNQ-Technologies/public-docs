@@ -82,7 +82,7 @@ Our growing list of tested and supported radio models:
 
 We can accommodate additional radio models so long as the model supports some form of external headset jack. Get in touch with us at contact@synqtech.com and let us know what radio models you use.
 
-## Supported Voice Providers
+## Supported Speech Providers
 SYNQ Radio allows you to select your preferred cloud provider for speech-to-text and text-to-speech services.
 - Azure AI Services
 - Azure Open AI
@@ -92,6 +92,8 @@ SYNQ Radio allows you to select your preferred cloud provider for speech-to-text
 - Groq
 - IBM Watsonx
 - Whisper (self hosted)
+
+See [Speech Providers](./settings.md#speech-providers) for configuration details.
 
 ## Installation
 Installation of SYNQ Radio involves deployment of the edge radio kit into your premises. Typically this will be in or near a networking room. 
@@ -115,6 +117,8 @@ SYNQ Radio supports the following push-to-talk systems:
 - Kenwood Boundless PTT
 - Zebra Workcloud Sync
 - Zello
+
+See [Push-to-talk](./settings.md#push-to-talk) for configuration details.
 
 ## Public Address Systems
 SYNQ Radio can also interface with public address systems. The SYNQ Radio kit supports a 3.5mm TRRS audio connection for microphone input and speaker output.
