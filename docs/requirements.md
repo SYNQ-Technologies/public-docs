@@ -23,6 +23,7 @@ SYNQ supports the following platforms:
 - [Retail Zipline](/docs/getting-started/retail-zipline.md)
 - [RingCentral](/docs/getting-started/ringcentral.md)
 - [Zebra Workcloud Sync](/docs/getting-started/zebra-workcloud-sync.md)
+- [Radio](/docs/radio/intro.md)
 
 ## Associate Devices
 SYNQ products are used on a range of associate devices, including organizations using

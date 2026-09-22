@@ -49,3 +49,22 @@ Ideally, managers and supervisors don't need to get involved in simple customer 
 2. The supervisor can see information about the original Call for Help request and the how long it has been outstanding.
 3. The supervisor can message individual associates or teams within Microsoft Teams to task someone to help the customer.
 4. After an associate helps the customer, the supervisor can see that the escalation has been resolved.
+ 
+## Architecture
+### High-Level Architecture
+![SYNQ Call for Help High-Level Architecture](/img/call-for-help/cfh-high-level-architecture.png)
+- A customers initiates a help request by pressing a call button or scanning a QR code with their own device.
+- Those help requests are received by the SYNQ cloud application.
+- The SYNQ cloud application delivers notifications to the configured notification provider:
+  - [Microsoft Teams](/docs/getting-started/microsoft-teams.md)
+  - [BlueFletch Messaging](/docs/getting-started/bluefletch.md)
+  - [Retail Zipline](/docs/getting-started/retail-zipline.md)
+  - [RingCentral](/docs/getting-started/ringcentral.md)
+  - [Zebra Workcloud Sync](/docs/getting-started/zebra-workcloud-sync.md)
+  - [Radio](/docs/radio/intro.md)
+- Associates receive those notification announcements on their device/app.
+- Associates are able to claim those help requests on their device/app.
+- Status updates are delivered back to the customer so they know help is one the way.
+
+### Detailed Architecture
+![SYNQ Call for Help Detailed Architecture](/img/call-for-help/cfh-detailed-architecture.png)
