@@ -4,8 +4,30 @@ sidebar_position: 19
 
 # What's New
 
-### Coming Soon
-- Support Webex as a communication platform provider.
+### 2026-10-20
+#### Features
+- Radio allows you to opt out of transcript storage.
+- Radio supports configuration of Microsoft MAI-Transcribe-1.5, MAI-Transcribe-2 and MAI-Transcribe-2-Streaming speech-to-text services.
+- Radio supports an adaptive silence threshold.
+- Text for Help dashboard improvements:
+  - Show number of sessions per day
+  - Show number of sessions handled by each user
+  - Export raw data to CSV
+#### Fixes
+- 1635: Radio no longer reports a stalled mic error when mic volume is zero.
+
+### 2026-10-06
+#### Features
+- Support `@Tag` mentions in Microsoft Teams channels to [force notifications](getting-started/microsoft-teams.md#force-enable-notifications-with-tags) for users in the tag.
+
+### 2026-10-02
+#### Features
+- Support deep linking to specific radio transcript entries.
+- Code word variable replacements now include tokens that allow you to assemble deep links to the transcript entries that triggered them.
+- Webhooks now support configuration options to select which specific events you want to subscribe to.
+#### Fixes
+- 1571: Improve support for locations with no default notification provider.
+- 1573: Improve detection accuracy of claiming call for help requests over the radio.
 
 ### 2026-09-22
 #### Features
@@ -43,7 +65,7 @@ sidebar_position: 19
 #### Fixes
 - 1475: Call for Help QR tracking page font legibility issues.
 
-### 2026-08-28
+### 2026-08-27
 #### Features
 - Support for Microsoft MAI-Transcribe speech-to-text service.
 

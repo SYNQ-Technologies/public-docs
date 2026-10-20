@@ -43,10 +43,9 @@ Microsoft provides detailed instructions on how to create teams and channels [he
 5. Click __Create__
 
 ### Add Channels to the team
-1. On the __Teams__ tab
-2. Click the __⋯__ menu of the desired team and select __Add channel__ \
+1. In Microsoft Teams, click the __⋯__ menu of the desired team and select __Add channel__ \
    ![Team Menu](/img/teams/team-menu.png)
-3. Provide the following:
+2. Provide the following:
    - Team name
    - Description
    - Channel type: Standard or Shared \
@@ -54,8 +53,8 @@ Microsoft provides detailed instructions on how to create teams and channels [he
       :::note
       Private channels are not supported. This is a [limitation](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/channel-and-group-conversations?tabs=dotnet) of Microsoft Teams.
       :::
-4. Click __Create__
-5. Repeat for all the channels you want to add
+3. Click __Create__
+4. Repeat for all the channels you want to add
 :::note
 If you are just getting started you may not know all the channels you plan to create. Channels can always be added and reconfigured later.
 :::
@@ -64,48 +63,45 @@ We recommend that you create a "Testing" channel. This can serve as a staging ar
 :::
 
 ### Add Users to the team
-1. On the __Teams__ tab
-2. Click the __⋯__ menu of the desired team and select __Add member__ \
+1. In Microsoft Teams, click the __⋯__ menu of the desired team and select __Add member__ \
    ![Team Menu](/img/teams/team-menu.png)
-3. Enter the name or email of the desired user or security group to add
+2. Enter the name or email of the desired user or security group to add
    - You can add multiple users at once
-4. Select the desired role (__Member__ or __Owner__) for each user
-5. Click __Add__
+3. Select the desired role (__Member__ or __Owner__) for each user
+4. Click __Add__
 :::note
 If you are just getting started you may not yet have a complete list of all users that should be added. This fine because team members can easily be added/removed later.
 We recommend you get started by only adding a few users that will be involved with the initial testing of the system.
 :::
 
 ### Manage Team Members and Permissions
-1. On the __Teams__ tab
-2. Click the __⋯__ menu of the desired team and select __Manage team__ \
+1. In Microsoft Teams, click the __⋯__ menu of the desired team and select __Manage team__ \
    ![Team Menu](/img/teams/team-menu.png)
-3. Select the __Members__ tab
-4. All Members of your team will be listed here, separated into two categories: __Owners__ and __Members and guests__
+2. Select the __Members__ tab
+3. All Members of your team will be listed here, separated into two categories: __Owners__ and __Members and guests__
    - Owners are able to manage the team, its channels and its users. 
    - Members can view but not edit.
-5. To grant administrative privileges to a user, change their __Role__ to __Owner__ \
+4. To grant administrative privileges to a user, change their __Role__ to __Owner__ \
    ![Manage Members](/img/teams/manage-members.png)
 
 ## Add the Frontline Hero App to Microsoft Teams
 Once your Team is created, channels are added, and relevant users are added, you'll need to add the SYNQ Frontline Hero to the Team.
-1. On the __Teams__ tab
-2. Click the __⋯__ menu of the desired team and select __Manage team__
-3. Select the __Apps__ tab at the top of the screen
-4. Click __＋ Get more apps__
-5. Search for "SYNQ Frontline Hero"
+1. In Microsoft Teams, click the __⋯__ menu of the desired team and select __Manage team__
+2. Select the __Apps__ tab at the top of the screen
+3. Click __＋ Get more apps__
+4. Search for "SYNQ Frontline Hero"
     :::note
     Canadian Tire stores should contact "Canadian Tire Corporate" to add the "MyStore by SYNQ" app instead for their location.
     ::: 
-6. Click __Add__ on the SYNQ Frontline Hero app \
+5. Click __Add__ on the SYNQ Frontline Hero app \
    ![App added](/img/teams/app-added.png)
-7. Click __Save__.
-8. A welcome message will appear in a post in the default/General channel of the team prompting you to complete the registration.
-9. Click the __Complete Registration__ button. This will take you to the SYNQ Frontline Hero admin portal to complete the registration. \
+6. Click __Save__.
+7. A welcome message will appear in a post in the default/General channel of the team prompting you to complete the registration.
+8. Click the __Complete Registration__ button. This will take you to the SYNQ Frontline Hero admin portal to complete the registration. \
    ![MyStore registration](/img/teams/mystore-complete-registration-1.png)
-10. Sign in with your Microsoft Account, if prompted.
-11. Click __Save__.
-12. The SYNQ Frontline Hero app has now been registered with the team. A final success message should appear. \
+9. Sign in with your Microsoft Account, if prompted.
+10. Click __Save__.
+11. The SYNQ Frontline Hero app has now been registered with the team. A final success message should appear. \
    ![MyStore registration](/img/teams/mystore-complete-registration-2.png)
 
 ## Enabling/Disabling Notifications
@@ -126,3 +122,27 @@ Notifications can be configured, in Teams, from your workstation or mobile devic
 :::note
 Most mobile devices will have a Silent or Do Not Disturb mode that can override whatever settings you have enabled in Teams. If no notifications are coming through and Teams has been configured properly, you will need to make sure the device isn't in Silent or Do Not Disturb mode. You can typically access notification settings on the device by pulling down from the top of the screen.
 :::
+
+### Force Enable Notifications with Tags
+Because notification preferences are set by each user, some associates may miss notifications if their channel notifications are turned off.
+To force notifications for a group of users, you can create a Teams tag and have the SYNQ Frontline Hero app `@mention` that tag on every notification it posts to a channel.
+
+#### Create a Tag
+1. In Microsoft Teams, click the __⋯__ menu of the desired team and select __Manage tags__
+2. Click __Create tag__
+3. Provide the following:
+   - Tag name
+   - Description
+4. Add the members that should be notified, then click __Create__
+
+#### Notify a Tag in a Channel
+1. Go to the channel of the team that you want to force notifications for
+2. Click __Post in channel__ to create a new channel post
+3. Type `@SYNQ Frontline Hero notify @TagName` and submit the post
+4. The SYNQ Frontline Hero app will reply to confirm that the tag will now be notified
+5. Repeat for any other channels and tags
+
+#### Stop Notifying a Tag
+To stop notifying a tag in a channel, do one of the following:
+- Post `@SYNQ Frontline Hero stop notifying @TagName` in the channel
+- In MyStore, navigate to __Configure Store__ > __Bot Instances__ and click the __X__ on the tag you want to remove from the channel
