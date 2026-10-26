@@ -31,7 +31,7 @@ Ensure your BlueFletch-enabled devices include the following BlueFletch applicat
 
 ### BlueFletch Launcher 
 Ensure your BlueFletch Launcher configuration includes the following:
-- `"enableNotifications": true,`
+- `"enableNotifications": true`
 - `"subscribeToIdentityGroups": true`
 
 ### Provide the following to SYNQ

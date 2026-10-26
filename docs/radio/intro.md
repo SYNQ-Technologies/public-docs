@@ -62,9 +62,18 @@ Our growing list of tested and supported radio models:
   - PKT-300
   - PKT-300LF
 - Motorola
+  - CLP1010
+  - CLP1010e
+  - CLP1013
+  - CLP1013e
+  - CLP1040
   - CLP1043
+  - CLP1060
+  - CLP1063
+  - CLP1080e
   - CLP1083
   - CLP1083e
+  - CLS1110
   - CLS1410
   - CLS1413
   - CLS1810
@@ -72,6 +81,7 @@ Our growing list of tested and supported radio models:
   - DLR1020
   - DLR1060
   - RMU2040
+  - RMU2043
 - Retevis
   - RT17
   - RT19

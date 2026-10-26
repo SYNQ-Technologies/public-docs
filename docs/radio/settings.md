@@ -420,5 +420,6 @@ To enable a webhook to send radio transcriptions to an external application:
 3. Specify the __URL__ of webhook endpoint to send to.
    - The URL must use `https://` with a valid certificate and must be reachable from SYNQ's cloud hosted servers. 
 4. Specify a __Secret__ value that will be used to cryptographically sign all webhook requests. Your application can use this same secret to verify that incoming webhook requests came from SYNQ Radio. See [Validate Signed Webhook Requests](../apis/webhooks.md#validate-signed-webhook-requests) for more details.
-5. Click __Save__.
-6. See [Radio Webhooks API](../apis/webhooks.md#radio) for more details on the webhook payload.
+5. Select the desired webhook events to subscribe to. For example, `Transcript appended`.
+6. Click __Save__.
+7. See [Radio Webhooks API](../apis/webhooks.md#radio) for more details on the webhook payload.
