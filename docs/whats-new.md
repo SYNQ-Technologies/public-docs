@@ -4,6 +4,18 @@ sidebar_position: 19
 
 # What's New
 
+### 2026-10-24
+#### Fixes
+- Patches for Node2Shell vulnerability [CVE-2026-111497](https://nvd.nist.gov/vuln/detail/cve-2026-111497).
+
+### 2026-10-22
+#### Features
+- Radio allows users to manage API keys of edge devices.
+
+### 2026-10-21
+#### Fixes
+- Patches for PHP2Shell vulnerabilities [CVE-2026-109618](https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w) and [CVE-2026-109619](https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp).
+
 ### 2026-10-20
 #### Features
 - Radio allows you to opt out of transcript storage.
