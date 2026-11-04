@@ -4,6 +4,15 @@ sidebar_position: 19
 
 # What's New
 
+### 2026-11-03
+#### Features
+- Radio transcripts are now exposed via a Model Context Protocol (MCP) server. This allows you to query and analyze radio transcripts directly from agentic applications like Claude, Codex, or Copilot.
+- Radio now exposes a configurable phrase list on the Azure speech provider. 
+#### Fixes
+- 1684: Radio does not correctly apply configured prompt to Azure OpenAI speech provider.
+- 1694: Radio transcript viewer does not render newlines within individual transcript entries.
+- 1706: Radio power scheduler does not calculate correct power-on time at daylight saving time boundaries.
+
 ### 2026-10-24
 #### Fixes
 - Patches for Node2Shell vulnerability [CVE-2026-111497](https://nvd.nist.gov/vuln/detail/cve-2026-111497).
