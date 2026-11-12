@@ -4,6 +4,16 @@ sidebar_position: 19
 
 # What's New
 
+### 2026-11-10
+#### Fixes
+- 189: Replace all legacy Material UI v4 components in MyStore.
+- 1727: Remove legacy CKEditor component from MyStore.
+- 1732: Call for Help web UI is missing cache-busting parameter on list page.
+
+### 2026-11-05
+#### Fixes
+- 1710: Call for Help web UI shows additional built-in outcomes when completing requests.
+
 ### 2026-11-03
 #### Features
 - Radio transcripts are now exposed via a Model Context Protocol (MCP) server. This allows you to query and analyze radio transcripts directly from agentic applications like Claude, Codex, or Copilot.
