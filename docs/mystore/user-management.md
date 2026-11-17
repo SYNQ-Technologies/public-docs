@@ -23,28 +23,38 @@ To manage the users of a location:
 4. Select the desired __Role__.
 5. Click __Continue__.
 6. Select the desired login method:
-   - Microsoft account
-   - Username and password
+   - __Microsoft account__ (single sign-on)
+   - __Username and password__
    :::note
    The available login method options will depend on your organization's allowed login methods.
    :::
-7. Click __Continue__
-8. Enter the email address of the user and press Enter.
+7. Click __Continue__.
+8. Finish adding the user by following the steps for the login method you selected:
+   - [Microsoft Account Users](#microsoft-account-users)
+   - [Username and Password Users](#username-and-password-users)
+
+#### Microsoft Account Users
+1. Enter the user's Microsoft email address and press Enter.
    :::note
-   You can add multiple users by pressing the __Add New__ button, ot by supplying a comma separated list of emails.
+   You can add multiple users by pressing the __Add New__ button, or by supplying a comma separated list of emails.
    :::
-9. For __username and password__ accounts enter the following information:
+2. Click __Continue__.
+3. Verify the user information is correct.
+4. Click __Create__.
+5. The user is now able to sign in. On the login page they should select the __Sign in with Microsoft__ option.
+
+#### Username and Password Users
+1. Enter the following information:
    - Email
    - User Full Name
    - Password
-   :::note 
-   This is only an initial password. The user will be required to set a new password when they sign in for the first time.
-   Be sure to copy the initial password value to distribute it to your users.
+   :::note
+   This is only an initial password. Be sure to copy the initial password value to distribute it to your users.
    :::
-10. For __Microsoft__ accounts only a valid Microsoft email is required.
-11. Click __Continue__.
-12. Verify the user information is correct.
-13. Click __Create__.
+2. Click __Continue__.
+3. Verify the user information is correct.
+4. Click __Create__.
+5. The user is now able to sign in. On the login page they should enter their email and the initial password, and then they will be prompted to set a new password.
 
 ### Microsoft Accounts
 The __Manage Users__ page provides a setting that allows users that sign in with Microsoft accounts to request access to your store location. When enabled, users can request access that must be approved by an Organization or Location Administrator.
