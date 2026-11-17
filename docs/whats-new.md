@@ -4,6 +4,11 @@ sidebar_position: 19
 
 # What's New
 
+### 2026-11-16
+#### Features
+- Call for Help staff-facing UI now supports the organization's configured brand color.
+- Call for Help staff-facing UI is now more responsive and fits better on mobile devices.
+
 ### 2026-11-10
 #### Fixes
 - 189: Replace all legacy Material UI v4 components in MyStore.
