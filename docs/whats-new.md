@@ -4,6 +4,30 @@ sidebar_position: 19
 
 # What's New
 
+### 2026-11-20
+#### Features
+- The scan-to-complete user interface now provides French and Spanish translations.
+- The scan-to-complete user interface now supports the organization's configured brand color when loaded outside Microsoft Teams. When launched from within Teams, it retains the Teams theme for a consistent experience.
+- By default, Call for Help requests claimed as "on the way" over the radio are automatically completed after 60 seconds. Administrators can now change this interval or turn it off.
+
+### 2026-11-19
+#### Fixes
+- Patched phpAfterShell vulnerabilities:
+  - [CVE-2026-115560](https://github.com/php/php-src/security/advisories/GHSA-658j-r8rw-q6mx)
+  - [CVE-2026-126714](https://github.com/php/php-src/security/advisories/GHSA-fm2m-fjf5-v3cp)
+  - [CVE-2026-129182](https://github.com/php/php-src/security/advisories/GHSA-2fjv-p558-g82m)
+  - [CVE-2026-129289](https://github.com/php/php-src/security/advisories/GHSA-qc49-hpvq-g2w6)
+  - [CVE-2026-129291](https://github.com/php/php-src/security/advisories/GHSA-jm4m-qfqx-967m)
+  - [CVE-2026-129474](https://github.com/php/php-src/security/advisories/GHSA-8mjj-2r7p-4hg2)
+  - [CVE-2026-129481](https://github.com/php/php-src/security/advisories/GHSA-g3vh-838c-65v7)
+  - [CVE-2026-129496](https://github.com/php/php-src/security/advisories/GHSA-gr4f-wgx5-jpfv)
+
+### 2026-11-18
+#### Features
+- The radio transcript viewer now has two new features to help you find entries:
+  - **Find bar**: Press `Ctrl + F` to search transcript entries and jump to matches.
+  - **Time rail**: A histogram of activity throughout the day. Click a time to jump to it. Not shown on small screens.
+
 ### 2026-11-16
 #### Features
 - Call for Help staff-facing UI now supports the organization's configured brand color.
