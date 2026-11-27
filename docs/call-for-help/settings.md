@@ -16,7 +16,7 @@ To set the request expiry timeout:
 6. Click __Save__.
 
 ## Escalations
-Escalations allow managers and supervisors to receive notifications when call for help requests are not claimed in a timely manner by associates.
+Escalations allow managers and supervisors to receive notifications when call for help requests are not handled in a timely manner by associates.
 
 To enable escalations:
 1. Sign into __MyStore__.
@@ -24,31 +24,42 @@ To enable escalations:
 3. Select __Settings__.
 4. Scroll down to __Escalation Notifications__.
 5. Check the __Send escalation notifications__ checkbox.
-6. Select the number of minutes to allow a call for help request to go unclaimed before triggering an escalation.
-7. Click __Save__.
+6. Select the number of minutes to wait before escalating a call for help request.
+7. Set __Escalate until the request is__ to the status a request must reach to avoid an escalation:
+    - __Claimed__ (default): escalate requests that haven't been claimed.
+    - __On the Way__: escalate requests that haven't been marked as on the way.
+    - __Closed__: escalate requests that haven't been completed.
+8. Click __Save__.
+
+When an escalated request reaches the selected status, the escalation is cleared and the escalation message is marked as resolved.
+
+:::note
+Prompts with the `Staff Action` set to `Done` or `Acknowledge` have no separate claim or on the way step, so they escalate until they are completed, whichever status is selected.
+:::
 
 ## Repeating Alerts
-Repeating alerts provide a way to send recurring reminders for unresolved call for help requests and escalations.
+Repeating alerts send recurring reminders while a call for help request is waiting to be resolved. There are two kinds:
+- __Standard alerts__ are sent as replies to the original request message.
+- __Escalation alerts__ are sent as replies to the escalation message while the escalation is open. They require [escalation notifications](#escalations).
 
-:::note
-Repeating alerts are only supported for prompts with the `Staff Action` set to `Claim & On the Way` or `On the Way`.
-:::
+A request moves through stages based on the `Staff Action` of its prompt. Each stage has its own number of alerts. Alerts for a stage stop as soon as the request moves to the next stage, and the next stage's alerts begin.
 
-:::note
-Repeating alerts are not supported as radio announcements.
-:::
+| Staff Action | Stages |
+| --- | --- |
+| Claim & On the Way | Unclaimed → Not yet On the Way → Not yet completed |
+| On the Way | Not yet On the Way → Not yet completed |
+| Done, Acknowledge | Not yet completed |
+| None | No repeating alerts |
 
-To enable repeating alerts:
+To configure repeating alerts:
 1. Sign into __MyStore__.
 2. Select __Call for Help__.
 3. Select __Settings__.
 4. Scroll down to __Repeating Alerts__.
-5. Check the __Enable Repeating Alert__ checkbox to send recurring reminders for unresolved call for help requests.
-6. Check the __Enable Escalation Repeating Alert__ checkbox to send recurring reminders for unresolved call for help escalations.
-7. Set the __Alert Capacity__ to the maximum number of minutes that the repeating alerts should to continue to be sent.
-8. Set the __Alert Interval for Unclaimed Requests__ to the desired interval to send alerts for unclaimed requests.
-9. Set the __Alert Interval for Unacknowledged On the Way Requests__ to the desired interval to send alerts for requests that are claimed but not yet marked as on the way.
-10. Click __Save__.
+5. Under __Standard alerts__, set the __Interval (seconds)__ to how often to send alerts (at least 20 seconds).
+6. Set the number of alerts to send while a request is __Unclaimed__, __Not yet On the Way__, and __Not yet completed__ (up to 100 each). Enter 0 to turn off alerts for a stage.
+7. Repeat steps 5 and 6 under __Escalation alerts__.
+8. Click __Save__.
 
 ## Channels
 Channels determine where call for help requests are routed. 
