@@ -26,6 +26,7 @@ SYNQ provides the following webhook event payloads as `application/json` data.
     "type": "callforhelp",
     "created_at": "2024-11-13T17:42:44Z",
     "status": "created|escalated|claimed|on_the_way|completed|timed_out|cancelled",
+    "repeat_info": null,
     "details": {
         "type": "display|call_button",
         "name": "Call button 1",
@@ -39,6 +40,21 @@ SYNQ provides the following webhook event payloads as `application/json` data.
     "uuid": "00000000-0000-0000-0000-000000000000"
 }
 ```
+
+#### Repeating Alerts
+When a [repeating alert](../call-for-help/settings.md#repeating-alerts) is sent, the Call for Help event includes `repeat_info`. For all other events it is `null`.
+```json
+"repeat_info": {
+    "reason": "unclaimed|pending_ontheway|pending_completed",
+    "level": "standard_alert|escalation_alert",
+    "count": 1
+}
+```
+- `reason`: the stage the request is in.
+- `level`: whether this is a standard or an escalation alert.
+- `count`: the number of this alert within the stage, starting at 1.
+
+`status` is the request's current status: `created`, `escalated`, `claimed` or `on_the_way`.
 
 ### Curbside
 ```json

@@ -4,6 +4,22 @@ sidebar_position: 19
 
 # What's New
 
+### 2026-11-26
+#### Features
+- Call for Help now provides more flexibility for escalations and repeating alerts.
+   - Configure what status a request must reach to stop escalating with the new __Escalate until the request is__ setting: __Claimed__ (default), __On the Way__, or __Closed__. Requests that haven't reached that status by the escalation time are escalated, and the escalation clears once they reach it. See [Escalations](call-for-help/settings.md#escalations).
+   - [Repeating alerts](call-for-help/settings.md#repeating-alerts) are now configured by stage. For both standard and escalation alerts, set an interval and the number of alerts to send while a request is __Unclaimed__, __Not yet On the Way__, or __Not yet completed__. Enter 0 to turn off alerts for a stage. Alerts stop as soon as the request moves to the next stage.
+   - The new __Not yet completed__ stage sends reminders for requests that staff are on the way to but haven't completed. Repeating alerts are now also available for prompts with the __Done__ or __Acknowledge__ staff action.
+   - Escalation messages in Teams now also reflect the request's status.
+
+### 2026-11-23
+#### Features
+- Radio now exposes a configurable phrase list on the Azure OpenAI speech provider.
+#### Fixes
+- 1780: Improve performance of Call for Help dispatch boards.
+- 1781: Allow configuration of repeating Call for Help alerts for all notification provider types.
+- 1782: Scan-to-complete does not complete when using BlueFletch notifications.
+
 ### 2026-11-20
 #### Features
 - The scan-to-complete user interface now provides French and Spanish translations.
